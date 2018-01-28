@@ -1,0 +1,5 @@
+{
+    "name": "gs-events",
+    "version": "1.0.0",
+    "description": "同步事件分发器"
+}
