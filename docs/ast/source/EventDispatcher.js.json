@@ -1,0 +1,2726 @@
+{
+  "type": "File",
+  "start": 0,
+  "end": 2493,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 48,
+      "column": 1
+    }
+  },
+  "program": {
+    "type": "Program",
+    "start": 0,
+    "end": 2493,
+    "loc": {
+      "start": {
+        "line": 1,
+        "column": 0
+      },
+      "end": {
+        "line": 48,
+        "column": 1
+      }
+    },
+    "sourceType": "module",
+    "body": [
+      {
+        "type": "ExportDefaultDeclaration",
+        "start": 2423,
+        "end": 2493,
+        "loc": {
+          "start": {
+            "line": 41,
+            "column": 0
+          },
+          "end": {
+            "line": 48,
+            "column": 1
+          }
+        },
+        "declaration": {
+          "type": "ClassDeclaration",
+          "start": 2438,
+          "end": 2493,
+          "loc": {
+            "start": {
+              "line": 41,
+              "column": 15
+            },
+            "end": {
+              "line": 48,
+              "column": 1
+            }
+          },
+          "id": {
+            "type": "Identifier",
+            "start": 2444,
+            "end": 2459,
+            "loc": {
+              "start": {
+                "line": 41,
+                "column": 21
+              },
+              "end": {
+                "line": 41,
+                "column": 36
+              },
+              "identifierName": "EventDispatcher"
+            },
+            "name": "EventDispatcher",
+            "leadingComments": null
+          },
+          "superClass": null,
+          "body": {
+            "type": "ClassBody",
+            "start": 2460,
+            "end": 2493,
+            "loc": {
+              "start": {
+                "line": 41,
+                "column": 37
+              },
+              "end": {
+                "line": 48,
+                "column": 1
+              }
+            },
+            "body": []
+          },
+          "leadingComments": [
+            {
+              "type": "CommentLine",
+              "value": "/ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+              "start": 0,
+              "end": 78,
+              "loc": {
+                "start": {
+                  "line": 1,
+                  "column": 0
+                },
+                "end": {
+                  "line": 1,
+                  "column": 78
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/ @Copyright ~2018 ☜Samlv9☞ and other contributors",
+              "start": 79,
+              "end": 131,
+              "loc": {
+                "start": {
+                  "line": 2,
+                  "column": 0
+                },
+                "end": {
+                  "line": 2,
+                  "column": 52
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/ @MIT-LICENSE | 1.0.0 | https://api.guless.com/",
+              "start": 132,
+              "end": 182,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 0
+                },
+                "end": {
+                  "line": 3,
+                  "column": 50
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+              "start": 183,
+              "end": 261,
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 0
+                },
+                "end": {
+                  "line": 4,
+                  "column": 78
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/                                              }|",
+              "start": 262,
+              "end": 313,
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 0
+                },
+                "end": {
+                  "line": 5,
+                  "column": 51
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/                                              }|",
+              "start": 314,
+              "end": 365,
+              "loc": {
+                "start": {
+                  "line": 6,
+                  "column": 0
+                },
+                "end": {
+                  "line": 6,
+                  "column": 51
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/                                              }|     　 へ　　　 ／|    ",
+              "start": 366,
+              "end": 435,
+              "loc": {
+                "start": {
+                  "line": 7,
+                  "column": 0
+                },
+                "end": {
+                  "line": 7,
+                  "column": 69
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/      _______     _______         ______      }|      /　│　　 ／ ／",
+              "start": 436,
+              "end": 502,
+              "loc": {
+                "start": {
+                  "line": 8,
+                  "column": 0
+                },
+                "end": {
+                  "line": 8,
+                  "column": 66
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/     /  ___  |   |_   __ \\      .' ____ '.    }|     │　Z ＿,＜　／　　 /`ヽ",
+              "start": 503,
+              "end": 574,
+              "loc": {
+                "start": {
+                  "line": 9,
+                  "column": 0
+                },
+                "end": {
+                  "line": 9,
+                  "column": 71
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/    |  (__ \\_|     | |__) |     | (____) |    }|     │　　　　　ヽ　　 /　　〉",
+              "start": 575,
+              "end": 645,
+              "loc": {
+                "start": {
+                  "line": 10,
+                  "column": 0
+                },
+                "end": {
+                  "line": 10,
+                  "column": 70
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/     '.___`-.      |  __ /      '_.____. |    }|      Y　　　　　`　 /　　/",
+              "start": 646,
+              "end": 716,
+              "loc": {
+                "start": {
+                  "line": 11,
+                  "column": 0
+                },
+                "end": {
+                  "line": 11,
+                  "column": 70
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/    |`\\____) |    _| |  \\ \\_    | \\____| |    }|    ｲ●　､　●　　⊂⊃〈　　/",
+              "start": 717,
+              "end": 786,
+              "loc": {
+                "start": {
+                  "line": 12,
+                  "column": 0
+                },
+                "end": {
+                  "line": 12,
+                  "column": 69
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/    |_______.'   |____| |___|    \\______,'    }|    ()　 v　　　　|　＼〈",
+              "start": 787,
+              "end": 855,
+              "loc": {
+                "start": {
+                  "line": 13,
+                  "column": 0
+                },
+                "end": {
+                  "line": 13,
+                  "column": 68
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/    |=========================================\\|    　>ｰ ､_　 ィ　 │ ／／",
+              "start": 856,
+              "end": 926,
+              "loc": {
+                "start": {
+                  "line": 14,
+                  "column": 0
+                },
+                "end": {
+                  "line": 14,
+                  "column": 70
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/    |> LESS IS MORE                           ||     / へ　　 /　ﾉ＜|＼＼",
+              "start": 927,
+              "end": 996,
+              "loc": {
+                "start": {
+                  "line": 15,
+                  "column": 0
+                },
+                "end": {
+                  "line": 15,
+                  "column": 69
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/    `=========================================/|    ヽ_ﾉ　　(_／　 │／／",
+              "start": 997,
+              "end": 1065,
+              "loc": {
+                "start": {
+                  "line": 16,
+                  "column": 0
+                },
+                "end": {
+                  "line": 16,
+                  "column": 68
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/                                              }|     7　　　　　　  |／",
+              "start": 1066,
+              "end": 1133,
+              "loc": {
+                "start": {
+                  "line": 17,
+                  "column": 0
+                },
+                "end": {
+                  "line": 17,
+                  "column": 67
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/                                              }|     ＞―r￣￣`ｰ―＿`",
+              "start": 1134,
+              "end": 1200,
+              "loc": {
+                "start": {
+                  "line": 18,
+                  "column": 0
+                },
+                "end": {
+                  "line": 18,
+                  "column": 66
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/                                              }|",
+              "start": 1201,
+              "end": 1252,
+              "loc": {
+                "start": {
+                  "line": 19,
+                  "column": 0
+                },
+                "end": {
+                  "line": 19,
+                  "column": 51
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/                                              }|",
+              "start": 1253,
+              "end": 1304,
+              "loc": {
+                "start": {
+                  "line": 20,
+                  "column": 0
+                },
+                "end": {
+                  "line": 20,
+                  "column": 51
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/ Permission is hereby granted, free of charge, to any person obtaining a copy",
+              "start": 1305,
+              "end": 1385,
+              "loc": {
+                "start": {
+                  "line": 21,
+                  "column": 0
+                },
+                "end": {
+                  "line": 21,
+                  "column": 80
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/ of this software and associated documentation files (the \"Software\"), to deal",
+              "start": 1386,
+              "end": 1467,
+              "loc": {
+                "start": {
+                  "line": 22,
+                  "column": 0
+                },
+                "end": {
+                  "line": 22,
+                  "column": 81
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/ in the Software without restriction, including without limitation the rights",
+              "start": 1468,
+              "end": 1548,
+              "loc": {
+                "start": {
+                  "line": 23,
+                  "column": 0
+                },
+                "end": {
+                  "line": 23,
+                  "column": 80
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell",
+              "start": 1549,
+              "end": 1626,
+              "loc": {
+                "start": {
+                  "line": 24,
+                  "column": 0
+                },
+                "end": {
+                  "line": 24,
+                  "column": 77
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/ copies of the Software, and to permit persons to whom the Software is",
+              "start": 1627,
+              "end": 1700,
+              "loc": {
+                "start": {
+                  "line": 25,
+                  "column": 0
+                },
+                "end": {
+                  "line": 25,
+                  "column": 73
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/ furnished to do so, subject to the following conditions:",
+              "start": 1701,
+              "end": 1761,
+              "loc": {
+                "start": {
+                  "line": 26,
+                  "column": 0
+                },
+                "end": {
+                  "line": 26,
+                  "column": 60
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/",
+              "start": 1762,
+              "end": 1765,
+              "loc": {
+                "start": {
+                  "line": 27,
+                  "column": 0
+                },
+                "end": {
+                  "line": 27,
+                  "column": 3
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/ The above copyright notice and this permission notice shall be included in all",
+              "start": 1766,
+              "end": 1848,
+              "loc": {
+                "start": {
+                  "line": 28,
+                  "column": 0
+                },
+                "end": {
+                  "line": 28,
+                  "column": 82
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/ copies or substantial portions of the Software.",
+              "start": 1849,
+              "end": 1900,
+              "loc": {
+                "start": {
+                  "line": 29,
+                  "column": 0
+                },
+                "end": {
+                  "line": 29,
+                  "column": 51
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/",
+              "start": 1901,
+              "end": 1904,
+              "loc": {
+                "start": {
+                  "line": 30,
+                  "column": 0
+                },
+                "end": {
+                  "line": 30,
+                  "column": 3
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/ THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR",
+              "start": 1905,
+              "end": 1983,
+              "loc": {
+                "start": {
+                  "line": 31,
+                  "column": 0
+                },
+                "end": {
+                  "line": 31,
+                  "column": 78
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,",
+              "start": 1984,
+              "end": 2060,
+              "loc": {
+                "start": {
+                  "line": 32,
+                  "column": 0
+                },
+                "end": {
+                  "line": 32,
+                  "column": 76
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE",
+              "start": 2061,
+              "end": 2140,
+              "loc": {
+                "start": {
+                  "line": 33,
+                  "column": 0
+                },
+                "end": {
+                  "line": 33,
+                  "column": 79
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER",
+              "start": 2141,
+              "end": 2215,
+              "loc": {
+                "start": {
+                  "line": 34,
+                  "column": 0
+                },
+                "end": {
+                  "line": 34,
+                  "column": 74
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,",
+              "start": 2216,
+              "end": 2297,
+              "loc": {
+                "start": {
+                  "line": 35,
+                  "column": 0
+                },
+                "end": {
+                  "line": 35,
+                  "column": 81
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN",
+              "start": 2298,
+              "end": 2375,
+              "loc": {
+                "start": {
+                  "line": 36,
+                  "column": 0
+                },
+                "end": {
+                  "line": 36,
+                  "column": 77
+                }
+              }
+            },
+            {
+              "type": "CommentLine",
+              "value": "/ THE SOFTWARE.",
+              "start": 2376,
+              "end": 2393,
+              "loc": {
+                "start": {
+                  "line": 37,
+                  "column": 0
+                },
+                "end": {
+                  "line": 37,
+                  "column": 17
+                }
+              }
+            },
+            {
+              "type": "CommentBlock",
+              "value": "*\n * EventDispatcher 类\n ",
+              "start": 2394,
+              "end": 2422,
+              "loc": {
+                "start": {
+                  "line": 38,
+                  "column": 0
+                },
+                "end": {
+                  "line": 40,
+                  "column": 3
+                }
+              }
+            }
+          ],
+          "trailingComments": []
+        },
+        "leadingComments": [
+          {
+            "type": "CommentLine",
+            "value": "/ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+            "start": 0,
+            "end": 78,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 0
+              },
+              "end": {
+                "line": 1,
+                "column": 78
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/ @Copyright ~2018 ☜Samlv9☞ and other contributors",
+            "start": 79,
+            "end": 131,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 0
+              },
+              "end": {
+                "line": 2,
+                "column": 52
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/ @MIT-LICENSE | 1.0.0 | https://api.guless.com/",
+            "start": 132,
+            "end": 182,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 0
+              },
+              "end": {
+                "line": 3,
+                "column": 50
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+            "start": 183,
+            "end": 261,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 0
+              },
+              "end": {
+                "line": 4,
+                "column": 78
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/                                              }|",
+            "start": 262,
+            "end": 313,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 5,
+                "column": 51
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/                                              }|",
+            "start": 314,
+            "end": 365,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 0
+              },
+              "end": {
+                "line": 6,
+                "column": 51
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/                                              }|     　 へ　　　 ／|    ",
+            "start": 366,
+            "end": 435,
+            "loc": {
+              "start": {
+                "line": 7,
+                "column": 0
+              },
+              "end": {
+                "line": 7,
+                "column": 69
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/      _______     _______         ______      }|      /　│　　 ／ ／",
+            "start": 436,
+            "end": 502,
+            "loc": {
+              "start": {
+                "line": 8,
+                "column": 0
+              },
+              "end": {
+                "line": 8,
+                "column": 66
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/     /  ___  |   |_   __ \\      .' ____ '.    }|     │　Z ＿,＜　／　　 /`ヽ",
+            "start": 503,
+            "end": 574,
+            "loc": {
+              "start": {
+                "line": 9,
+                "column": 0
+              },
+              "end": {
+                "line": 9,
+                "column": 71
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/    |  (__ \\_|     | |__) |     | (____) |    }|     │　　　　　ヽ　　 /　　〉",
+            "start": 575,
+            "end": 645,
+            "loc": {
+              "start": {
+                "line": 10,
+                "column": 0
+              },
+              "end": {
+                "line": 10,
+                "column": 70
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/     '.___`-.      |  __ /      '_.____. |    }|      Y　　　　　`　 /　　/",
+            "start": 646,
+            "end": 716,
+            "loc": {
+              "start": {
+                "line": 11,
+                "column": 0
+              },
+              "end": {
+                "line": 11,
+                "column": 70
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/    |`\\____) |    _| |  \\ \\_    | \\____| |    }|    ｲ●　､　●　　⊂⊃〈　　/",
+            "start": 717,
+            "end": 786,
+            "loc": {
+              "start": {
+                "line": 12,
+                "column": 0
+              },
+              "end": {
+                "line": 12,
+                "column": 69
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/    |_______.'   |____| |___|    \\______,'    }|    ()　 v　　　　|　＼〈",
+            "start": 787,
+            "end": 855,
+            "loc": {
+              "start": {
+                "line": 13,
+                "column": 0
+              },
+              "end": {
+                "line": 13,
+                "column": 68
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/    |=========================================\\|    　>ｰ ､_　 ィ　 │ ／／",
+            "start": 856,
+            "end": 926,
+            "loc": {
+              "start": {
+                "line": 14,
+                "column": 0
+              },
+              "end": {
+                "line": 14,
+                "column": 70
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/    |> LESS IS MORE                           ||     / へ　　 /　ﾉ＜|＼＼",
+            "start": 927,
+            "end": 996,
+            "loc": {
+              "start": {
+                "line": 15,
+                "column": 0
+              },
+              "end": {
+                "line": 15,
+                "column": 69
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/    `=========================================/|    ヽ_ﾉ　　(_／　 │／／",
+            "start": 997,
+            "end": 1065,
+            "loc": {
+              "start": {
+                "line": 16,
+                "column": 0
+              },
+              "end": {
+                "line": 16,
+                "column": 68
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/                                              }|     7　　　　　　  |／",
+            "start": 1066,
+            "end": 1133,
+            "loc": {
+              "start": {
+                "line": 17,
+                "column": 0
+              },
+              "end": {
+                "line": 17,
+                "column": 67
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/                                              }|     ＞―r￣￣`ｰ―＿`",
+            "start": 1134,
+            "end": 1200,
+            "loc": {
+              "start": {
+                "line": 18,
+                "column": 0
+              },
+              "end": {
+                "line": 18,
+                "column": 66
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/                                              }|",
+            "start": 1201,
+            "end": 1252,
+            "loc": {
+              "start": {
+                "line": 19,
+                "column": 0
+              },
+              "end": {
+                "line": 19,
+                "column": 51
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/                                              }|",
+            "start": 1253,
+            "end": 1304,
+            "loc": {
+              "start": {
+                "line": 20,
+                "column": 0
+              },
+              "end": {
+                "line": 20,
+                "column": 51
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/ Permission is hereby granted, free of charge, to any person obtaining a copy",
+            "start": 1305,
+            "end": 1385,
+            "loc": {
+              "start": {
+                "line": 21,
+                "column": 0
+              },
+              "end": {
+                "line": 21,
+                "column": 80
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/ of this software and associated documentation files (the \"Software\"), to deal",
+            "start": 1386,
+            "end": 1467,
+            "loc": {
+              "start": {
+                "line": 22,
+                "column": 0
+              },
+              "end": {
+                "line": 22,
+                "column": 81
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/ in the Software without restriction, including without limitation the rights",
+            "start": 1468,
+            "end": 1548,
+            "loc": {
+              "start": {
+                "line": 23,
+                "column": 0
+              },
+              "end": {
+                "line": 23,
+                "column": 80
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell",
+            "start": 1549,
+            "end": 1626,
+            "loc": {
+              "start": {
+                "line": 24,
+                "column": 0
+              },
+              "end": {
+                "line": 24,
+                "column": 77
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/ copies of the Software, and to permit persons to whom the Software is",
+            "start": 1627,
+            "end": 1700,
+            "loc": {
+              "start": {
+                "line": 25,
+                "column": 0
+              },
+              "end": {
+                "line": 25,
+                "column": 73
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/ furnished to do so, subject to the following conditions:",
+            "start": 1701,
+            "end": 1761,
+            "loc": {
+              "start": {
+                "line": 26,
+                "column": 0
+              },
+              "end": {
+                "line": 26,
+                "column": 60
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/",
+            "start": 1762,
+            "end": 1765,
+            "loc": {
+              "start": {
+                "line": 27,
+                "column": 0
+              },
+              "end": {
+                "line": 27,
+                "column": 3
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/ The above copyright notice and this permission notice shall be included in all",
+            "start": 1766,
+            "end": 1848,
+            "loc": {
+              "start": {
+                "line": 28,
+                "column": 0
+              },
+              "end": {
+                "line": 28,
+                "column": 82
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/ copies or substantial portions of the Software.",
+            "start": 1849,
+            "end": 1900,
+            "loc": {
+              "start": {
+                "line": 29,
+                "column": 0
+              },
+              "end": {
+                "line": 29,
+                "column": 51
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/",
+            "start": 1901,
+            "end": 1904,
+            "loc": {
+              "start": {
+                "line": 30,
+                "column": 0
+              },
+              "end": {
+                "line": 30,
+                "column": 3
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/ THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR",
+            "start": 1905,
+            "end": 1983,
+            "loc": {
+              "start": {
+                "line": 31,
+                "column": 0
+              },
+              "end": {
+                "line": 31,
+                "column": 78
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,",
+            "start": 1984,
+            "end": 2060,
+            "loc": {
+              "start": {
+                "line": 32,
+                "column": 0
+              },
+              "end": {
+                "line": 32,
+                "column": 76
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE",
+            "start": 2061,
+            "end": 2140,
+            "loc": {
+              "start": {
+                "line": 33,
+                "column": 0
+              },
+              "end": {
+                "line": 33,
+                "column": 79
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER",
+            "start": 2141,
+            "end": 2215,
+            "loc": {
+              "start": {
+                "line": 34,
+                "column": 0
+              },
+              "end": {
+                "line": 34,
+                "column": 74
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,",
+            "start": 2216,
+            "end": 2297,
+            "loc": {
+              "start": {
+                "line": 35,
+                "column": 0
+              },
+              "end": {
+                "line": 35,
+                "column": 81
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN",
+            "start": 2298,
+            "end": 2375,
+            "loc": {
+              "start": {
+                "line": 36,
+                "column": 0
+              },
+              "end": {
+                "line": 36,
+                "column": 77
+              }
+            }
+          },
+          {
+            "type": "CommentLine",
+            "value": "/ THE SOFTWARE.",
+            "start": 2376,
+            "end": 2393,
+            "loc": {
+              "start": {
+                "line": 37,
+                "column": 0
+              },
+              "end": {
+                "line": 37,
+                "column": 17
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * EventDispatcher 类\n ",
+            "start": 2394,
+            "end": 2422,
+            "loc": {
+              "start": {
+                "line": 38,
+                "column": 0
+              },
+              "end": {
+                "line": 40,
+                "column": 3
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "directives": []
+  },
+  "comments": [
+    {
+      "type": "CommentLine",
+      "value": "/ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+      "start": 0,
+      "end": 78,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 78
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ @Copyright ~2018 ☜Samlv9☞ and other contributors",
+      "start": 79,
+      "end": 131,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 52
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ @MIT-LICENSE | 1.0.0 | https://api.guless.com/",
+      "start": 132,
+      "end": 182,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 50
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+      "start": 183,
+      "end": 261,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 78
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/                                              }|",
+      "start": 262,
+      "end": 313,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 51
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/                                              }|",
+      "start": 314,
+      "end": 365,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 51
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/                                              }|     　 へ　　　 ／|    ",
+      "start": 366,
+      "end": 435,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 7,
+          "column": 69
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/      _______     _______         ______      }|      /　│　　 ／ ／",
+      "start": 436,
+      "end": 502,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 66
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/     /  ___  |   |_   __ \\      .' ____ '.    }|     │　Z ＿,＜　／　　 /`ヽ",
+      "start": 503,
+      "end": 574,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 0
+        },
+        "end": {
+          "line": 9,
+          "column": 71
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/    |  (__ \\_|     | |__) |     | (____) |    }|     │　　　　　ヽ　　 /　　〉",
+      "start": 575,
+      "end": 645,
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 0
+        },
+        "end": {
+          "line": 10,
+          "column": 70
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/     '.___`-.      |  __ /      '_.____. |    }|      Y　　　　　`　 /　　/",
+      "start": 646,
+      "end": 716,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 0
+        },
+        "end": {
+          "line": 11,
+          "column": 70
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/    |`\\____) |    _| |  \\ \\_    | \\____| |    }|    ｲ●　､　●　　⊂⊃〈　　/",
+      "start": 717,
+      "end": 786,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 0
+        },
+        "end": {
+          "line": 12,
+          "column": 69
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/    |_______.'   |____| |___|    \\______,'    }|    ()　 v　　　　|　＼〈",
+      "start": 787,
+      "end": 855,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 0
+        },
+        "end": {
+          "line": 13,
+          "column": 68
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/    |=========================================\\|    　>ｰ ､_　 ィ　 │ ／／",
+      "start": 856,
+      "end": 926,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 0
+        },
+        "end": {
+          "line": 14,
+          "column": 70
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/    |> LESS IS MORE                           ||     / へ　　 /　ﾉ＜|＼＼",
+      "start": 927,
+      "end": 996,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 0
+        },
+        "end": {
+          "line": 15,
+          "column": 69
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/    `=========================================/|    ヽ_ﾉ　　(_／　 │／／",
+      "start": 997,
+      "end": 1065,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 0
+        },
+        "end": {
+          "line": 16,
+          "column": 68
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/                                              }|     7　　　　　　  |／",
+      "start": 1066,
+      "end": 1133,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 0
+        },
+        "end": {
+          "line": 17,
+          "column": 67
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/                                              }|     ＞―r￣￣`ｰ―＿`",
+      "start": 1134,
+      "end": 1200,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 0
+        },
+        "end": {
+          "line": 18,
+          "column": 66
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/                                              }|",
+      "start": 1201,
+      "end": 1252,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 0
+        },
+        "end": {
+          "line": 19,
+          "column": 51
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/                                              }|",
+      "start": 1253,
+      "end": 1304,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 0
+        },
+        "end": {
+          "line": 20,
+          "column": 51
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ Permission is hereby granted, free of charge, to any person obtaining a copy",
+      "start": 1305,
+      "end": 1385,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 0
+        },
+        "end": {
+          "line": 21,
+          "column": 80
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ of this software and associated documentation files (the \"Software\"), to deal",
+      "start": 1386,
+      "end": 1467,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 0
+        },
+        "end": {
+          "line": 22,
+          "column": 81
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ in the Software without restriction, including without limitation the rights",
+      "start": 1468,
+      "end": 1548,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 0
+        },
+        "end": {
+          "line": 23,
+          "column": 80
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell",
+      "start": 1549,
+      "end": 1626,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 0
+        },
+        "end": {
+          "line": 24,
+          "column": 77
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ copies of the Software, and to permit persons to whom the Software is",
+      "start": 1627,
+      "end": 1700,
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 0
+        },
+        "end": {
+          "line": 25,
+          "column": 73
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ furnished to do so, subject to the following conditions:",
+      "start": 1701,
+      "end": 1761,
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 0
+        },
+        "end": {
+          "line": 26,
+          "column": 60
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/",
+      "start": 1762,
+      "end": 1765,
+      "loc": {
+        "start": {
+          "line": 27,
+          "column": 0
+        },
+        "end": {
+          "line": 27,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ The above copyright notice and this permission notice shall be included in all",
+      "start": 1766,
+      "end": 1848,
+      "loc": {
+        "start": {
+          "line": 28,
+          "column": 0
+        },
+        "end": {
+          "line": 28,
+          "column": 82
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ copies or substantial portions of the Software.",
+      "start": 1849,
+      "end": 1900,
+      "loc": {
+        "start": {
+          "line": 29,
+          "column": 0
+        },
+        "end": {
+          "line": 29,
+          "column": 51
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/",
+      "start": 1901,
+      "end": 1904,
+      "loc": {
+        "start": {
+          "line": 30,
+          "column": 0
+        },
+        "end": {
+          "line": 30,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR",
+      "start": 1905,
+      "end": 1983,
+      "loc": {
+        "start": {
+          "line": 31,
+          "column": 0
+        },
+        "end": {
+          "line": 31,
+          "column": 78
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,",
+      "start": 1984,
+      "end": 2060,
+      "loc": {
+        "start": {
+          "line": 32,
+          "column": 0
+        },
+        "end": {
+          "line": 32,
+          "column": 76
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE",
+      "start": 2061,
+      "end": 2140,
+      "loc": {
+        "start": {
+          "line": 33,
+          "column": 0
+        },
+        "end": {
+          "line": 33,
+          "column": 79
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER",
+      "start": 2141,
+      "end": 2215,
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 0
+        },
+        "end": {
+          "line": 34,
+          "column": 74
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,",
+      "start": 2216,
+      "end": 2297,
+      "loc": {
+        "start": {
+          "line": 35,
+          "column": 0
+        },
+        "end": {
+          "line": 35,
+          "column": 81
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN",
+      "start": 2298,
+      "end": 2375,
+      "loc": {
+        "start": {
+          "line": 36,
+          "column": 0
+        },
+        "end": {
+          "line": 36,
+          "column": 77
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ THE SOFTWARE.",
+      "start": 2376,
+      "end": 2393,
+      "loc": {
+        "start": {
+          "line": 37,
+          "column": 0
+        },
+        "end": {
+          "line": 37,
+          "column": 17
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * EventDispatcher 类\n ",
+      "start": 2394,
+      "end": 2422,
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 0
+        },
+        "end": {
+          "line": 40,
+          "column": 3
+        }
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "type": "CommentLine",
+      "value": "/ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+      "start": 0,
+      "end": 78,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 78
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ @Copyright ~2018 ☜Samlv9☞ and other contributors",
+      "start": 79,
+      "end": 131,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 52
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ @MIT-LICENSE | 1.0.0 | https://api.guless.com/",
+      "start": 132,
+      "end": 182,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 50
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",
+      "start": 183,
+      "end": 261,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 78
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/                                              }|",
+      "start": 262,
+      "end": 313,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 51
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/                                              }|",
+      "start": 314,
+      "end": 365,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 51
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/                                              }|     　 へ　　　 ／|    ",
+      "start": 366,
+      "end": 435,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 7,
+          "column": 69
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/      _______     _______         ______      }|      /　│　　 ／ ／",
+      "start": 436,
+      "end": 502,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 66
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/     /  ___  |   |_   __ \\      .' ____ '.    }|     │　Z ＿,＜　／　　 /`ヽ",
+      "start": 503,
+      "end": 574,
+      "loc": {
+        "start": {
+          "line": 9,
+          "column": 0
+        },
+        "end": {
+          "line": 9,
+          "column": 71
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/    |  (__ \\_|     | |__) |     | (____) |    }|     │　　　　　ヽ　　 /　　〉",
+      "start": 575,
+      "end": 645,
+      "loc": {
+        "start": {
+          "line": 10,
+          "column": 0
+        },
+        "end": {
+          "line": 10,
+          "column": 70
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/     '.___`-.      |  __ /      '_.____. |    }|      Y　　　　　`　 /　　/",
+      "start": 646,
+      "end": 716,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 0
+        },
+        "end": {
+          "line": 11,
+          "column": 70
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/    |`\\____) |    _| |  \\ \\_    | \\____| |    }|    ｲ●　､　●　　⊂⊃〈　　/",
+      "start": 717,
+      "end": 786,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 0
+        },
+        "end": {
+          "line": 12,
+          "column": 69
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/    |_______.'   |____| |___|    \\______,'    }|    ()　 v　　　　|　＼〈",
+      "start": 787,
+      "end": 855,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 0
+        },
+        "end": {
+          "line": 13,
+          "column": 68
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/    |=========================================\\|    　>ｰ ､_　 ィ　 │ ／／",
+      "start": 856,
+      "end": 926,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 0
+        },
+        "end": {
+          "line": 14,
+          "column": 70
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/    |> LESS IS MORE                           ||     / へ　　 /　ﾉ＜|＼＼",
+      "start": 927,
+      "end": 996,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 0
+        },
+        "end": {
+          "line": 15,
+          "column": 69
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/    `=========================================/|    ヽ_ﾉ　　(_／　 │／／",
+      "start": 997,
+      "end": 1065,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 0
+        },
+        "end": {
+          "line": 16,
+          "column": 68
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/                                              }|     7　　　　　　  |／",
+      "start": 1066,
+      "end": 1133,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 0
+        },
+        "end": {
+          "line": 17,
+          "column": 67
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/                                              }|     ＞―r￣￣`ｰ―＿`",
+      "start": 1134,
+      "end": 1200,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 0
+        },
+        "end": {
+          "line": 18,
+          "column": 66
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/                                              }|",
+      "start": 1201,
+      "end": 1252,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 0
+        },
+        "end": {
+          "line": 19,
+          "column": 51
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/                                              }|",
+      "start": 1253,
+      "end": 1304,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 0
+        },
+        "end": {
+          "line": 20,
+          "column": 51
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ Permission is hereby granted, free of charge, to any person obtaining a copy",
+      "start": 1305,
+      "end": 1385,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 0
+        },
+        "end": {
+          "line": 21,
+          "column": 80
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ of this software and associated documentation files (the \"Software\"), to deal",
+      "start": 1386,
+      "end": 1467,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 0
+        },
+        "end": {
+          "line": 22,
+          "column": 81
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ in the Software without restriction, including without limitation the rights",
+      "start": 1468,
+      "end": 1548,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 0
+        },
+        "end": {
+          "line": 23,
+          "column": 80
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell",
+      "start": 1549,
+      "end": 1626,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 0
+        },
+        "end": {
+          "line": 24,
+          "column": 77
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ copies of the Software, and to permit persons to whom the Software is",
+      "start": 1627,
+      "end": 1700,
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 0
+        },
+        "end": {
+          "line": 25,
+          "column": 73
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ furnished to do so, subject to the following conditions:",
+      "start": 1701,
+      "end": 1761,
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 0
+        },
+        "end": {
+          "line": 26,
+          "column": 60
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/",
+      "start": 1762,
+      "end": 1765,
+      "loc": {
+        "start": {
+          "line": 27,
+          "column": 0
+        },
+        "end": {
+          "line": 27,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ The above copyright notice and this permission notice shall be included in all",
+      "start": 1766,
+      "end": 1848,
+      "loc": {
+        "start": {
+          "line": 28,
+          "column": 0
+        },
+        "end": {
+          "line": 28,
+          "column": 82
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ copies or substantial portions of the Software.",
+      "start": 1849,
+      "end": 1900,
+      "loc": {
+        "start": {
+          "line": 29,
+          "column": 0
+        },
+        "end": {
+          "line": 29,
+          "column": 51
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/",
+      "start": 1901,
+      "end": 1904,
+      "loc": {
+        "start": {
+          "line": 30,
+          "column": 0
+        },
+        "end": {
+          "line": 30,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR",
+      "start": 1905,
+      "end": 1983,
+      "loc": {
+        "start": {
+          "line": 31,
+          "column": 0
+        },
+        "end": {
+          "line": 31,
+          "column": 78
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,",
+      "start": 1984,
+      "end": 2060,
+      "loc": {
+        "start": {
+          "line": 32,
+          "column": 0
+        },
+        "end": {
+          "line": 32,
+          "column": 76
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE",
+      "start": 2061,
+      "end": 2140,
+      "loc": {
+        "start": {
+          "line": 33,
+          "column": 0
+        },
+        "end": {
+          "line": 33,
+          "column": 79
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER",
+      "start": 2141,
+      "end": 2215,
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 0
+        },
+        "end": {
+          "line": 34,
+          "column": 74
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,",
+      "start": 2216,
+      "end": 2297,
+      "loc": {
+        "start": {
+          "line": 35,
+          "column": 0
+        },
+        "end": {
+          "line": 35,
+          "column": 81
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN",
+      "start": 2298,
+      "end": 2375,
+      "loc": {
+        "start": {
+          "line": 36,
+          "column": 0
+        },
+        "end": {
+          "line": 36,
+          "column": 77
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "/ THE SOFTWARE.",
+      "start": 2376,
+      "end": 2393,
+      "loc": {
+        "start": {
+          "line": 37,
+          "column": 0
+        },
+        "end": {
+          "line": 37,
+          "column": 17
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * EventDispatcher 类\n ",
+      "start": 2394,
+      "end": 2422,
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 0
+        },
+        "end": {
+          "line": 40,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 2423,
+      "end": 2429,
+      "loc": {
+        "start": {
+          "line": 41,
+          "column": 0
+        },
+        "end": {
+          "line": 41,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "default",
+        "keyword": "default",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "default",
+      "start": 2430,
+      "end": 2437,
+      "loc": {
+        "start": {
+          "line": 41,
+          "column": 7
+        },
+        "end": {
+          "line": 41,
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "class",
+        "keyword": "class",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "class",
+      "start": 2438,
+      "end": 2443,
+      "loc": {
+        "start": {
+          "line": 41,
+          "column": 15
+        },
+        "end": {
+          "line": 41,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "EventDispatcher",
+      "start": 2444,
+      "end": 2459,
+      "loc": {
+        "start": {
+          "line": 41,
+          "column": 21
+        },
+        "end": {
+          "line": 41,
+          "column": 36
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 2460,
+      "end": 2461,
+      "loc": {
+        "start": {
+          "line": 41,
+          "column": 37
+        },
+        "end": {
+          "line": 41,
+          "column": 38
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 2492,
+      "end": 2493,
+      "loc": {
+        "start": {
+          "line": 48,
+          "column": 0
+        },
+        "end": {
+          "line": 48,
+          "column": 1
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "eof",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 2493,
+      "end": 2493,
+      "loc": {
+        "start": {
+          "line": 48,
+          "column": 1
+        },
+        "end": {
+          "line": 48,
+          "column": 1
+        }
+      }
+    }
+  ]
+}

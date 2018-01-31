@@ -1,0 +1,17 @@
+{
+    "source": "./src/",
+    "destination": "./docs/",
+    "plugins": [
+        { 
+            "name": "esdoc-standard-plugin", 
+            "option": { 
+                "brand": { "repository": "https://github.com/guless/events" },
+                "manual": { "index": "./manual/index.md", "globalIndex": false, "asset": "./manual/assets/", "files": ["./manual/overview.md"] }
+            }
+        },
+        { 
+            "name": "esdoc-ecmascript-proposal-plugin", 
+            "option": { "all": true } 
+        }
+    ]
+}
