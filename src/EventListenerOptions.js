@@ -36,157 +36,115 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 import IEventDispatcher from "./IEventDispatcher";
-import EventPhase from "./EventPhase";
+import IEventListenerOptions from "./IEventListenerOptions";
 
 /**
- * 定义 {@link EventDispatcher} 派发的事件对象。
+ * 定义侦听器配置选项。
+ * @implements {IEventListenerOptions}
+ * @see {@link EventListener}
  * @see {@link EventDispatcher}
  * @since 1.0.0
  */
-export default class Event {
+export default class EventListenerOptions /*< implements IEventListenerOptions >*/ {
     /**
-     * 创建一个事件对象。
+     * 创建一个侦听器选项对象。
      * 
-     * @param {String|Symbol} type - 事件类型。
-     * @param {Boolean} [bubbles=false] - 指示该事件是否参与冒泡行为。
-     * @param {Boolean} [cancelable=true] - 指示该事件是否可以取消默认行为。
+     * @param {IEventDispatcher} [scope=null] - 指定侦听器的作用域对象。
+     * @param {Boolean} [once=false] - 指示侦听器是否在执行后，自动从派发器中移除。
+     * @param {Boolean} [useCapture=false] - 指示侦听器是否在捕获阶段处理事件。
+     * @param {Number} [priority=0] - 指示侦听器在派发事件时的优先级（事件派发时会优先执行高优先级的侦听器）。
      * @since 1.0.0
      */
-    constructor( type, bubbles = false, cancelable = true ) {
-        /**
-         * @type {String|Symbol}
-         */
-        this._type = type;
-        
-        /**
-         * @type {Boolean}
-         */
-        this._bubbles = bubbles;
-        
-        /**
-         * @type {Boolean}
-         */
-        this._cancelable = cancelable;
-        
+    constructor( scope = null, once = false, useCapture = false, priority = 0 ) {
         /**
          * @type {IEventDispatcher}
          */
-        this._target = null;
-        
-        /**
-         * @type {IEventDispatcher}
-         */
-        this._currentTarget = null;
-        
-        /**
-         * @type {EventPhase}
-         */
-        this._eventPhase = EventPhase.NONE;
+        this._scope = scope;
         
         /**
          * @type {Boolean}
          */
-        this._defaultPrevented = false;
+        this._once = once;
         
         /**
          * @type {Boolean}
          */
-        this._stopPropagation = false;
+        this._useCapture = useCapture;
         
         /**
-         * @type {Boolean}
+         * @type {Number}
          */
-        this._stopImmediatePropagation = false;
+        this._priority = priority;
     }
     
     /**
-     * 获取事件类型。
-     * @type {String|Symbol}
-     * @since 1.0.0
-     */
-    get type() {
-        return this._type
-    }
-    
-    /**
-     * 指示该事件是否参与冒泡行为。
-     * @type {Boolean}
-     * @since 1.0.0
-     */
-    get bubbles() {
-        return this._bubbles;
-    }
-    
-    /**
-     * 指示该事件是否可以取消默认行为。
-     * @type {Boolean}
-     * @since 1.0.0
-     */
-    get cancelable() {
-        return this._cancelable;
-    }
-    
-    /**
-     * 获取事件的目标对象。
+     * 获取侦听器的作用域对象。
      * @type {IEventDispatcher}
      * @since 1.0.0
      */
-    get target() {
-        return this._target;
+    get scope() {
+        return this._scope;
     }
     
     /**
-     * 获取事件的当前对象。
-     * @type {IEventDispatcher}
-     * @since 1.0.0
-     */
-    get currentTarget() {
-        return this._currentTarget;
-    }
-    
-    /**
-     * 获取事件的当前阶段。
-     * @type {EventPhase}
-     * @since 1.0.0
-     */
-    get eventPhase() {
-        return this._eventPhase;
-    }
-    
-    /**
-     * 指示该事件是否已经取消了默认行为。
+     * 指示侦听器是否在执行后，自动从派发器中移除。
      * @type {Boolean}
      * @since 1.0.0
      */
-    get defaultPrevented() {
-        return this._defaultPrevented;
+    get once() {
+        return this._once;
     }
     
     /**
-     * 如果事件可以取消(`cancelable == true`)默认行为，则取消该事件的默认行为。
-     * @see {@link Event#cancelable}
+     * 指示侦听器是否在捕获阶段处理事件。
+     * @type {Boolean}
      * @since 1.0.0
      */
-    preventDefault() {
-        this._cancelable && (this._defaultPrevented = true);
+    get useCapture() {
+        return this._useCapture;
     }
     
     /**
-     * 停止事件冒泡，后续所有节点的侦听器都将不会收到该事件通知。
-     * @see {@link EventDispatcher#dispatchEvent}
+     * 指示侦听器在派发事件时的优先级。
+     * @type {Number}
      * @since 1.0.0
      */
-    stopPropagation() {
-        this._stopPropagation = true;
+    get priority() {
+        return this._priority;
     }
     
     /**
-     * 立即停止事件冒泡，当前节点以及后续所有节点的侦听器都将不会收到该事件通知。
-     * @see {@link EventDispatcher#dispatchEvent}
+     * 使用自定义的参数，初始化当前配置选项。
+     * 
+     * - 如果 `options` 是一个 `Boolean` 类型的值，则将 `options` 视为 {@link EventListenerOptions#useCapture}。
+     * - 如果 `options` 是一个 `IEventListenerOptions` 类型的值，则拷贝 `options` 的值到当前配置选项中。
+     * @param {Boolean|IEventListenerOptions} [options=false] - 指定侦听器的配置选项。
+     * @example
+     * const dispatcher = new EventDispatcher();
+     * const options = new EventListenerOptions();
+     * options.initWithParams({ "once": true, "scope": this });
+     * 
+     * dispatcher.addEventListener("custom", ( evt ) => {
+     *     /// 该事件侦听器在执行后，会自动从 `dispatcher` 派发器中移除。
+     *     console.log("success");
+     * }, options);
+     * 
+     * dispatcher.dispatchEvent(new Event("custom", false, false));
+     * @returns {this}
      * @since 1.0.0
      */
-    stopImmediatePropagation() {
-        this._stopPropagation = true;
-        this._stopImmediatePropagation = true;
+    initWithParams( options = false ) {
+        if ( typeof options == "boolean" ) {
+            this._useCapture = options;
+        }
+        
+        else {
+            if ( options.scope !== void 0 ) { this._scope = options.scope; }
+            if ( options.once !== void 0 ) { this._once  = options.once; }
+            if ( options.useCapture !== void 0 ) { this._useCapture = options.useCapture; }
+            if ( options.priority !== void 0 ) { this._priority = options.priority; }
+        }
+        
+        return this;
     }
 }

@@ -2,13 +2,16 @@
   "name": "gs-events",
   "version": "1.0.0",
   "description": "事件分发器（同步）",
+  "main": "exports.js",
   "scripts": {
     "docs": "esdoc"
   },
   "devDependencies": {
     "esdoc": "^1.0.4",
+    "esdoc-accessor-plugin": "^1.0.0",
     "esdoc-ecmascript-proposal-plugin": "^1.0.0",
     "esdoc-integrate-manual-plugin": "^1.0.0",
-    "esdoc-standard-plugin": "^1.0.0"
+    "esdoc-standard-plugin": "^1.0.0",
+    "esdoc-typescript-plugin": "^1.0.0"
   }
 }

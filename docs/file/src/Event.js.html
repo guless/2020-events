@@ -8,7 +8,7 @@
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
-<meta name="description" content="&#x540C;&#x6B65;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x5668;"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gs-events"><meta property="twitter:description" content="&#x540C;&#x6B65;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x5668;"></head>
+<meta name="description" content="&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x5668;&#xFF08;&#x540C;&#x6B65;&#xFF09;"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gs-events"><meta property="twitter:description" content="&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x5668;&#xFF08;&#x540C;&#x6B65;&#xFF09;"></head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
@@ -30,6 +30,13 @@
   <ul>
     
   <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Event.js~Event.html">Event</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EventDispatcher.js~EventDispatcher.html">EventDispatcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EventListener.js~EventListener.html">EventListener</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EventListenerOptions.js~EventListenerOptions.html">EventListenerOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EventPhase.js~EventPhase.html">EventPhase</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/src/IEventDispatcher.js~IEventDispatcher.html">IEventDispatcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/src/IEventListener.js~IEventListener.html">IEventListener</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/src/IEventListenerOptions.js~IEventListenerOptions.html">IEventListenerOptions</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -72,8 +79,12 @@
 /// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
+import IEventDispatcher from &quot;./IEventDispatcher&quot;;
+import EventPhase from &quot;./EventPhase&quot;;
+
 /**
- * Event &#x7C7B;&#x5B9A;&#x4E49; {@link EventDispatcher} &#x6D3E;&#x53D1;&#x7684;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x3002;
+ * &#x5B9A;&#x4E49; {@link EventDispatcher} &#x6D3E;&#x53D1;&#x7684;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x3002;
+ * @see {@link EventDispatcher}
  * @since 1.0.0
  */
 export default class Event {
@@ -86,10 +97,141 @@ export default class Event {
      * @since 1.0.0
      */
     constructor( type, bubbles = false, cancelable = true ) {
+        /**
+         * @type {String|Symbol}
+         */
+        this._type = type;
         
+        /**
+         * @type {Boolean}
+         */
+        this._bubbles = bubbles;
         
+        /**
+         * @type {Boolean}
+         */
+        this._cancelable = cancelable;
         
+        /**
+         * @type {IEventDispatcher}
+         */
+        this._target = null;
         
+        /**
+         * @type {IEventDispatcher}
+         */
+        this._currentTarget = null;
+        
+        /**
+         * @type {EventPhase}
+         */
+        this._eventPhase = EventPhase.NONE;
+        
+        /**
+         * @type {Boolean}
+         */
+        this._defaultPrevented = false;
+        
+        /**
+         * @type {Boolean}
+         */
+        this._stopPropagation = false;
+        
+        /**
+         * @type {Boolean}
+         */
+        this._stopImmediatePropagation = false;
+    }
+    
+    /**
+     * &#x83B7;&#x53D6;&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;&#x3002;
+     * @type {String|Symbol}
+     * @since 1.0.0
+     */
+    get type() {
+        return this._type
+    }
+    
+    /**
+     * &#x6307;&#x793A;&#x8BE5;&#x4E8B;&#x4EF6;&#x662F;&#x5426;&#x53C2;&#x4E0E;&#x5192;&#x6CE1;&#x884C;&#x4E3A;&#x3002;
+     * @type {Boolean}
+     * @since 1.0.0
+     */
+    get bubbles() {
+        return this._bubbles;
+    }
+    
+    /**
+     * &#x6307;&#x793A;&#x8BE5;&#x4E8B;&#x4EF6;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x53D6;&#x6D88;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x3002;
+     * @type {Boolean}
+     * @since 1.0.0
+     */
+    get cancelable() {
+        return this._cancelable;
+    }
+    
+    /**
+     * &#x83B7;&#x53D6;&#x4E8B;&#x4EF6;&#x7684;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#x3002;
+     * @type {IEventDispatcher}
+     * @since 1.0.0
+     */
+    get target() {
+        return this._target;
+    }
+    
+    /**
+     * &#x83B7;&#x53D6;&#x4E8B;&#x4EF6;&#x7684;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x3002;
+     * @type {IEventDispatcher}
+     * @since 1.0.0
+     */
+    get currentTarget() {
+        return this._currentTarget;
+    }
+    
+    /**
+     * &#x83B7;&#x53D6;&#x4E8B;&#x4EF6;&#x7684;&#x5F53;&#x524D;&#x9636;&#x6BB5;&#x3002;
+     * @type {EventPhase}
+     * @since 1.0.0
+     */
+    get eventPhase() {
+        return this._eventPhase;
+    }
+    
+    /**
+     * &#x6307;&#x793A;&#x8BE5;&#x4E8B;&#x4EF6;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x53D6;&#x6D88;&#x4E86;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x3002;
+     * @type {Boolean}
+     * @since 1.0.0
+     */
+    get defaultPrevented() {
+        return this._defaultPrevented;
+    }
+    
+    /**
+     * &#x5982;&#x679C;&#x4E8B;&#x4EF6;&#x53EF;&#x4EE5;&#x53D6;&#x6D88;(`cancelable == true`)&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#xFF0C;&#x5219;&#x53D6;&#x6D88;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x3002;
+     * @see {@link Event#cancelable}
+     * @since 1.0.0
+     */
+    preventDefault() {
+        this._cancelable &amp;&amp; (this._defaultPrevented = true);
+    }
+    
+    /**
+     * &#x505C;&#x6B62;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;&#xFF0C;&#x540E;&#x7EED;&#x6240;&#x6709;&#x8282;&#x70B9;&#x7684;&#x4FA6;&#x542C;&#x5668;&#x90FD;&#x5C06;&#x4E0D;&#x4F1A;&#x6536;&#x5230;&#x8BE5;&#x4E8B;&#x4EF6;&#x901A;&#x77E5;&#x3002;
+     * @see {@link EventDispatcher#dispatchEvent}
+     * @since 1.0.0
+     */
+    stopPropagation() {
+        this._stopPropagation = true;
+    }
+    
+    /**
+     * &#x7ACB;&#x5373;&#x505C;&#x6B62;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;&#xFF0C;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x4EE5;&#x53CA;&#x540E;&#x7EED;&#x6240;&#x6709;&#x8282;&#x70B9;&#x7684;&#x4FA6;&#x542C;&#x5668;&#x90FD;&#x5C06;&#x4E0D;&#x4F1A;&#x6536;&#x5230;&#x8BE5;&#x4E8B;&#x4EF6;&#x901A;&#x77E5;&#x3002;
+     * @see {@link EventDispatcher#dispatchEvent}
+     * @since 1.0.0
+     */
+    stopImmediatePropagation() {
+        this._stopPropagation = true;
+        this._stopImmediatePropagation = true;
     }
 }</code></pre>
 

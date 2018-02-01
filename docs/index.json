@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "src/Event.js",
-    "content": "/// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/// @Copyright ~2018 ☜Samlv9☞ and other contributors\n/// @MIT-LICENSE | 1.0.0 | https://api.guless.com/\n/// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n///                                              }|\n///                                              }|\n///                                              }|     　 へ　　　 ／|    \n///      _______     _______         ______      }|      /　│　　 ／ ／\n///     /  ___  |   |_   __ \\      .' ____ '.    }|     │　Z ＿,＜　／　　 /`ヽ\n///    |  (__ \\_|     | |__) |     | (____) |    }|     │　　　　　ヽ　　 /　　〉\n///     '.___`-.      |  __ /      '_.____. |    }|      Y　　　　　`　 /　　/\n///    |`\\____) |    _| |  \\ \\_    | \\____| |    }|    ｲ●　､　●　　⊂⊃〈　　/\n///    |_______.'   |____| |___|    \\______,'    }|    ()　 v　　　　|　＼〈\n///    |=========================================\\|    　>ｰ ､_　 ィ　 │ ／／\n///    |> LESS IS MORE                           ||     / へ　　 /　ﾉ＜|＼＼\n///    `=========================================/|    ヽ_ﾉ　　(_／　 │／／\n///                                              }|     7　　　　　　  |／\n///                                              }|     ＞―r￣￣`ｰ―＿`\n///                                              }|\n///                                              }|\n/// Permission is hereby granted, free of charge, to any person obtaining a copy\n/// of this software and associated documentation files (the \"Software\"), to deal\n/// in the Software without restriction, including without limitation the rights\n/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n/// copies of the Software, and to permit persons to whom the Software is\n/// furnished to do so, subject to the following conditions:\n///\n/// The above copyright notice and this permission notice shall be included in all\n/// copies or substantial portions of the Software.\n///\n/// THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n/// THE SOFTWARE.\n/**\n * Event 类定义 {@link EventDispatcher} 派发的事件对象。\n * @since 1.0.0\n */\nexport default class Event {\n    /**\n     * 创建一个事件对象。\n     * \n     * @param {String|Symbol} type - 事件类型。\n     * @param {Boolean} [bubbles=false] - 指示该事件是否参与冒泡行为。\n     * @param {Boolean} [cancelable=true] - 指示该事件是否可以取消默认行为。\n     * @since 1.0.0\n     */\n    constructor( type, bubbles = false, cancelable = true ) {\n        \n        \n        \n        \n    }\n}",
+    "content": "/// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/// @Copyright ~2018 ☜Samlv9☞ and other contributors\n/// @MIT-LICENSE | 1.0.0 | https://api.guless.com/\n/// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n///                                              }|\n///                                              }|\n///                                              }|     　 へ　　　 ／|    \n///      _______     _______         ______      }|      /　│　　 ／ ／\n///     /  ___  |   |_   __ \\      .' ____ '.    }|     │　Z ＿,＜　／　　 /`ヽ\n///    |  (__ \\_|     | |__) |     | (____) |    }|     │　　　　　ヽ　　 /　　〉\n///     '.___`-.      |  __ /      '_.____. |    }|      Y　　　　　`　 /　　/\n///    |`\\____) |    _| |  \\ \\_    | \\____| |    }|    ｲ●　､　●　　⊂⊃〈　　/\n///    |_______.'   |____| |___|    \\______,'    }|    ()　 v　　　　|　＼〈\n///    |=========================================\\|    　>ｰ ､_　 ィ　 │ ／／\n///    |> LESS IS MORE                           ||     / へ　　 /　ﾉ＜|＼＼\n///    `=========================================/|    ヽ_ﾉ　　(_／　 │／／\n///                                              }|     7　　　　　　  |／\n///                                              }|     ＞―r￣￣`ｰ―＿`\n///                                              }|\n///                                              }|\n/// Permission is hereby granted, free of charge, to any person obtaining a copy\n/// of this software and associated documentation files (the \"Software\"), to deal\n/// in the Software without restriction, including without limitation the rights\n/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n/// copies of the Software, and to permit persons to whom the Software is\n/// furnished to do so, subject to the following conditions:\n///\n/// The above copyright notice and this permission notice shall be included in all\n/// copies or substantial portions of the Software.\n///\n/// THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n/// THE SOFTWARE.\nimport IEventDispatcher from \"./IEventDispatcher\";\nimport EventPhase from \"./EventPhase\";\n\n/**\n * 定义 {@link EventDispatcher} 派发的事件对象。\n * @see {@link EventDispatcher}\n * @since 1.0.0\n */\nexport default class Event {\n    /**\n     * 创建一个事件对象。\n     * \n     * @param {String|Symbol} type - 事件类型。\n     * @param {Boolean} [bubbles=false] - 指示该事件是否参与冒泡行为。\n     * @param {Boolean} [cancelable=true] - 指示该事件是否可以取消默认行为。\n     * @since 1.0.0\n     */\n    constructor( type, bubbles = false, cancelable = true ) {\n        /**\n         * @type {String|Symbol}\n         */\n        this._type = type;\n        \n        /**\n         * @type {Boolean}\n         */\n        this._bubbles = bubbles;\n        \n        /**\n         * @type {Boolean}\n         */\n        this._cancelable = cancelable;\n        \n        /**\n         * @type {IEventDispatcher}\n         */\n        this._target = null;\n        \n        /**\n         * @type {IEventDispatcher}\n         */\n        this._currentTarget = null;\n        \n        /**\n         * @type {EventPhase}\n         */\n        this._eventPhase = EventPhase.NONE;\n        \n        /**\n         * @type {Boolean}\n         */\n        this._defaultPrevented = false;\n        \n        /**\n         * @type {Boolean}\n         */\n        this._stopPropagation = false;\n        \n        /**\n         * @type {Boolean}\n         */\n        this._stopImmediatePropagation = false;\n    }\n    \n    /**\n     * 获取事件类型。\n     * @type {String|Symbol}\n     * @since 1.0.0\n     */\n    get type() {\n        return this._type\n    }\n    \n    /**\n     * 指示该事件是否参与冒泡行为。\n     * @type {Boolean}\n     * @since 1.0.0\n     */\n    get bubbles() {\n        return this._bubbles;\n    }\n    \n    /**\n     * 指示该事件是否可以取消默认行为。\n     * @type {Boolean}\n     * @since 1.0.0\n     */\n    get cancelable() {\n        return this._cancelable;\n    }\n    \n    /**\n     * 获取事件的目标对象。\n     * @type {IEventDispatcher}\n     * @since 1.0.0\n     */\n    get target() {\n        return this._target;\n    }\n    \n    /**\n     * 获取事件的当前对象。\n     * @type {IEventDispatcher}\n     * @since 1.0.0\n     */\n    get currentTarget() {\n        return this._currentTarget;\n    }\n    \n    /**\n     * 获取事件的当前阶段。\n     * @type {EventPhase}\n     * @since 1.0.0\n     */\n    get eventPhase() {\n        return this._eventPhase;\n    }\n    \n    /**\n     * 指示该事件是否已经取消了默认行为。\n     * @type {Boolean}\n     * @since 1.0.0\n     */\n    get defaultPrevented() {\n        return this._defaultPrevented;\n    }\n    \n    /**\n     * 如果事件可以取消(`cancelable == true`)默认行为，则取消该事件的默认行为。\n     * @see {@link Event#cancelable}\n     * @since 1.0.0\n     */\n    preventDefault() {\n        this._cancelable && (this._defaultPrevented = true);\n    }\n    \n    /**\n     * 停止事件冒泡，后续所有节点的侦听器都将不会收到该事件通知。\n     * @see {@link EventDispatcher#dispatchEvent}\n     * @since 1.0.0\n     */\n    stopPropagation() {\n        this._stopPropagation = true;\n    }\n    \n    /**\n     * 立即停止事件冒泡，当前节点以及后续所有节点的侦听器都将不会收到该事件通知。\n     * @see {@link EventDispatcher#dispatchEvent}\n     * @since 1.0.0\n     */\n    stopImmediatePropagation() {\n        this._stopPropagation = true;\n        this._stopImmediatePropagation = true;\n    }\n}",
     "static": true,
     "longname": "/Users/samlv9/Developer/GULESS/events/src/Event.js",
     "access": "public",
@@ -585,8 +585,11 @@
     "export": true,
     "importPath": "gs-events/src/Event.js",
     "importStyle": "Event",
-    "description": "Event 类定义 {@link EventDispatcher} 派发的事件对象。",
-    "lineNumber": 42,
+    "description": "定义 {@link EventDispatcher} 派发的事件对象。",
+    "see": [
+      "{@link EventDispatcher}"
+    ],
+    "lineNumber": 46,
     "since": "1.0.0",
     "interface": false
   },
@@ -601,7 +604,7 @@
     "longname": "src/Event.js~Event#constructor",
     "access": "public",
     "description": "创建一个事件对象。",
-    "lineNumber": 51,
+    "lineNumber": 55,
     "since": "1.0.0",
     "params": [
       {
@@ -642,8 +645,1635 @@
     ]
   },
   {
+    "__docId__": 51,
+    "kind": "member",
+    "name": "_type",
+    "memberof": "src/Event.js~Event",
+    "static": false,
+    "longname": "src/Event.js~Event#_type",
+    "access": "private",
+    "description": "",
+    "lineNumber": 59,
+    "type": {
+      "nullable": null,
+      "types": [
+        "String",
+        "Symbol"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 52,
+    "kind": "member",
+    "name": "_bubbles",
+    "memberof": "src/Event.js~Event",
+    "static": false,
+    "longname": "src/Event.js~Event#_bubbles",
+    "access": "private",
+    "description": "",
+    "lineNumber": 64,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Boolean"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 53,
+    "kind": "member",
+    "name": "_cancelable",
+    "memberof": "src/Event.js~Event",
+    "static": false,
+    "longname": "src/Event.js~Event#_cancelable",
+    "access": "private",
+    "description": "",
+    "lineNumber": 69,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Boolean"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 54,
+    "kind": "member",
+    "name": "_target",
+    "memberof": "src/Event.js~Event",
+    "static": false,
+    "longname": "src/Event.js~Event#_target",
+    "access": "private",
+    "description": "",
+    "lineNumber": 74,
+    "type": {
+      "nullable": null,
+      "types": [
+        "IEventDispatcher"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 55,
+    "kind": "member",
+    "name": "_currentTarget",
+    "memberof": "src/Event.js~Event",
+    "static": false,
+    "longname": "src/Event.js~Event#_currentTarget",
+    "access": "private",
+    "description": "",
+    "lineNumber": 79,
+    "type": {
+      "nullable": null,
+      "types": [
+        "IEventDispatcher"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 56,
+    "kind": "member",
+    "name": "_eventPhase",
+    "memberof": "src/Event.js~Event",
+    "static": false,
+    "longname": "src/Event.js~Event#_eventPhase",
+    "access": "private",
+    "description": "",
+    "lineNumber": 84,
+    "type": {
+      "nullable": null,
+      "types": [
+        "EventPhase"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 57,
+    "kind": "member",
+    "name": "_defaultPrevented",
+    "memberof": "src/Event.js~Event",
+    "static": false,
+    "longname": "src/Event.js~Event#_defaultPrevented",
+    "access": "private",
+    "description": "",
+    "lineNumber": 89,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Boolean"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 58,
+    "kind": "member",
+    "name": "_stopPropagation",
+    "memberof": "src/Event.js~Event",
+    "static": false,
+    "longname": "src/Event.js~Event#_stopPropagation",
+    "access": "private",
+    "description": "",
+    "lineNumber": 94,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Boolean"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 59,
+    "kind": "member",
+    "name": "_stopImmediatePropagation",
+    "memberof": "src/Event.js~Event",
+    "static": false,
+    "longname": "src/Event.js~Event#_stopImmediatePropagation",
+    "access": "private",
+    "description": "",
+    "lineNumber": 99,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Boolean"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 60,
+    "kind": "get",
+    "name": "type",
+    "memberof": "src/Event.js~Event",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Event.js~Event#type",
+    "access": "public",
+    "description": "获取事件类型。",
+    "lineNumber": 107,
+    "since": "1.0.0",
+    "type": {
+      "nullable": null,
+      "types": [
+        "String",
+        "Symbol"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 61,
+    "kind": "get",
+    "name": "bubbles",
+    "memberof": "src/Event.js~Event",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Event.js~Event#bubbles",
+    "access": "public",
+    "description": "指示该事件是否参与冒泡行为。",
+    "lineNumber": 116,
+    "since": "1.0.0",
+    "type": {
+      "nullable": null,
+      "types": [
+        "Boolean"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 62,
+    "kind": "get",
+    "name": "cancelable",
+    "memberof": "src/Event.js~Event",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Event.js~Event#cancelable",
+    "access": "public",
+    "description": "指示该事件是否可以取消默认行为。",
+    "lineNumber": 125,
+    "since": "1.0.0",
+    "type": {
+      "nullable": null,
+      "types": [
+        "Boolean"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 63,
+    "kind": "get",
+    "name": "target",
+    "memberof": "src/Event.js~Event",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Event.js~Event#target",
+    "access": "public",
+    "description": "获取事件的目标对象。",
+    "lineNumber": 134,
+    "since": "1.0.0",
+    "type": {
+      "nullable": null,
+      "types": [
+        "IEventDispatcher"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 64,
+    "kind": "get",
+    "name": "currentTarget",
+    "memberof": "src/Event.js~Event",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Event.js~Event#currentTarget",
+    "access": "public",
+    "description": "获取事件的当前对象。",
+    "lineNumber": 143,
+    "since": "1.0.0",
+    "type": {
+      "nullable": null,
+      "types": [
+        "IEventDispatcher"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 65,
+    "kind": "get",
+    "name": "eventPhase",
+    "memberof": "src/Event.js~Event",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Event.js~Event#eventPhase",
+    "access": "public",
+    "description": "获取事件的当前阶段。",
+    "lineNumber": 152,
+    "since": "1.0.0",
+    "type": {
+      "nullable": null,
+      "types": [
+        "EventPhase"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 66,
+    "kind": "get",
+    "name": "defaultPrevented",
+    "memberof": "src/Event.js~Event",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Event.js~Event#defaultPrevented",
+    "access": "public",
+    "description": "指示该事件是否已经取消了默认行为。",
+    "lineNumber": 161,
+    "since": "1.0.0",
+    "type": {
+      "nullable": null,
+      "types": [
+        "Boolean"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 67,
+    "kind": "method",
+    "name": "preventDefault",
+    "memberof": "src/Event.js~Event",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Event.js~Event#preventDefault",
+    "access": "public",
+    "description": "如果事件可以取消(`cancelable == true`)默认行为，则取消该事件的默认行为。",
+    "see": [
+      "{@link Event#cancelable}"
+    ],
+    "lineNumber": 170,
+    "since": "1.0.0",
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 69,
+    "kind": "method",
+    "name": "stopPropagation",
+    "memberof": "src/Event.js~Event",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Event.js~Event#stopPropagation",
+    "access": "public",
+    "description": "停止事件冒泡，后续所有节点的侦听器都将不会收到该事件通知。",
+    "see": [
+      "{@link EventDispatcher#dispatchEvent}"
+    ],
+    "lineNumber": 179,
+    "since": "1.0.0",
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 71,
+    "kind": "method",
+    "name": "stopImmediatePropagation",
+    "memberof": "src/Event.js~Event",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/Event.js~Event#stopImmediatePropagation",
+    "access": "public",
+    "description": "立即停止事件冒泡，当前节点以及后续所有节点的侦听器都将不会收到该事件通知。",
+    "see": [
+      "{@link EventDispatcher#dispatchEvent}"
+    ],
+    "lineNumber": 188,
+    "since": "1.0.0",
+    "params": [],
+    "return": null
+  },
+  {
+    "__docId__": 74,
+    "kind": "file",
+    "name": "src/EventDispatcher.js",
+    "content": "/// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/// @Copyright ~2018 ☜Samlv9☞ and other contributors\n/// @MIT-LICENSE | 1.0.0 | https://api.guless.com/\n/// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n///                                              }|\n///                                              }|\n///                                              }|     　 へ　　　 ／|    \n///      _______     _______         ______      }|      /　│　　 ／ ／\n///     /  ___  |   |_   __ \\      .' ____ '.    }|     │　Z ＿,＜　／　　 /`ヽ\n///    |  (__ \\_|     | |__) |     | (____) |    }|     │　　　　　ヽ　　 /　　〉\n///     '.___`-.      |  __ /      '_.____. |    }|      Y　　　　　`　 /　　/\n///    |`\\____) |    _| |  \\ \\_    | \\____| |    }|    ｲ●　､　●　　⊂⊃〈　　/\n///    |_______.'   |____| |___|    \\______,'    }|    ()　 v　　　　|　＼〈\n///    |=========================================\\|    　>ｰ ､_　 ィ　 │ ／／\n///    |> LESS IS MORE                           ||     / へ　　 /　ﾉ＜|＼＼\n///    `=========================================/|    ヽ_ﾉ　　(_／　 │／／\n///                                              }|     7　　　　　　  |／\n///                                              }|     ＞―r￣￣`ｰ―＿`\n///                                              }|\n///                                              }|\n/// Permission is hereby granted, free of charge, to any person obtaining a copy\n/// of this software and associated documentation files (the \"Software\"), to deal\n/// in the Software without restriction, including without limitation the rights\n/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n/// copies of the Software, and to permit persons to whom the Software is\n/// furnished to do so, subject to the following conditions:\n///\n/// The above copyright notice and this permission notice shall be included in all\n/// copies or substantial portions of the Software.\n///\n/// THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n/// THE SOFTWARE.\nimport IEventDispatcher from \"./IEventDispatcher\";\nimport IEventListener from \"./IEventListener\";\nimport IEventListenerOptions from \"./IEventListenerOptions\";\nimport Event from \"./Event\";\nimport EventListener from \"./EventListener\";\n\n/**\n * 定义所有具备事件派发功能对象的基类。\n * @implements {IEventDispatcher}\n * @since 1.0.0\n */\nexport default class EventDispatcher /*< implements IEventDispatcher >*/ {\n    /**\n     * 创建一个事件派发器。\n     * @param {IEventDispatcher} [target=null] - 指定派发器的代理目标对象。\n     */\n    constructor( target = null ) {\n        /**\n         * @type {IEventDispatcher}\n         */\n        this._eventTarget = (target || this);\n        \n        /**\n         * @type { {[type:string]:Array<EventListener>} }\n         */\n        this._eventRegister = {};\n    }\n    \n    /**\n     * 注册一个事件侦听器。\n     * @param {String|Symbol} type - 注册的事件类型。\n     * @param {Function|IEventListener} listener - 指定事件处理函数或者是一个事件侦听器。\n     * @param {Boolean|IEventListenerOptions} [options=false] - 指定侦听器配置选项。\n     */\n    addEventListener( type, listener, options = false ) {\n        \n        \n    }\n    \n    /**\n     * 移除一个事件侦听器。\n     * @param {String|Symbol} type - 移除的事件类型。\n     * @param {Function|IEventListener} listener - 指定要移除的事件处理函数或者事件侦听器。\n     * @param {Boolean} [useCapture=false] - 指定是移除捕获阶段(`true`)还是冒泡阶段(`false`)的事件侦听器。\n     */\n    removeEventListener( type, listener, useCapture = false ) {\n        \n        \n    }\n    \n    /**\n     * 检查是否注册了指定类型的事件侦听器。\n     * @param {String|Symbol} type - 检查的事件类型。\n     * @returns {Boolean} - 如果存在指定类型的侦听器则返回 `true`，否则返回 `false`。\n     */\n    hasEventListener( type ) {\n        \n        \n    }\n    \n    /**\n     * 派发一个事件对象到目标对象的事件流中。\n     * @param {Event} event - 指定派发的事件对象。\n     * @returns {Boolean} - 如果事件传递到了当前目标对象，并且没有被取消默认行为。则返回 `true`，否则返回 `false`。\n     */\n    dispatchEvent( event ) {\n        \n        \n    }\n}",
+    "static": true,
+    "longname": "/Users/samlv9/Developer/GULESS/events/src/EventDispatcher.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 75,
+    "kind": "class",
+    "name": "EventDispatcher",
+    "memberof": "src/EventDispatcher.js",
+    "static": true,
+    "longname": "src/EventDispatcher.js~EventDispatcher",
+    "access": "public",
+    "export": true,
+    "importPath": "gs-events/src/EventDispatcher.js",
+    "importStyle": "EventDispatcher",
+    "description": "定义所有具备事件派发功能对象的基类。",
+    "lineNumber": 49,
+    "since": "1.0.0",
+    "interface": false,
+    "implements": [
+      "IEventDispatcher"
+    ]
+  },
+  {
+    "__docId__": 76,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/EventDispatcher.js~EventDispatcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EventDispatcher.js~EventDispatcher#constructor",
+    "access": "public",
+    "description": "创建一个事件派发器。",
+    "lineNumber": 54,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "IEventDispatcher"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "null",
+        "defaultRaw": null,
+        "name": "target",
+        "description": "指定派发器的代理目标对象。"
+      }
+    ]
+  },
+  {
+    "__docId__": 77,
+    "kind": "member",
+    "name": "_eventTarget",
+    "memberof": "src/EventDispatcher.js~EventDispatcher",
+    "static": false,
+    "longname": "src/EventDispatcher.js~EventDispatcher#_eventTarget",
+    "access": "private",
+    "description": "",
+    "lineNumber": 58,
+    "type": {
+      "nullable": null,
+      "types": [
+        "IEventDispatcher"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 78,
+    "kind": "member",
+    "name": "_eventRegister",
+    "memberof": "src/EventDispatcher.js~EventDispatcher",
+    "static": false,
+    "longname": "src/EventDispatcher.js~EventDispatcher#_eventRegister",
+    "access": "private",
+    "description": "",
+    "lineNumber": 63,
+    "type": {
+      "nullable": null,
+      "types": [
+        " {[type:string]:Array<EventListener>"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 79,
+    "kind": "method",
+    "name": "addEventListener",
+    "memberof": "src/EventDispatcher.js~EventDispatcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EventDispatcher.js~EventDispatcher#addEventListener",
+    "access": "public",
+    "description": "注册一个事件侦听器。",
+    "lineNumber": 72,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String",
+          "Symbol"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "type",
+        "description": "注册的事件类型。"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Function",
+          "IEventListener"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "listener",
+        "description": "指定事件处理函数或者是一个事件侦听器。"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean",
+          "IEventListenerOptions"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "options",
+        "description": "指定侦听器配置选项。"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 80,
+    "kind": "method",
+    "name": "removeEventListener",
+    "memberof": "src/EventDispatcher.js~EventDispatcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EventDispatcher.js~EventDispatcher#removeEventListener",
+    "access": "public",
+    "description": "移除一个事件侦听器。",
+    "lineNumber": 83,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String",
+          "Symbol"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "type",
+        "description": "移除的事件类型。"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Function",
+          "IEventListener"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "listener",
+        "description": "指定要移除的事件处理函数或者事件侦听器。"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "useCapture",
+        "description": "指定是移除捕获阶段(`true`)还是冒泡阶段(`false`)的事件侦听器。"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 81,
+    "kind": "method",
+    "name": "hasEventListener",
+    "memberof": "src/EventDispatcher.js~EventDispatcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EventDispatcher.js~EventDispatcher#hasEventListener",
+    "access": "public",
+    "description": "检查是否注册了指定类型的事件侦听器。",
+    "lineNumber": 93,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Boolean} - 如果存在指定类型的侦听器则返回 `true`，否则返回 `false`。"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String",
+          "Symbol"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "type",
+        "description": "检查的事件类型。"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Boolean"
+      ],
+      "spread": false,
+      "description": "如果存在指定类型的侦听器则返回 `true`，否则返回 `false`。"
+    }
+  },
+  {
+    "__docId__": 82,
+    "kind": "method",
+    "name": "dispatchEvent",
+    "memberof": "src/EventDispatcher.js~EventDispatcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EventDispatcher.js~EventDispatcher#dispatchEvent",
+    "access": "public",
+    "description": "派发一个事件对象到目标对象的事件流中。",
+    "lineNumber": 103,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Boolean} - 如果事件传递到了当前目标对象，并且没有被取消默认行为。则返回 `true`，否则返回 `false`。"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Event"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "event",
+        "description": "指定派发的事件对象。"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Boolean"
+      ],
+      "spread": false,
+      "description": "如果事件传递到了当前目标对象，并且没有被取消默认行为。则返回 `true`，否则返回 `false`。"
+    }
+  },
+  {
+    "__docId__": 83,
+    "kind": "file",
+    "name": "src/EventListener.js",
+    "content": "/// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/// @Copyright ~2018 ☜Samlv9☞ and other contributors\n/// @MIT-LICENSE | 1.0.0 | https://api.guless.com/\n/// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n///                                              }|\n///                                              }|\n///                                              }|     　 へ　　　 ／|    \n///      _______     _______         ______      }|      /　│　　 ／ ／\n///     /  ___  |   |_   __ \\      .' ____ '.    }|     │　Z ＿,＜　／　　 /`ヽ\n///    |  (__ \\_|     | |__) |     | (____) |    }|     │　　　　　ヽ　　 /　　〉\n///     '.___`-.      |  __ /      '_.____. |    }|      Y　　　　　`　 /　　/\n///    |`\\____) |    _| |  \\ \\_    | \\____| |    }|    ｲ●　､　●　　⊂⊃〈　　/\n///    |_______.'   |____| |___|    \\______,'    }|    ()　 v　　　　|　＼〈\n///    |=========================================\\|    　>ｰ ､_　 ィ　 │ ／／\n///    |> LESS IS MORE                           ||     / へ　　 /　ﾉ＜|＼＼\n///    `=========================================/|    ヽ_ﾉ　　(_／　 │／／\n///                                              }|     7　　　　　　  |／\n///                                              }|     ＞―r￣￣`ｰ―＿`\n///                                              }|\n///                                              }|\n/// Permission is hereby granted, free of charge, to any person obtaining a copy\n/// of this software and associated documentation files (the \"Software\"), to deal\n/// in the Software without restriction, including without limitation the rights\n/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n/// copies of the Software, and to permit persons to whom the Software is\n/// furnished to do so, subject to the following conditions:\n///\n/// The above copyright notice and this permission notice shall be included in all\n/// copies or substantial portions of the Software.\n///\n/// THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n/// THE SOFTWARE.\nimport IEventListener from \"./IEventListener\";\nimport IEventListenerOptions from \"./IEventListenerOptions\";\nimport Event from \"./Event\";\nimport EventListenerOptions from \"./EventListenerOptions\";\n\n/**\n * 定义 {@link EventDispatcher} 的事件侦听器对象。\n * @implements {IEventListener}\n * @since 1.0.0\n */\nexport default class EventListener /*< implement IEventListener >*/ {\n    /**\n     * 创建一个侦听器对象。\n     * \n     * @param {Function|IEventListener} handler - 指定事件处理函数或者是一个侦听器。\n     * @param {Boolean|IEventListenerOptions} [options=false] - 指定侦听器的配置选项。\n     */\n    constructor( handler, options = false ) {\n        /**\n         * @type {Function|IEventListener}\n         */\n        this._handler = handler;\n        \n        /**\n         * @type {EventListenerOptions}\n         */\n        this._options = (new EventListenerOptions()).initWithParams(options);\n    }\n    \n    /**\n     * 处理一个事件对象。\n     * @param {Event} event - 指定派发的事件对象。\n     */\n    handleEvent( event ) {\n        \n        \n    }\n}",
+    "static": true,
+    "longname": "/Users/samlv9/Developer/GULESS/events/src/EventListener.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 84,
+    "kind": "class",
+    "name": "EventListener",
+    "memberof": "src/EventListener.js",
+    "static": true,
+    "longname": "src/EventListener.js~EventListener",
+    "access": "public",
+    "export": true,
+    "importPath": "gs-events/src/EventListener.js",
+    "importStyle": "EventListener",
+    "description": "定义 {@link EventDispatcher} 的事件侦听器对象。",
+    "lineNumber": 48,
+    "since": "1.0.0",
+    "interface": false,
+    "implements": [
+      "IEventListener"
+    ]
+  },
+  {
+    "__docId__": 85,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/EventListener.js~EventListener",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EventListener.js~EventListener#constructor",
+    "access": "public",
+    "description": "创建一个侦听器对象。",
+    "lineNumber": 55,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Function",
+          "IEventListener"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "handler",
+        "description": "指定事件处理函数或者是一个侦听器。"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean",
+          "IEventListenerOptions"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "options",
+        "description": "指定侦听器的配置选项。"
+      }
+    ]
+  },
+  {
+    "__docId__": 86,
+    "kind": "member",
+    "name": "_handler",
+    "memberof": "src/EventListener.js~EventListener",
+    "static": false,
+    "longname": "src/EventListener.js~EventListener#_handler",
+    "access": "private",
+    "description": "",
+    "lineNumber": 59,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Function",
+        "IEventListener"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 87,
+    "kind": "member",
+    "name": "_options",
+    "memberof": "src/EventListener.js~EventListener",
+    "static": false,
+    "longname": "src/EventListener.js~EventListener#_options",
+    "access": "private",
+    "description": "",
+    "lineNumber": 64,
+    "type": {
+      "nullable": null,
+      "types": [
+        "EventListenerOptions"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 88,
+    "kind": "method",
+    "name": "handleEvent",
+    "memberof": "src/EventListener.js~EventListener",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EventListener.js~EventListener#handleEvent",
+    "access": "public",
+    "description": "处理一个事件对象。",
+    "lineNumber": 71,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Event"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "event",
+        "description": "指定派发的事件对象。"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 89,
+    "kind": "file",
+    "name": "src/EventListenerOptions.js",
+    "content": "/// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/// @Copyright ~2018 ☜Samlv9☞ and other contributors\n/// @MIT-LICENSE | 1.0.0 | https://api.guless.com/\n/// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n///                                              }|\n///                                              }|\n///                                              }|     　 へ　　　 ／|    \n///      _______     _______         ______      }|      /　│　　 ／ ／\n///     /  ___  |   |_   __ \\      .' ____ '.    }|     │　Z ＿,＜　／　　 /`ヽ\n///    |  (__ \\_|     | |__) |     | (____) |    }|     │　　　　　ヽ　　 /　　〉\n///     '.___`-.      |  __ /      '_.____. |    }|      Y　　　　　`　 /　　/\n///    |`\\____) |    _| |  \\ \\_    | \\____| |    }|    ｲ●　､　●　　⊂⊃〈　　/\n///    |_______.'   |____| |___|    \\______,'    }|    ()　 v　　　　|　＼〈\n///    |=========================================\\|    　>ｰ ､_　 ィ　 │ ／／\n///    |> LESS IS MORE                           ||     / へ　　 /　ﾉ＜|＼＼\n///    `=========================================/|    ヽ_ﾉ　　(_／　 │／／\n///                                              }|     7　　　　　　  |／\n///                                              }|     ＞―r￣￣`ｰ―＿`\n///                                              }|\n///                                              }|\n/// Permission is hereby granted, free of charge, to any person obtaining a copy\n/// of this software and associated documentation files (the \"Software\"), to deal\n/// in the Software without restriction, including without limitation the rights\n/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n/// copies of the Software, and to permit persons to whom the Software is\n/// furnished to do so, subject to the following conditions:\n///\n/// The above copyright notice and this permission notice shall be included in all\n/// copies or substantial portions of the Software.\n///\n/// THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n/// THE SOFTWARE.\nimport IEventDispatcher from \"./IEventDispatcher\";\nimport IEventListenerOptions from \"./IEventListenerOptions\";\n\n/**\n * 定义侦听器配置选项。\n * @implements {IEventListenerOptions}\n * @see {@link EventListener}\n * @see {@link EventDispatcher}\n * @since 1.0.0\n */\nexport default class EventListenerOptions /*< implements IEventListenerOptions >*/ {\n    /**\n     * 创建一个侦听器选项对象。\n     * \n     * @param {IEventDispatcher} [scope=null] - 指定侦听器的作用域对象。\n     * @param {Boolean} [once=false] - 指示侦听器是否在执行后，自动从派发器中移除。\n     * @param {Boolean} [useCapture=false] - 指示侦听器是否在捕获阶段处理事件。\n     * @param {Number} [priority=0] - 指示侦听器在派发事件时的优先级（事件派发时会优先执行高优先级的侦听器）。\n     * @since 1.0.0\n     */\n    constructor( scope = null, once = false, useCapture = false, priority = 0 ) {\n        /**\n         * @type {IEventDispatcher}\n         */\n        this._scope = scope;\n        \n        /**\n         * @type {Boolean}\n         */\n        this._once = once;\n        \n        /**\n         * @type {Boolean}\n         */\n        this._useCapture = useCapture;\n        \n        /**\n         * @type {Number}\n         */\n        this._priority = priority;\n    }\n    \n    /**\n     * 获取侦听器的作用域对象。\n     * @type {IEventDispatcher}\n     * @since 1.0.0\n     */\n    get scope() {\n        return this._scope;\n    }\n    \n    /**\n     * 指示侦听器是否在执行后，自动从派发器中移除。\n     * @type {Boolean}\n     * @since 1.0.0\n     */\n    get once() {\n        return this._once;\n    }\n    \n    /**\n     * 指示侦听器是否在捕获阶段处理事件。\n     * @type {Boolean}\n     * @since 1.0.0\n     */\n    get useCapture() {\n        return this._useCapture;\n    }\n    \n    /**\n     * 指示侦听器在派发事件时的优先级。\n     * @type {Number}\n     * @since 1.0.0\n     */\n    get priority() {\n        return this._priority;\n    }\n    \n    /**\n     * 使用自定义的参数，初始化当前配置选项。\n     * \n     * - 如果 `options` 是一个 `Boolean` 类型的值，则将 `options` 视为 {@link EventListenerOptions#useCapture}。\n     * - 如果 `options` 是一个 `IEventListenerOptions` 类型的值，则拷贝 `options` 的值到当前配置选项中。\n     * @param {Boolean|IEventListenerOptions} [options=false] - 指定侦听器的配置选项。\n     * @example\n     * const dispatcher = new EventDispatcher();\n     * const options = new EventListenerOptions();\n     * options.initWithParams({ \"once\": true, \"scope\": this });\n     * \n     * dispatcher.addEventListener(\"custom\", ( evt ) => {\n     *     /// 该事件侦听器在执行后，会自动从 `dispatcher` 派发器中移除。\n     *     console.log(\"success\");\n     * }, options);\n     * \n     * dispatcher.dispatchEvent(new Event(\"custom\", false, false));\n     * @returns {this}\n     * @since 1.0.0\n     */\n    initWithParams( options = false ) {\n        if ( typeof options == \"boolean\" ) {\n            this._useCapture = options;\n        }\n        \n        else {\n            if ( options.scope !== void 0 ) { this._scope = options.scope; }\n            if ( options.once !== void 0 ) { this._once  = options.once; }\n            if ( options.useCapture !== void 0 ) { this._useCapture = options.useCapture; }\n            if ( options.priority !== void 0 ) { this._priority = options.priority; }\n        }\n        \n        return this;\n    }\n}",
+    "static": true,
+    "longname": "/Users/samlv9/Developer/GULESS/events/src/EventListenerOptions.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 90,
+    "kind": "class",
+    "name": "EventListenerOptions",
+    "memberof": "src/EventListenerOptions.js",
+    "static": true,
+    "longname": "src/EventListenerOptions.js~EventListenerOptions",
+    "access": "public",
+    "export": true,
+    "importPath": "gs-events/src/EventListenerOptions.js",
+    "importStyle": "EventListenerOptions",
+    "description": "定义侦听器配置选项。",
+    "see": [
+      "{@link EventListener}",
+      "{@link EventDispatcher}"
+    ],
+    "lineNumber": 48,
+    "since": "1.0.0",
+    "interface": false,
+    "implements": [
+      "IEventListenerOptions"
+    ]
+  },
+  {
+    "__docId__": 91,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/EventListenerOptions.js~EventListenerOptions",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EventListenerOptions.js~EventListenerOptions#constructor",
+    "access": "public",
+    "description": "创建一个侦听器选项对象。",
+    "lineNumber": 58,
+    "since": "1.0.0",
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "IEventDispatcher"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "null",
+        "defaultRaw": null,
+        "name": "scope",
+        "description": "指定侦听器的作用域对象。"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "once",
+        "description": "指示侦听器是否在执行后，自动从派发器中移除。"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "useCapture",
+        "description": "指示侦听器是否在捕获阶段处理事件。"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Number"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "0",
+        "defaultRaw": 0,
+        "name": "priority",
+        "description": "指示侦听器在派发事件时的优先级（事件派发时会优先执行高优先级的侦听器）。"
+      }
+    ]
+  },
+  {
+    "__docId__": 92,
+    "kind": "member",
+    "name": "_scope",
+    "memberof": "src/EventListenerOptions.js~EventListenerOptions",
+    "static": false,
+    "longname": "src/EventListenerOptions.js~EventListenerOptions#_scope",
+    "access": "private",
+    "description": "",
+    "lineNumber": 62,
+    "type": {
+      "nullable": null,
+      "types": [
+        "IEventDispatcher"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 93,
+    "kind": "member",
+    "name": "_once",
+    "memberof": "src/EventListenerOptions.js~EventListenerOptions",
+    "static": false,
+    "longname": "src/EventListenerOptions.js~EventListenerOptions#_once",
+    "access": "private",
+    "description": "",
+    "lineNumber": 67,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Boolean"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 94,
+    "kind": "member",
+    "name": "_useCapture",
+    "memberof": "src/EventListenerOptions.js~EventListenerOptions",
+    "static": false,
+    "longname": "src/EventListenerOptions.js~EventListenerOptions#_useCapture",
+    "access": "private",
+    "description": "",
+    "lineNumber": 72,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Boolean"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 95,
+    "kind": "member",
+    "name": "_priority",
+    "memberof": "src/EventListenerOptions.js~EventListenerOptions",
+    "static": false,
+    "longname": "src/EventListenerOptions.js~EventListenerOptions#_priority",
+    "access": "private",
+    "description": "",
+    "lineNumber": 77,
+    "type": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": null
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 96,
+    "kind": "get",
+    "name": "scope",
+    "memberof": "src/EventListenerOptions.js~EventListenerOptions",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EventListenerOptions.js~EventListenerOptions#scope",
+    "access": "public",
+    "description": "获取侦听器的作用域对象。",
+    "lineNumber": 85,
+    "since": "1.0.0",
+    "type": {
+      "nullable": null,
+      "types": [
+        "IEventDispatcher"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 97,
+    "kind": "get",
+    "name": "once",
+    "memberof": "src/EventListenerOptions.js~EventListenerOptions",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EventListenerOptions.js~EventListenerOptions#once",
+    "access": "public",
+    "description": "指示侦听器是否在执行后，自动从派发器中移除。",
+    "lineNumber": 94,
+    "since": "1.0.0",
+    "type": {
+      "nullable": null,
+      "types": [
+        "Boolean"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 98,
+    "kind": "get",
+    "name": "useCapture",
+    "memberof": "src/EventListenerOptions.js~EventListenerOptions",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EventListenerOptions.js~EventListenerOptions#useCapture",
+    "access": "public",
+    "description": "指示侦听器是否在捕获阶段处理事件。",
+    "lineNumber": 103,
+    "since": "1.0.0",
+    "type": {
+      "nullable": null,
+      "types": [
+        "Boolean"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 99,
+    "kind": "get",
+    "name": "priority",
+    "memberof": "src/EventListenerOptions.js~EventListenerOptions",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EventListenerOptions.js~EventListenerOptions#priority",
+    "access": "public",
+    "description": "指示侦听器在派发事件时的优先级。",
+    "lineNumber": 112,
+    "since": "1.0.0",
+    "type": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 100,
+    "kind": "method",
+    "name": "initWithParams",
+    "memberof": "src/EventListenerOptions.js~EventListenerOptions",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/EventListenerOptions.js~EventListenerOptions#initWithParams",
+    "access": "public",
+    "description": "使用自定义的参数，初始化当前配置选项。\n\n- 如果 `options` 是一个 `Boolean` 类型的值，则将 `options` 视为 {@link EventListenerOptions#useCapture}。\n- 如果 `options` 是一个 `IEventListenerOptions` 类型的值，则拷贝 `options` 的值到当前配置选项中。",
+    "examples": [
+      "const dispatcher = new EventDispatcher();\nconst options = new EventListenerOptions();\noptions.initWithParams({ \"once\": true, \"scope\": this });\n\ndispatcher.addEventListener(\"custom\", ( evt ) => {\n    /// 该事件侦听器在执行后，会自动从 `dispatcher` 派发器中移除。\n    console.log(\"success\");\n}, options);\n\ndispatcher.dispatchEvent(new Event(\"custom\", false, false));"
+    ],
+    "lineNumber": 136,
+    "since": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{this}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Boolean",
+          "IEventListenerOptions"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "options",
+        "description": "指定侦听器的配置选项。"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "this"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 106,
+    "kind": "file",
+    "name": "src/EventPhase.js",
+    "content": "/// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n/// @Copyright ~2018 ☜Samlv9☞ and other contributors\n/// @MIT-LICENSE | 1.0.0 | https://api.guless.com/\n/// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n///                                              }|\n///                                              }|\n///                                              }|     　 へ　　　 ／|    \n///      _______     _______         ______      }|      /　│　　 ／ ／\n///     /  ___  |   |_   __ \\      .' ____ '.    }|     │　Z ＿,＜　／　　 /`ヽ\n///    |  (__ \\_|     | |__) |     | (____) |    }|     │　　　　　ヽ　　 /　　〉\n///     '.___`-.      |  __ /      '_.____. |    }|      Y　　　　　`　 /　　/\n///    |`\\____) |    _| |  \\ \\_    | \\____| |    }|    ｲ●　､　●　　⊂⊃〈　　/\n///    |_______.'   |____| |___|    \\______,'    }|    ()　 v　　　　|　＼〈\n///    |=========================================\\|    　>ｰ ､_　 ィ　 │ ／／\n///    |> LESS IS MORE                           ||     / へ　　 /　ﾉ＜|＼＼\n///    `=========================================/|    ヽ_ﾉ　　(_／　 │／／\n///                                              }|     7　　　　　　  |／\n///                                              }|     ＞―r￣￣`ｰ―＿`\n///                                              }|\n///                                              }|\n/// Permission is hereby granted, free of charge, to any person obtaining a copy\n/// of this software and associated documentation files (the \"Software\"), to deal\n/// in the Software without restriction, including without limitation the rights\n/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n/// copies of the Software, and to permit persons to whom the Software is\n/// furnished to do so, subject to the following conditions:\n///\n/// The above copyright notice and this permission notice shall be included in all\n/// copies or substantial portions of the Software.\n///\n/// THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n/// THE SOFTWARE.\n/**\n * 定义 {@link EventDispatcher} 派发事件的阶段的常量。\n * @enum {Number}\n * @since 1.0.0\n */\nexport default class EventPhase {\n    /**\n     * 定义事件的初始状态。\n     * @readonly\n     * @type {Number}\n     * @since 1.0.0\n     */\n    static NONE = 0;\n    \n    /**\n     * 定义事件处于捕获阶段。\n     * @readonly\n     * @type {Number}\n     * @since 1.0.0\n     */\n    static CAPTURING_PHASE = 1;\n    \n    /**\n     * 定义事件处于目标阶段。\n     * @readonly\n     * @type {Number}\n     * @since 1.0.0\n     */\n    static AT_TARGET = 2;\n    \n    /**\n     * 定义事件处于冒泡阶段。\n     * @readonly\n     * @type {Number}\n     * @since 1.0.0\n     */\n    static BUBBLING_PHASE = 3;\n}",
+    "static": true,
+    "longname": "/Users/samlv9/Developer/GULESS/events/src/EventPhase.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 107,
+    "kind": "class",
+    "name": "EventPhase",
+    "memberof": "src/EventPhase.js",
+    "static": true,
+    "longname": "src/EventPhase.js~EventPhase",
+    "access": "public",
+    "export": true,
+    "importPath": "gs-events/src/EventPhase.js",
+    "importStyle": "EventPhase",
+    "description": "定义 {@link EventDispatcher} 派发事件的阶段的常量。",
+    "lineNumber": 43,
+    "since": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@enum",
+        "tagValue": "{Number}"
+      }
+    ],
+    "interface": false
+  },
+  {
+    "__docId__": 108,
+    "kind": "member",
+    "name": "NONE",
+    "memberof": "src/EventPhase.js~EventPhase",
+    "static": true,
+    "longname": "src/EventPhase.js~EventPhase.NONE",
+    "access": "public",
+    "description": "定义事件的初始状态。",
+    "lineNumber": 50,
+    "since": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@readonly",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 109,
+    "kind": "member",
+    "name": "CAPTURING_PHASE",
+    "memberof": "src/EventPhase.js~EventPhase",
+    "static": true,
+    "longname": "src/EventPhase.js~EventPhase.CAPTURING_PHASE",
+    "access": "public",
+    "description": "定义事件处于捕获阶段。",
+    "lineNumber": 58,
+    "since": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@readonly",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 110,
+    "kind": "member",
+    "name": "AT_TARGET",
+    "memberof": "src/EventPhase.js~EventPhase",
+    "static": true,
+    "longname": "src/EventPhase.js~EventPhase.AT_TARGET",
+    "access": "public",
+    "description": "定义事件处于目标阶段。",
+    "lineNumber": 66,
+    "since": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@readonly",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 111,
+    "kind": "member",
+    "name": "BUBBLING_PHASE",
+    "memberof": "src/EventPhase.js~EventPhase",
+    "static": true,
+    "longname": "src/EventPhase.js~EventPhase.BUBBLING_PHASE",
+    "access": "public",
+    "description": "定义事件处于冒泡阶段。",
+    "lineNumber": 74,
+    "since": "1.0.0",
+    "unknown": [
+      {
+        "tagName": "@readonly",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 112,
+    "kind": "file",
+    "name": "src/IEventDispatcher.js",
+    "content": "/**\n * 定义所有具备事件派发功能对象的接口。\n * @interface\n */\nexport default class IEventDispatcher {\n    /**\n     * 注册一个事件侦听器。\n     * @param {String|Symbol} type - 注册的事件类型。\n     * @param {Function|IEventListener} listener - 指定事件处理函数或者是一个事件侦听器。\n     * @param {Boolean|IEventListenerOptions} [options=false] - 指定侦听器配置选项。\n     */\n    addEventListener( type, listener, options ) {};\n    \n    /**\n     * 移除一个事件侦听器。\n     * @param {String|Symbol} type - 移除的事件类型。\n     * @param {Function|IEventListener} listener - 指定要移除的事件处理函数或者事件侦听器。\n     * @param {Boolean} [useCapture=false] - 指定是移除捕获阶段(`true`)还是冒泡阶段(`false`)的事件侦听器。\n     */\n    removeEventListener( type, listener, useCapture ) {};\n    \n    /**\n     * 检查是否注册了指定类型的事件侦听器。\n     * @param {String|Symbol} type - 检查的事件类型。\n     * @returns {Boolean} - 如果存在指定类型的侦听器则返回 `true`，否则返回 `false`。\n     */\n    hasEventListener( type ) {};\n    \n    /**\n     * 派发一个事件对象到目标对象的事件流中。\n     * @param {Event} event - 指定派发的事件对象。\n     * @returns {Boolean} - 如果事件传递到了当前目标对象，并且没有被取消默认行为。则返回 `true`，否则返回 `false`。\n     */\n    dispatchEvent( event ) {};\n}",
+    "static": true,
+    "longname": "/Users/samlv9/Developer/GULESS/events/src/IEventDispatcher.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 113,
+    "kind": "class",
+    "name": "IEventDispatcher",
+    "memberof": "src/IEventDispatcher.js",
+    "static": true,
+    "longname": "src/IEventDispatcher.js~IEventDispatcher",
+    "access": "public",
+    "export": true,
+    "importPath": "gs-events/src/IEventDispatcher.js",
+    "importStyle": "IEventDispatcher",
+    "description": "定义所有具备事件派发功能对象的接口。",
+    "lineNumber": 5,
+    "interface": true
+  },
+  {
+    "__docId__": 114,
+    "kind": "method",
+    "name": "addEventListener",
+    "memberof": "src/IEventDispatcher.js~IEventDispatcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/IEventDispatcher.js~IEventDispatcher#addEventListener",
+    "access": "public",
+    "description": "注册一个事件侦听器。",
+    "lineNumber": 12,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String",
+          "Symbol"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "type",
+        "description": "注册的事件类型。"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Function",
+          "IEventListener"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "listener",
+        "description": "指定事件处理函数或者是一个事件侦听器。"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean",
+          "IEventListenerOptions"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "options",
+        "description": "指定侦听器配置选项。"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 115,
+    "kind": "method",
+    "name": "removeEventListener",
+    "memberof": "src/IEventDispatcher.js~IEventDispatcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/IEventDispatcher.js~IEventDispatcher#removeEventListener",
+    "access": "public",
+    "description": "移除一个事件侦听器。",
+    "lineNumber": 20,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String",
+          "Symbol"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "type",
+        "description": "移除的事件类型。"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Function",
+          "IEventListener"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "listener",
+        "description": "指定要移除的事件处理函数或者事件侦听器。"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Boolean"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "false",
+        "defaultRaw": false,
+        "name": "useCapture",
+        "description": "指定是移除捕获阶段(`true`)还是冒泡阶段(`false`)的事件侦听器。"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 116,
+    "kind": "method",
+    "name": "hasEventListener",
+    "memberof": "src/IEventDispatcher.js~IEventDispatcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/IEventDispatcher.js~IEventDispatcher#hasEventListener",
+    "access": "public",
+    "description": "检查是否注册了指定类型的事件侦听器。",
+    "lineNumber": 27,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Boolean} - 如果存在指定类型的侦听器则返回 `true`，否则返回 `false`。"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String",
+          "Symbol"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "type",
+        "description": "检查的事件类型。"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Boolean"
+      ],
+      "spread": false,
+      "description": "如果存在指定类型的侦听器则返回 `true`，否则返回 `false`。"
+    }
+  },
+  {
+    "__docId__": 117,
+    "kind": "method",
+    "name": "dispatchEvent",
+    "memberof": "src/IEventDispatcher.js~IEventDispatcher",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/IEventDispatcher.js~IEventDispatcher#dispatchEvent",
+    "access": "public",
+    "description": "派发一个事件对象到目标对象的事件流中。",
+    "lineNumber": 34,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Boolean} - 如果事件传递到了当前目标对象，并且没有被取消默认行为。则返回 `true`，否则返回 `false`。"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Event"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "event",
+        "description": "指定派发的事件对象。"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Boolean"
+      ],
+      "spread": false,
+      "description": "如果事件传递到了当前目标对象，并且没有被取消默认行为。则返回 `true`，否则返回 `false`。"
+    }
+  },
+  {
+    "__docId__": 118,
+    "kind": "file",
+    "name": "src/IEventListener.js",
+    "content": "import Event from \"./Event\";\n\n/**\n * 定义事件侦听器对象的接口。\n * @interface\n */\nexport default class IEventListener {\n    /**\n     * 处理一个事件对象。\n     * @param {Event} event - 指定派发的事件对象。\n     */\n    handleEvent( event ) {};\n}",
+    "static": true,
+    "longname": "/Users/samlv9/Developer/GULESS/events/src/IEventListener.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 119,
+    "kind": "class",
+    "name": "IEventListener",
+    "memberof": "src/IEventListener.js",
+    "static": true,
+    "longname": "src/IEventListener.js~IEventListener",
+    "access": "public",
+    "export": true,
+    "importPath": "gs-events/src/IEventListener.js",
+    "importStyle": "IEventListener",
+    "description": "定义事件侦听器对象的接口。",
+    "lineNumber": 7,
+    "interface": true
+  },
+  {
+    "__docId__": 120,
+    "kind": "method",
+    "name": "handleEvent",
+    "memberof": "src/IEventListener.js~IEventListener",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/IEventListener.js~IEventListener#handleEvent",
+    "access": "public",
+    "description": "处理一个事件对象。",
+    "lineNumber": 12,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Event"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "event",
+        "description": "指定派发的事件对象。"
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 121,
+    "kind": "file",
+    "name": "src/IEventListenerOptions.js",
+    "content": "/**\n * 定义侦听器配置选项的接口。\n * @interface\n */\nexport default class IEventListenerOptions {\n    /**\n     * 获取侦听器的作用域对象。\n     * @type {IEventDispatcher}\n     * @since 1.0.0\n     */\n    get scope() {};\n    \n    /**\n     * 指示侦听器是否在执行后，自动从派发器中移除。\n     * @type {Boolean}\n     * @since 1.0.0\n     */\n    get once() {};\n    \n    /**\n     * 指示侦听器是否在捕获阶段处理事件。\n     * @type {Boolean}\n     * @since 1.0.0\n     */\n    get useCapture() {};\n    \n    /**\n     * 指示侦听器在派发事件时的优先级。\n     * @type {Number}\n     * @since 1.0.0\n     */\n    get priority() {};\n}",
+    "static": true,
+    "longname": "/Users/samlv9/Developer/GULESS/events/src/IEventListenerOptions.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 122,
+    "kind": "class",
+    "name": "IEventListenerOptions",
+    "memberof": "src/IEventListenerOptions.js",
+    "static": true,
+    "longname": "src/IEventListenerOptions.js~IEventListenerOptions",
+    "access": "public",
+    "export": true,
+    "importPath": "gs-events/src/IEventListenerOptions.js",
+    "importStyle": "IEventListenerOptions",
+    "description": "定义侦听器配置选项的接口。",
+    "lineNumber": 5,
+    "interface": true
+  },
+  {
+    "__docId__": 123,
+    "kind": "get",
+    "name": "scope",
+    "memberof": "src/IEventListenerOptions.js~IEventListenerOptions",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/IEventListenerOptions.js~IEventListenerOptions#scope",
+    "access": "public",
+    "description": "获取侦听器的作用域对象。",
+    "lineNumber": 11,
+    "since": "1.0.0",
+    "type": {
+      "nullable": null,
+      "types": [
+        "IEventDispatcher"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 124,
+    "kind": "get",
+    "name": "once",
+    "memberof": "src/IEventListenerOptions.js~IEventListenerOptions",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/IEventListenerOptions.js~IEventListenerOptions#once",
+    "access": "public",
+    "description": "指示侦听器是否在执行后，自动从派发器中移除。",
+    "lineNumber": 18,
+    "since": "1.0.0",
+    "type": {
+      "nullable": null,
+      "types": [
+        "Boolean"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 125,
+    "kind": "get",
+    "name": "useCapture",
+    "memberof": "src/IEventListenerOptions.js~IEventListenerOptions",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/IEventListenerOptions.js~IEventListenerOptions#useCapture",
+    "access": "public",
+    "description": "指示侦听器是否在捕获阶段处理事件。",
+    "lineNumber": 25,
+    "since": "1.0.0",
+    "type": {
+      "nullable": null,
+      "types": [
+        "Boolean"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 126,
+    "kind": "get",
+    "name": "priority",
+    "memberof": "src/IEventListenerOptions.js~IEventListenerOptions",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/IEventListenerOptions.js~IEventListenerOptions#priority",
+    "access": "public",
+    "description": "指示侦听器在派发事件时的优先级。",
+    "lineNumber": 32,
+    "since": "1.0.0",
+    "type": {
+      "nullable": null,
+      "types": [
+        "Number"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
     "kind": "index",
-    "content": "同步事件分发器\n------------",
+    "content": "事件分发器（同步）\n--------------",
     "longname": "/Users/samlv9/Developer/GULESS/events/README.md",
     "name": "./README.md",
     "static": true,
@@ -651,7 +2281,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"gs-events\",\n  \"version\": \"1.0.0\",\n  \"description\": \"同步事件分发器\",\n  \"scripts\": {\n    \"docs\": \"esdoc\"\n  },\n  \"devDependencies\": {\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-integrate-manual-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\"\n  }\n}\n",
+    "content": "{\n  \"name\": \"gs-events\",\n  \"version\": \"1.0.0\",\n  \"description\": \"事件分发器（同步）\",\n  \"main\": \"exports.js\",\n  \"scripts\": {\n    \"docs\": \"esdoc\"\n  },\n  \"devDependencies\": {\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-accessor-plugin\": \"^1.0.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-integrate-manual-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"esdoc-typescript-plugin\": \"^1.0.0\"\n  }\n}\n",
     "longname": "/Users/samlv9/Developer/GULESS/events/package.json",
     "name": "package.json",
     "static": true,

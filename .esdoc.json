@@ -6,6 +6,7 @@
             "name": "esdoc-standard-plugin", 
             "option": { 
                 "brand": { "repository": "https://github.com/guless/events" },
+                "accessor": { "access": ["public", "protected"], "autoPrivate": true },
                 "manual": { "index": "./manual/index.md", "globalIndex": false, "asset": "./manual/assets/", "files": ["./manual/overview.md"] }
             }
         },

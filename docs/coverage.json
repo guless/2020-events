@@ -1,11 +1,46 @@
 {
   "coverage": "100%",
-  "expectCount": 2,
-  "actualCount": 2,
+  "expectCount": 62,
+  "actualCount": 62,
   "files": {
     "src/Event.js": {
+      "expectCount": 21,
+      "actualCount": 21,
+      "undocumentLines": []
+    },
+    "src/EventDispatcher.js": {
+      "expectCount": 8,
+      "actualCount": 8,
+      "undocumentLines": []
+    },
+    "src/EventListener.js": {
+      "expectCount": 5,
+      "actualCount": 5,
+      "undocumentLines": []
+    },
+    "src/EventListenerOptions.js": {
+      "expectCount": 11,
+      "actualCount": 11,
+      "undocumentLines": []
+    },
+    "src/EventPhase.js": {
+      "expectCount": 5,
+      "actualCount": 5,
+      "undocumentLines": []
+    },
+    "src/IEventDispatcher.js": {
+      "expectCount": 5,
+      "actualCount": 5,
+      "undocumentLines": []
+    },
+    "src/IEventListener.js": {
       "expectCount": 2,
       "actualCount": 2,
+      "undocumentLines": []
+    },
+    "src/IEventListenerOptions.js": {
+      "expectCount": 5,
+      "actualCount": 5,
       "undocumentLines": []
     }
   }

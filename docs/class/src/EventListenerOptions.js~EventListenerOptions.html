@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">EventListenerOptions | gs-events</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x5668;&#xFF08;&#x540C;&#x6B65;&#xFF09;"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gs-events"><meta property="twitter:description" content="&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x5668;&#xFF08;&#x540C;&#x6B65;&#xFF09;"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/guless/events"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Event.js~Event.html">Event</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EventDispatcher.js~EventDispatcher.html">EventDispatcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EventListener.js~EventListener.html">EventListener</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EventListenerOptions.js~EventListenerOptions.html">EventListenerOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/EventPhase.js~EventPhase.html">EventPhase</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/src/IEventDispatcher.js~IEventDispatcher.html">IEventDispatcher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/src/IEventListener.js~IEventListener.html">IEventListener</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/src/IEventListenerOptions.js~IEventListenerOptions.html">IEventListenerOptions</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="header-notice">
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import EventListenerOptions from &apos;<span><a href="file/src/EventListenerOptions.js.html#lineNumber48">gs-events/src/EventListenerOptions.js</a></span>&apos;</code></pre></div>
+  <span data-ice="access">public</span>
+  <span data-ice="kind">class</span>
+  
+  
+  <span data-ice="since">| since 1.0.0</span>
+  <span data-ice="source">| <span><a href="file/src/EventListenerOptions.js.html#lineNumber48">source</a></span></span>
+</div>
+
+<div class="self-detail detail">
+  <h1 data-ice="name">EventListenerOptions</h1>
+
+  
+
+  
+  
+  
+  
+  
+  <div class="flat-list" data-ice="implements"><h4>Implements:</h4><ul><li><span><a href="class/src/IEventListenerOptions.js~IEventListenerOptions.html">IEventListenerOptions</a></span></li></ul></div>
+  
+  
+  
+
+  
+  
+  <div class="description" data-ice="description"><p>&#x5B9A;&#x4E49;&#x4FA6;&#x542C;&#x5668;&#x914D;&#x7F6E;&#x9009;&#x9879;&#x3002;</p>
+</div>
+  
+
+  <div data-ice="see"><h4>See:</h4><ul><li><span><span><a href="class/src/EventListener.js~EventListener.html">EventListener</a></span></span></li>
+<li><span><span><a href="class/src/EventDispatcher.js~EventDispatcher.html">EventDispatcher</a></span></span></li></ul></div>
+
+  
+
+  
+
+  
+</div>
+
+
+
+<div data-ice="constructorSummary"><h2>Constructor Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3">Public Constructor</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/EventListenerOptions.js~EventListenerOptions.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(scope: <span><a href="class/src/IEventDispatcher.js~IEventDispatcher.html">IEventDispatcher</a></span>, once: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span>, useCapture: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span>, priority: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>)</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4FA6;&#x542C;&#x5668;&#x9009;&#x9879;&#x5BF9;&#x8C61;&#x3002;</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since 1.0.0</span>
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<div data-ice="memberSummary"><h2>Member Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3">Public Members</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      <span class="kind" data-ice="kind">get</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/EventListenerOptions.js~EventListenerOptions.html#instance-get-once">once</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>&#x6307;&#x793A;&#x4FA6;&#x542C;&#x5668;&#x662F;&#x5426;&#x5728;&#x6267;&#x884C;&#x540E;&#xFF0C;&#x81EA;&#x52A8;&#x4ECE;&#x6D3E;&#x53D1;&#x5668;&#x4E2D;&#x79FB;&#x9664;&#x3002;</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since 1.0.0</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      <span class="kind" data-ice="kind">get</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/EventListenerOptions.js~EventListenerOptions.html#instance-get-priority">priority</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>&#x6307;&#x793A;&#x4FA6;&#x542C;&#x5668;&#x5728;&#x6D3E;&#x53D1;&#x4E8B;&#x4EF6;&#x65F6;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x3002;</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since 1.0.0</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      <span class="kind" data-ice="kind">get</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/EventListenerOptions.js~EventListenerOptions.html#instance-get-scope">scope</a></span></span><span class="code" data-ice="signature">: <span><a href="class/src/IEventDispatcher.js~IEventDispatcher.html">IEventDispatcher</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>&#x83B7;&#x53D6;&#x4FA6;&#x542C;&#x5668;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x5BF9;&#x8C61;&#x3002;</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since 1.0.0</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      <span class="kind" data-ice="kind">get</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/EventListenerOptions.js~EventListenerOptions.html#instance-get-useCapture">useCapture</a></span></span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>&#x6307;&#x793A;&#x4FA6;&#x542C;&#x5668;&#x662F;&#x5426;&#x5728;&#x6355;&#x83B7;&#x9636;&#x6BB5;&#x5904;&#x7406;&#x4E8B;&#x4EF6;&#x3002;</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since 1.0.0</span>
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<div data-ice="methodSummary"><h2>Method Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3">Public Methods</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/EventListenerOptions.js~EventListenerOptions.html#instance-method-initWithParams">initWithParams</a></span></span><span class="code" data-ice="signature">(options: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span> | <span><a href="class/src/IEventListenerOptions.js~IEventListenerOptions.html">IEventListenerOptions</a></span>): <span>this</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x5F53;&#x524D;&#x914D;&#x7F6E;&#x9009;&#x9879;&#x3002;</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since 1.0.0</span>
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+
+<div data-ice="constructorDetails"><h2 data-ice="title">Public Constructors</h2>
+
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-constructor-constructor">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(scope: <span><a href="class/src/IEventDispatcher.js~IEventDispatcher.html">IEventDispatcher</a></span>, once: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span>, useCapture: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span>, priority: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span>)</span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since 1.0.0</span>
+      <span data-ice="source"><span><a href="file/src/EventListenerOptions.js.html#lineNumber58">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4FA6;&#x542C;&#x5668;&#x9009;&#x9879;&#x5BF9;&#x8C61;&#x3002;</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">scope</td>
+      <td data-ice="type" class="code"><span><a href="class/src/IEventDispatcher.js~IEventDispatcher.html">IEventDispatcher</a></span></td>
+      <td data-ice="appendix"><ul><li>optional</li>
+<li>default: null</li></ul></td>
+      <td data-ice="description"><p>&#x6307;&#x5B9A;&#x4FA6;&#x542C;&#x5668;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x5BF9;&#x8C61;&#x3002;</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">once</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
+      <td data-ice="appendix"><ul><li>optional</li>
+<li>default: false</li></ul></td>
+      <td data-ice="description"><p>&#x6307;&#x793A;&#x4FA6;&#x542C;&#x5668;&#x662F;&#x5426;&#x5728;&#x6267;&#x884C;&#x540E;&#xFF0C;&#x81EA;&#x52A8;&#x4ECE;&#x6D3E;&#x53D1;&#x5668;&#x4E2D;&#x79FB;&#x9664;&#x3002;</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">useCapture</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
+      <td data-ice="appendix"><ul><li>optional</li>
+<li>default: false</li></ul></td>
+      <td data-ice="description"><p>&#x6307;&#x793A;&#x4FA6;&#x542C;&#x5668;&#x662F;&#x5426;&#x5728;&#x6355;&#x83B7;&#x9636;&#x6BB5;&#x5904;&#x7406;&#x4E8B;&#x4EF6;&#x3002;</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">priority</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></td>
+      <td data-ice="appendix"><ul><li>optional</li>
+<li>default: 0</li></ul></td>
+      <td data-ice="description"><p>&#x6307;&#x793A;&#x4FA6;&#x542C;&#x5668;&#x5728;&#x6D3E;&#x53D1;&#x4E8B;&#x4EF6;&#x65F6;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#xFF08;&#x4E8B;&#x4EF6;&#x6D3E;&#x53D1;&#x65F6;&#x4F1A;&#x4F18;&#x5148;&#x6267;&#x884C;&#x9AD8;&#x4F18;&#x5148;&#x7EA7;&#x7684;&#x4FA6;&#x542C;&#x5668;&#xFF09;&#x3002;</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+</div>
+<div data-ice="memberDetails"><h2 data-ice="title">Public Members</h2>
+
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-get-once">
+    <span class="access" data-ice="access">public</span>
+    
+    <span class="kind" data-ice="kind">get</span>
+    
+    
+    
+    <span class="code" data-ice="name">once</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since 1.0.0</span>
+      <span data-ice="source"><span><a href="file/src/EventListenerOptions.js.html#lineNumber94">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>&#x6307;&#x793A;&#x4FA6;&#x542C;&#x5668;&#x662F;&#x5426;&#x5728;&#x6267;&#x884C;&#x540E;&#xFF0C;&#x81EA;&#x52A8;&#x4ECE;&#x6D3E;&#x53D1;&#x5668;&#x4E2D;&#x79FB;&#x9664;&#x3002;</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-get-priority">
+    <span class="access" data-ice="access">public</span>
+    
+    <span class="kind" data-ice="kind">get</span>
+    
+    
+    
+    <span class="code" data-ice="name">priority</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></span></span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since 1.0.0</span>
+      <span data-ice="source"><span><a href="file/src/EventListenerOptions.js.html#lineNumber112">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>&#x6307;&#x793A;&#x4FA6;&#x542C;&#x5668;&#x5728;&#x6D3E;&#x53D1;&#x4E8B;&#x4EF6;&#x65F6;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x3002;</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-get-scope">
+    <span class="access" data-ice="access">public</span>
+    
+    <span class="kind" data-ice="kind">get</span>
+    
+    
+    
+    <span class="code" data-ice="name">scope</span><span class="code" data-ice="signature">: <span><a href="class/src/IEventDispatcher.js~IEventDispatcher.html">IEventDispatcher</a></span></span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since 1.0.0</span>
+      <span data-ice="source"><span><a href="file/src/EventListenerOptions.js.html#lineNumber85">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>&#x83B7;&#x53D6;&#x4FA6;&#x542C;&#x5668;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x5BF9;&#x8C61;&#x3002;</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-get-useCapture">
+    <span class="access" data-ice="access">public</span>
+    
+    <span class="kind" data-ice="kind">get</span>
+    
+    
+    
+    <span class="code" data-ice="name">useCapture</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since 1.0.0</span>
+      <span data-ice="source"><span><a href="file/src/EventListenerOptions.js.html#lineNumber103">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>&#x6307;&#x793A;&#x4FA6;&#x542C;&#x5668;&#x662F;&#x5426;&#x5728;&#x6355;&#x83B7;&#x9636;&#x6BB5;&#x5904;&#x7406;&#x4E8B;&#x4EF6;&#x3002;</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+</div>
+<div data-ice="methodDetails"><h2 data-ice="title">Public Methods</h2>
+
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-initWithParams">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">initWithParams</span><span class="code" data-ice="signature">(options: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span> | <span><a href="class/src/IEventListenerOptions.js~IEventListenerOptions.html">IEventListenerOptions</a></span>): <span>this</span></span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since 1.0.0</span>
+      <span data-ice="source"><span><a href="file/src/EventListenerOptions.js.html#lineNumber136">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x5F53;&#x524D;&#x914D;&#x7F6E;&#x9009;&#x9879;&#x3002;</p>
+<ul>
+<li>&#x5982;&#x679C; <code>options</code> &#x662F;&#x4E00;&#x4E2A; <code>Boolean</code> &#x7C7B;&#x578B;&#x7684;&#x503C;&#xFF0C;&#x5219;&#x5C06; <code>options</code> &#x89C6;&#x4E3A; <span><a href="class/src/EventListenerOptions.js~EventListenerOptions.html#instance-get-useCapture">EventListenerOptions#useCapture</a></span>&#x3002;</li>
+<li>&#x5982;&#x679C; <code>options</code> &#x662F;&#x4E00;&#x4E2A; <code>IEventListenerOptions</code> &#x7C7B;&#x578B;&#x7684;&#x503C;&#xFF0C;&#x5219;&#x62F7;&#x8D1D; <code>options</code> &#x7684;&#x503C;&#x5230;&#x5F53;&#x524D;&#x914D;&#x7F6E;&#x9009;&#x9879;&#x4E2D;&#x3002;</li>
+</ul>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">options</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span> | <span><a href="class/src/IEventListenerOptions.js~IEventListenerOptions.html">IEventListenerOptions</a></span></td>
+      <td data-ice="appendix"><ul><li>optional</li>
+<li>default: false</li></ul></td>
+      <td data-ice="description"><p>&#x6307;&#x5B9A;&#x4FA6;&#x542C;&#x5668;&#x7684;&#x914D;&#x7F6E;&#x9009;&#x9879;&#x3002;</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>this</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">const dispatcher = new EventDispatcher();
+const options = new EventListenerOptions();
+options.initWithParams({ &quot;once&quot;: true, &quot;scope&quot;: this });
+
+dispatcher.addEventListener(&quot;custom&quot;, ( evt ) =&gt; {
+    /// &#x8BE5;&#x4E8B;&#x4EF6;&#x4FA6;&#x542C;&#x5668;&#x5728;&#x6267;&#x884C;&#x540E;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x4ECE; `dispatcher` &#x6D3E;&#x53D1;&#x5668;&#x4E2D;&#x79FB;&#x9664;&#x3002;
+    console.log(&quot;success&quot;);
+}, options);
+
+dispatcher.dispatchEvent(new Event(&quot;custom&quot;, false, false));</code></pre>
+    </div>
+</div>
+
+  
+
+  
+  
+</div>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
