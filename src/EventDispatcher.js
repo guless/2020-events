@@ -72,10 +72,55 @@ export default class EventDispatcher /*< implements IEventDispatcher >*/ {
     /**
      * 注册一个事件侦听器。
      * 
-     * 侦听器可以注册到派发事件的任何一个阶段。
-     * @param {String|Symbol} type - 注册的事件类型。
+     * 如果浏览器支持 {@link Symbol} 类型，则事件类型可以使用 {@link Symbol} 对象，这样可以防止
+     * 你的事件被其他人意外的移除。
+     * 
+     * 事件侦听器可以注册到派发事件的任何一个阶段，**捕获阶段**和**冒泡阶段**的侦听器是相互独立的。
+     * 因此使用不同的 `useCapture` 值将注册不同的侦听器。同样移除的时候，也需要指定不同的 `useCapture` 值。 
+     * 
+     * 事件处理函数默认的作用域为派发器（`EventDispatcher`）对象或者其代理的对象，通过设置 `options.scope` 
+     * 可以为事件处理函数指定作用域。但是如果注册的是一个实现了 {@link IEventListener} 接口的对象，则直接
+     * 调用其 `handleEvent()` 方法处理事件，并且作用域始终指向该 `IEventListener` 对象。
+     * 
+     * 通过指定 `options.once` 选项，可以指定侦听器在执行后，是否自动从列表中移除。
+     * 
+     * 优先级高（`options.priority`）的侦听器会在派发事件时优先调用。相同优先级的情况会按照注册的先后
+     * 顺序调用侦听器。分别使用不同的优先级注册相同的侦听器时，以最后一次注册的侦听器为准。
+     * 
+     * @param {String|Symbol} type - 事件类型。
      * @param {Function|IEventListener} handler - 指定事件处理函数或者是一个事件侦听器。
      * @param {Boolean|IEventListenerOptions} [options=false] - 指定侦听器配置选项。
+     * @example
+     * const dispatcher = new EventDispatcher();
+     * 
+     * /// 在冒泡阶段注册侦听器。
+     * dispatcher.addEventListener("custom", ( evt ) => {});
+     * dispatcher.addEventListener("custom", ( evt ) => {}, false);
+     * 
+     * /// 在捕获阶段注册侦听器。
+     * dispatcher.addEventListener("custom", ( evt ) => {}, true);
+     * 
+     * /// 指定事件处理函数的作用域。
+     * const target = {};
+     * dispatcher.addEventListener("custom", ( evt ) => {
+     *     console.log(target === this); // true
+     * }, { "scope": target });
+     * 
+     * /// 注册一次性的侦听器。
+     * dispatcher.addEventListener("custom", ( evt ) => {
+     *     /// 该函数执行后，将自动从列表中移除。
+     * }, { "once": true });
+     * 
+     * /// 尽管该侦听器后注册的，但是因为具有较高的优先级，所以会先被调用。
+     * dispatcher.addEventListener("custom", ( evt ) => {
+     *     console.log(1);
+     * }, { "priority": 1 });
+     * 
+     * /// 相同的侦听器使用不用的优先级多次注册，以最后一次注册的优先级为准。
+     * const handler = ( evt ) => {};
+     * dispatcher.addEventListener("custom", handler, { "priority": 1 });
+     * dispatcher.addEventListener("custom", handler, { "priority": 2 }); // 只会注册一个优先级为 2 的侦听器。
+     * @see {@link IEventListenerOptions}
      * @since 1.0.0
      */
     addEventListener( type, handler, options = false ) {
@@ -137,29 +182,30 @@ export default class EventDispatcher /*< implements IEventDispatcher >*/ {
      * 移除一个事件侦听器。
      * 
      * 第三个参数 `useCapture` 可以是一个 {@link Boolean} 类型的值，或者是一个 {@link IEventListenerOptions} 类型的值。
-     * ```
-     * dispatcher.removeEventListener(type, handler, false); // useCapture = false;
-     * dispatcher.removeEventListener(type, handler, { "useCapture": true }); // useCapture = { "useCapture": true };
-     * ```
      * 
      * 只有完全相同（使用 === 对比）的侦听器才会被移除。因此使用 `useCapture=false` 并不会移除**捕获阶段**的侦听器。
      * 同理 `useCapture=true` 也不会移除**冒泡阶段**的侦听器。
-     * ```
+     * 
+     * @param {String|Symbol} type - 事件类型。
+     * @param {Function|IEventListener} handler - 指定要移除的事件处理函数或者事件侦听器。
+     * @param {Boolean|IEventListenerOptions} [useCapture=false] - 指定是移除捕获阶段(`true`)还是冒泡阶段(`false`)的事件侦听器。
+     * @example
+     * /// 使用不用类型的 useCapture 值移除侦听器。
+     * dispatcher.removeEventListener(type, handler, false);
+     * dispatcher.removeEventListener(type, handler, { "useCapture": true });
+     * 
+     * /// 分别移除不用阶段的侦听器。
      * const dispatcher = new EventDispatcher();
      * 
      * function captureHandler( evt ) {
      *     console.log("capture");
      * }
      * 
-     * dispatcher.addEventListener("custom", captureHandler, true); // 注册一个捕获阶段的侦听器。
+     * dispatcher.addEventListener("custom", captureHandler, true);
      * dispatcher.removeEventListener("custom", captureHandler, false); // 这里并不会移除 captureHandler 侦听器。
      * dispatcher.hasEventListener("custom"); // true
      * dispatcher.removeEventListener("custom", captureHandler, true); // 这里才会移除 captureHandler 侦听器。
      * dispatcher.hasEventListener("custom"); // false
-     * ```
-     * @param {String|Symbol} type - 移除的事件类型。
-     * @param {Function|IEventListener} handler - 指定要移除的事件处理函数或者事件侦听器。
-     * @param {Boolean|IEventListenerOptions} [useCapture=false] - 指定是移除捕获阶段(`true`)还是冒泡阶段(`false`)的事件侦听器。
      * @since 1.0.0
      */
     removeEventListener( type, handler, useCapture = false ) {
@@ -198,7 +244,7 @@ export default class EventDispatcher /*< implements IEventDispatcher >*/ {
     
     /**
      * 检查是否注册了指定类型的事件侦听器。
-     * @param {String|Symbol} type - 检查的事件类型。
+     * @param {String|Symbol} type - 事件类型。
      * @example
      * const dispatcher = new EventDispatcher();
      * dispatcher.addEventListener("custom", ( evt ) => {}, false);
