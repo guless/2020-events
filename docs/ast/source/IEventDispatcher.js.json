@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 1054,
+  "end": 1146,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 35,
+      "line": 40,
       "column": 1
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 1054,
+    "end": 1146,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 35,
+        "line": 40,
         "column": 1
       }
     },
@@ -30,43 +30,43 @@
     "body": [
       {
         "type": "ExportDefaultDeclaration",
-        "start": 44,
-        "end": 1054,
+        "start": 60,
+        "end": 1146,
         "loc": {
           "start": {
-            "line": 5,
+            "line": 6,
             "column": 0
           },
           "end": {
-            "line": 35,
+            "line": 40,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 59,
-          "end": 1054,
+          "start": 75,
+          "end": 1146,
           "loc": {
             "start": {
-              "line": 5,
+              "line": 6,
               "column": 15
             },
             "end": {
-              "line": 35,
+              "line": 40,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 65,
-            "end": 81,
+            "start": 81,
+            "end": 97,
             "loc": {
               "start": {
-                "line": 5,
+                "line": 6,
                 "column": 21
               },
               "end": {
-                "line": 5,
+                "line": 6,
                 "column": 37
               },
               "identifierName": "IEventDispatcher"
@@ -77,46 +77,46 @@
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 82,
-            "end": 1054,
+            "start": 98,
+            "end": 1146,
             "loc": {
               "start": {
-                "line": 5,
+                "line": 6,
                 "column": 38
               },
               "end": {
-                "line": 35,
+                "line": 40,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 314,
-                "end": 360,
+                "start": 349,
+                "end": 394,
                 "loc": {
                   "start": {
-                    "line": 12,
+                    "line": 14,
                     "column": 4
                   },
                   "end": {
-                    "line": 12,
-                    "column": 50
+                    "line": 14,
+                    "column": 49
                   }
                 },
                 "static": false,
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 314,
-                  "end": 330,
+                  "start": 349,
+                  "end": 365,
                   "loc": {
                     "start": {
-                      "line": 12,
+                      "line": 14,
                       "column": 4
                     },
                     "end": {
-                      "line": 12,
+                      "line": 14,
                       "column": 20
                     },
                     "identifierName": "addEventListener"
@@ -132,15 +132,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 332,
-                    "end": 336,
+                    "start": 367,
+                    "end": 371,
                     "loc": {
                       "start": {
-                        "line": 12,
+                        "line": 14,
                         "column": 22
                       },
                       "end": {
-                        "line": 12,
+                        "line": 14,
                         "column": 26
                       },
                       "identifierName": "type"
@@ -149,33 +149,33 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 338,
-                    "end": 346,
+                    "start": 373,
+                    "end": 380,
                     "loc": {
                       "start": {
-                        "line": 12,
+                        "line": 14,
                         "column": 28
                       },
                       "end": {
-                        "line": 12,
-                        "column": 36
+                        "line": 14,
+                        "column": 35
                       },
-                      "identifierName": "listener"
+                      "identifierName": "handler"
                     },
-                    "name": "listener"
+                    "name": "handler"
                   },
                   {
                     "type": "Identifier",
-                    "start": 348,
-                    "end": 355,
+                    "start": 382,
+                    "end": 389,
                     "loc": {
                       "start": {
-                        "line": 12,
-                        "column": 38
+                        "line": 14,
+                        "column": 37
                       },
                       "end": {
-                        "line": 12,
-                        "column": 45
+                        "line": 14,
+                        "column": 44
                       },
                       "identifierName": "options"
                     },
@@ -184,16 +184,16 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 358,
-                  "end": 360,
+                  "start": 392,
+                  "end": 394,
                   "loc": {
                     "start": {
-                      "line": 12,
-                      "column": 48
+                      "line": 14,
+                      "column": 47
                     },
                     "end": {
-                      "line": 12,
-                      "column": 50
+                      "line": 14,
+                      "column": 49
                     }
                   },
                   "body": [],
@@ -202,16 +202,16 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n     * 注册一个事件侦听器。\n     * @param {String|Symbol} type - 注册的事件类型。\n     * @param {Function|IEventListener} listener - 指定事件处理函数或者是一个事件侦听器。\n     * @param {Boolean|IEventListenerOptions} [options=false] - 指定侦听器配置选项。\n     ",
-                    "start": 88,
-                    "end": 309,
+                    "value": "*\n     * 注册一个事件侦听器。\n     * @param {String|Symbol} type - 注册的事件类型。\n     * @param {Function|IEventListener} handler - 指定事件处理函数或者是一个事件侦听器。\n     * @param {Boolean|IEventListenerOptions} [options=false] - 指定侦听器配置选项。\n     * @since 1.0.0\n     ",
+                    "start": 104,
+                    "end": 344,
                     "loc": {
                       "start": {
-                        "line": 6,
+                        "line": 7,
                         "column": 4
                       },
                       "end": {
-                        "line": 11,
+                        "line": 13,
                         "column": 7
                       }
                     }
@@ -220,31 +220,31 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 608,
-                "end": 660,
+                "start": 661,
+                "end": 712,
                 "loc": {
                   "start": {
-                    "line": 20,
+                    "line": 23,
                     "column": 4
                   },
                   "end": {
-                    "line": 20,
-                    "column": 56
+                    "line": 23,
+                    "column": 55
                   }
                 },
                 "static": false,
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 608,
-                  "end": 627,
+                  "start": 661,
+                  "end": 680,
                   "loc": {
                     "start": {
-                      "line": 20,
+                      "line": 23,
                       "column": 4
                     },
                     "end": {
-                      "line": 20,
+                      "line": 23,
                       "column": 23
                     },
                     "identifierName": "removeEventListener"
@@ -260,15 +260,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 629,
-                    "end": 633,
+                    "start": 682,
+                    "end": 686,
                     "loc": {
                       "start": {
-                        "line": 20,
+                        "line": 23,
                         "column": 25
                       },
                       "end": {
-                        "line": 20,
+                        "line": 23,
                         "column": 29
                       },
                       "identifierName": "type"
@@ -277,33 +277,33 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 635,
-                    "end": 643,
+                    "start": 688,
+                    "end": 695,
                     "loc": {
                       "start": {
-                        "line": 20,
+                        "line": 23,
                         "column": 31
                       },
                       "end": {
-                        "line": 20,
-                        "column": 39
+                        "line": 23,
+                        "column": 38
                       },
-                      "identifierName": "listener"
+                      "identifierName": "handler"
                     },
-                    "name": "listener"
+                    "name": "handler"
                   },
                   {
                     "type": "Identifier",
-                    "start": 645,
-                    "end": 655,
+                    "start": 697,
+                    "end": 707,
                     "loc": {
                       "start": {
-                        "line": 20,
-                        "column": 41
+                        "line": 23,
+                        "column": 40
                       },
                       "end": {
-                        "line": 20,
-                        "column": 51
+                        "line": 23,
+                        "column": 50
                       },
                       "identifierName": "useCapture"
                     },
@@ -312,16 +312,16 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 658,
-                  "end": 660,
+                  "start": 710,
+                  "end": 712,
                   "loc": {
                     "start": {
-                      "line": 20,
-                      "column": 54
+                      "line": 23,
+                      "column": 53
                     },
                     "end": {
-                      "line": 20,
-                      "column": 56
+                      "line": 23,
+                      "column": 55
                     }
                   },
                   "body": [],
@@ -330,16 +330,16 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n     * 移除一个事件侦听器。\n     * @param {String|Symbol} type - 移除的事件类型。\n     * @param {Function|IEventListener} listener - 指定要移除的事件处理函数或者事件侦听器。\n     * @param {Boolean} [useCapture=false] - 指定是移除捕获阶段(`true`)还是冒泡阶段(`false`)的事件侦听器。\n     ",
-                    "start": 371,
-                    "end": 603,
+                    "value": "*\n     * 移除一个事件侦听器。\n     * @param {String|Symbol} type - 移除的事件类型。\n     * @param {Function|IEventListener} handler - 指定要移除的事件处理函数或者事件侦听器。\n     * @param {Boolean} [useCapture=false] - 指定是移除捕获阶段(`true`)还是冒泡阶段(`false`)的事件侦听器。\n     * @since 1.0.0\n     ",
+                    "start": 405,
+                    "end": 656,
                     "loc": {
                       "start": {
-                        "line": 14,
+                        "line": 16,
                         "column": 4
                       },
                       "end": {
-                        "line": 19,
+                        "line": 22,
                         "column": 7
                       }
                     }
@@ -348,15 +348,15 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 824,
-                "end": 851,
+                "start": 896,
+                "end": 923,
                 "loc": {
                   "start": {
-                    "line": 27,
+                    "line": 31,
                     "column": 4
                   },
                   "end": {
-                    "line": 27,
+                    "line": 31,
                     "column": 31
                   }
                 },
@@ -364,15 +364,15 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 824,
-                  "end": 840,
+                  "start": 896,
+                  "end": 912,
                   "loc": {
                     "start": {
-                      "line": 27,
+                      "line": 31,
                       "column": 4
                     },
                     "end": {
-                      "line": 27,
+                      "line": 31,
                       "column": 20
                     },
                     "identifierName": "hasEventListener"
@@ -388,15 +388,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 842,
-                    "end": 846,
+                    "start": 914,
+                    "end": 918,
                     "loc": {
                       "start": {
-                        "line": 27,
+                        "line": 31,
                         "column": 22
                       },
                       "end": {
-                        "line": 27,
+                        "line": 31,
                         "column": 26
                       },
                       "identifierName": "type"
@@ -406,15 +406,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 849,
-                  "end": 851,
+                  "start": 921,
+                  "end": 923,
                   "loc": {
                     "start": {
-                      "line": 27,
+                      "line": 31,
                       "column": 29
                     },
                     "end": {
-                      "line": 27,
+                      "line": 31,
                       "column": 31
                     }
                   },
@@ -424,16 +424,16 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n     * 检查是否注册了指定类型的事件侦听器。\n     * @param {String|Symbol} type - 检查的事件类型。\n     * @returns {Boolean} - 如果存在指定类型的侦听器则返回 `true`，否则返回 `false`。\n     ",
-                    "start": 671,
-                    "end": 819,
+                    "value": "*\n     * 检查是否注册了指定类型的事件侦听器。\n     * @param {String|Symbol} type - 检查的事件类型。\n     * @returns {Boolean} - 如果存在指定类型的侦听器则返回 `true`，否则返回 `false`。\n     * @since 1.0.0\n     ",
+                    "start": 723,
+                    "end": 891,
                     "loc": {
                       "start": {
-                        "line": 22,
+                        "line": 25,
                         "column": 4
                       },
                       "end": {
-                        "line": 26,
+                        "line": 30,
                         "column": 7
                       }
                     }
@@ -442,15 +442,15 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 1026,
-                "end": 1051,
+                "start": 1118,
+                "end": 1143,
                 "loc": {
                   "start": {
-                    "line": 34,
+                    "line": 39,
                     "column": 4
                   },
                   "end": {
-                    "line": 34,
+                    "line": 39,
                     "column": 29
                   }
                 },
@@ -458,15 +458,15 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1026,
-                  "end": 1039,
+                  "start": 1118,
+                  "end": 1131,
                   "loc": {
                     "start": {
-                      "line": 34,
+                      "line": 39,
                       "column": 4
                     },
                     "end": {
-                      "line": 34,
+                      "line": 39,
                       "column": 17
                     },
                     "identifierName": "dispatchEvent"
@@ -482,15 +482,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1041,
-                    "end": 1046,
+                    "start": 1133,
+                    "end": 1138,
                     "loc": {
                       "start": {
-                        "line": 34,
+                        "line": 39,
                         "column": 19
                       },
                       "end": {
-                        "line": 34,
+                        "line": 39,
                         "column": 24
                       },
                       "identifierName": "event"
@@ -500,15 +500,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1049,
-                  "end": 1051,
+                  "start": 1141,
+                  "end": 1143,
                   "loc": {
                     "start": {
-                      "line": 34,
+                      "line": 39,
                       "column": 27
                     },
                     "end": {
-                      "line": 34,
+                      "line": 39,
                       "column": 29
                     }
                   },
@@ -518,16 +518,16 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n     * 派发一个事件对象到目标对象的事件流中。\n     * @param {Event} event - 指定派发的事件对象。\n     * @returns {Boolean} - 如果事件传递到了当前目标对象，并且没有被取消默认行为。则返回 `true`，否则返回 `false`。\n     ",
-                    "start": 862,
-                    "end": 1021,
+                    "value": "*\n     * 派发一个事件对象到目标对象的事件流中。\n     * @param {Event} event - 指定派发的事件对象。\n     * @returns {Boolean} - 如果事件传递到了当前目标对象，并且没有被取消默认行为。则返回 `true`，否则返回 `false`。\n     * @since 1.0.0\n     ",
+                    "start": 934,
+                    "end": 1113,
                     "loc": {
                       "start": {
-                        "line": 29,
+                        "line": 33,
                         "column": 4
                       },
                       "end": {
-                        "line": 33,
+                        "line": 38,
                         "column": 7
                       }
                     }
@@ -539,16 +539,16 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * 定义所有具备事件派发功能对象的接口。\n * @interface\n ",
+              "value": "*\n * 定义所有具备事件派发功能对象的接口。\n * @interface\n * @since 1.0.0\n ",
               "start": 0,
-              "end": 43,
+              "end": 59,
               "loc": {
                 "start": {
                   "line": 1,
                   "column": 0
                 },
                 "end": {
-                  "line": 4,
+                  "line": 5,
                   "column": 3
                 }
               }
@@ -559,16 +559,16 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * 定义所有具备事件派发功能对象的接口。\n * @interface\n ",
+            "value": "*\n * 定义所有具备事件派发功能对象的接口。\n * @interface\n * @since 1.0.0\n ",
             "start": 0,
-            "end": 43,
+            "end": 59,
             "loc": {
               "start": {
                 "line": 1,
                 "column": 0
               },
               "end": {
-                "line": 4,
+                "line": 5,
                 "column": 3
               }
             }
@@ -581,80 +581,80 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * 定义所有具备事件派发功能对象的接口。\n * @interface\n ",
+      "value": "*\n * 定义所有具备事件派发功能对象的接口。\n * @interface\n * @since 1.0.0\n ",
       "start": 0,
-      "end": 43,
+      "end": 59,
       "loc": {
         "start": {
           "line": 1,
           "column": 0
         },
         "end": {
-          "line": 4,
+          "line": 5,
           "column": 3
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * 注册一个事件侦听器。\n     * @param {String|Symbol} type - 注册的事件类型。\n     * @param {Function|IEventListener} listener - 指定事件处理函数或者是一个事件侦听器。\n     * @param {Boolean|IEventListenerOptions} [options=false] - 指定侦听器配置选项。\n     ",
-      "start": 88,
-      "end": 309,
+      "value": "*\n     * 注册一个事件侦听器。\n     * @param {String|Symbol} type - 注册的事件类型。\n     * @param {Function|IEventListener} handler - 指定事件处理函数或者是一个事件侦听器。\n     * @param {Boolean|IEventListenerOptions} [options=false] - 指定侦听器配置选项。\n     * @since 1.0.0\n     ",
+      "start": 104,
+      "end": 344,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 7,
           "column": 4
         },
         "end": {
-          "line": 11,
+          "line": 13,
           "column": 7
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * 移除一个事件侦听器。\n     * @param {String|Symbol} type - 移除的事件类型。\n     * @param {Function|IEventListener} listener - 指定要移除的事件处理函数或者事件侦听器。\n     * @param {Boolean} [useCapture=false] - 指定是移除捕获阶段(`true`)还是冒泡阶段(`false`)的事件侦听器。\n     ",
-      "start": 371,
-      "end": 603,
+      "value": "*\n     * 移除一个事件侦听器。\n     * @param {String|Symbol} type - 移除的事件类型。\n     * @param {Function|IEventListener} handler - 指定要移除的事件处理函数或者事件侦听器。\n     * @param {Boolean} [useCapture=false] - 指定是移除捕获阶段(`true`)还是冒泡阶段(`false`)的事件侦听器。\n     * @since 1.0.0\n     ",
+      "start": 405,
+      "end": 656,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 16,
           "column": 4
         },
         "end": {
-          "line": 19,
-          "column": 7
-        }
-      }
-    },
-    {
-      "type": "CommentBlock",
-      "value": "*\n     * 检查是否注册了指定类型的事件侦听器。\n     * @param {String|Symbol} type - 检查的事件类型。\n     * @returns {Boolean} - 如果存在指定类型的侦听器则返回 `true`，否则返回 `false`。\n     ",
-      "start": 671,
-      "end": 819,
-      "loc": {
-        "start": {
           "line": 22,
-          "column": 4
-        },
-        "end": {
-          "line": 26,
           "column": 7
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * 派发一个事件对象到目标对象的事件流中。\n     * @param {Event} event - 指定派发的事件对象。\n     * @returns {Boolean} - 如果事件传递到了当前目标对象，并且没有被取消默认行为。则返回 `true`，否则返回 `false`。\n     ",
-      "start": 862,
-      "end": 1021,
+      "value": "*\n     * 检查是否注册了指定类型的事件侦听器。\n     * @param {String|Symbol} type - 检查的事件类型。\n     * @returns {Boolean} - 如果存在指定类型的侦听器则返回 `true`，否则返回 `false`。\n     * @since 1.0.0\n     ",
+      "start": 723,
+      "end": 891,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 25,
           "column": 4
         },
         "end": {
+          "line": 30,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * 派发一个事件对象到目标对象的事件流中。\n     * @param {Event} event - 指定派发的事件对象。\n     * @returns {Boolean} - 如果事件传递到了当前目标对象，并且没有被取消默认行为。则返回 `true`，否则返回 `false`。\n     * @since 1.0.0\n     ",
+      "start": 934,
+      "end": 1113,
+      "loc": {
+        "start": {
           "line": 33,
+          "column": 4
+        },
+        "end": {
+          "line": 38,
           "column": 7
         }
       }
@@ -663,16 +663,16 @@
   "tokens": [
     {
       "type": "CommentBlock",
-      "value": "*\n * 定义所有具备事件派发功能对象的接口。\n * @interface\n ",
+      "value": "*\n * 定义所有具备事件派发功能对象的接口。\n * @interface\n * @since 1.0.0\n ",
       "start": 0,
-      "end": 43,
+      "end": 59,
       "loc": {
         "start": {
           "line": 1,
           "column": 0
         },
         "end": {
-          "line": 4,
+          "line": 5,
           "column": 3
         }
       }
@@ -692,15 +692,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 44,
-      "end": 50,
+      "start": 60,
+      "end": 66,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 5,
+          "line": 6,
           "column": 6
         }
       }
@@ -720,15 +720,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 51,
-      "end": 58,
+      "start": 67,
+      "end": 74,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 6,
           "column": 7
         },
         "end": {
-          "line": 5,
+          "line": 6,
           "column": 14
         }
       }
@@ -748,15 +748,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 59,
-      "end": 64,
+      "start": 75,
+      "end": 80,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 6,
           "column": 15
         },
         "end": {
-          "line": 5,
+          "line": 6,
           "column": 20
         }
       }
@@ -774,15 +774,15 @@
         "binop": null
       },
       "value": "IEventDispatcher",
-      "start": 65,
-      "end": 81,
+      "start": 81,
+      "end": 97,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 6,
           "column": 21
         },
         "end": {
-          "line": 5,
+          "line": 6,
           "column": 37
         }
       }
@@ -799,31 +799,31 @@
         "postfix": false,
         "binop": null
       },
-      "start": 82,
-      "end": 83,
+      "start": 98,
+      "end": 99,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 6,
           "column": 38
         },
         "end": {
-          "line": 5,
+          "line": 6,
           "column": 39
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * 注册一个事件侦听器。\n     * @param {String|Symbol} type - 注册的事件类型。\n     * @param {Function|IEventListener} listener - 指定事件处理函数或者是一个事件侦听器。\n     * @param {Boolean|IEventListenerOptions} [options=false] - 指定侦听器配置选项。\n     ",
-      "start": 88,
-      "end": 309,
+      "value": "*\n     * 注册一个事件侦听器。\n     * @param {String|Symbol} type - 注册的事件类型。\n     * @param {Function|IEventListener} handler - 指定事件处理函数或者是一个事件侦听器。\n     * @param {Boolean|IEventListenerOptions} [options=false] - 指定侦听器配置选项。\n     * @since 1.0.0\n     ",
+      "start": 104,
+      "end": 344,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 7,
           "column": 4
         },
         "end": {
-          "line": 11,
+          "line": 13,
           "column": 7
         }
       }
@@ -841,15 +841,15 @@
         "binop": null
       },
       "value": "addEventListener",
-      "start": 314,
-      "end": 330,
+      "start": 349,
+      "end": 365,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 14,
           "column": 4
         },
         "end": {
-          "line": 12,
+          "line": 14,
           "column": 20
         }
       }
@@ -866,15 +866,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 330,
-      "end": 331,
+      "start": 365,
+      "end": 366,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 14,
           "column": 20
         },
         "end": {
-          "line": 12,
+          "line": 14,
           "column": 21
         }
       }
@@ -892,15 +892,15 @@
         "binop": null
       },
       "value": "type",
-      "start": 332,
-      "end": 336,
+      "start": 367,
+      "end": 371,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 14,
           "column": 22
         },
         "end": {
-          "line": 12,
+          "line": 14,
           "column": 26
         }
       }
@@ -918,15 +918,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 336,
-      "end": 337,
+      "start": 371,
+      "end": 372,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 14,
           "column": 26
         },
         "end": {
-          "line": 12,
+          "line": 14,
           "column": 27
         }
       }
@@ -943,17 +943,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "listener",
-      "start": 338,
-      "end": 346,
+      "value": "handler",
+      "start": 373,
+      "end": 380,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 14,
           "column": 28
         },
         "end": {
-          "line": 12,
-          "column": 36
+          "line": 14,
+          "column": 35
         }
       }
     },
@@ -970,16 +970,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 346,
-      "end": 347,
+      "start": 380,
+      "end": 381,
       "loc": {
         "start": {
-          "line": 12,
-          "column": 36
+          "line": 14,
+          "column": 35
         },
         "end": {
-          "line": 12,
-          "column": 37
+          "line": 14,
+          "column": 36
         }
       }
     },
@@ -996,16 +996,16 @@
         "binop": null
       },
       "value": "options",
-      "start": 348,
-      "end": 355,
+      "start": 382,
+      "end": 389,
       "loc": {
         "start": {
-          "line": 12,
-          "column": 38
+          "line": 14,
+          "column": 37
         },
         "end": {
-          "line": 12,
-          "column": 45
+          "line": 14,
+          "column": 44
         }
       }
     },
@@ -1021,16 +1021,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 356,
-      "end": 357,
+      "start": 390,
+      "end": 391,
       "loc": {
         "start": {
-          "line": 12,
-          "column": 46
+          "line": 14,
+          "column": 45
         },
         "end": {
-          "line": 12,
-          "column": 47
+          "line": 14,
+          "column": 46
         }
       }
     },
@@ -1046,16 +1046,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 358,
-      "end": 359,
+      "start": 392,
+      "end": 393,
       "loc": {
         "start": {
-          "line": 12,
-          "column": 48
+          "line": 14,
+          "column": 47
         },
         "end": {
-          "line": 12,
-          "column": 49
+          "line": 14,
+          "column": 48
         }
       }
     },
@@ -1071,16 +1071,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 359,
-      "end": 360,
+      "start": 393,
+      "end": 394,
       "loc": {
         "start": {
-          "line": 12,
-          "column": 49
+          "line": 14,
+          "column": 48
         },
         "end": {
-          "line": 12,
-          "column": 50
+          "line": 14,
+          "column": 49
         }
       }
     },
@@ -1097,31 +1097,31 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 360,
-      "end": 361,
+      "start": 394,
+      "end": 395,
       "loc": {
         "start": {
-          "line": 12,
-          "column": 50
+          "line": 14,
+          "column": 49
         },
         "end": {
-          "line": 12,
-          "column": 51
+          "line": 14,
+          "column": 50
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * 移除一个事件侦听器。\n     * @param {String|Symbol} type - 移除的事件类型。\n     * @param {Function|IEventListener} listener - 指定要移除的事件处理函数或者事件侦听器。\n     * @param {Boolean} [useCapture=false] - 指定是移除捕获阶段(`true`)还是冒泡阶段(`false`)的事件侦听器。\n     ",
-      "start": 371,
-      "end": 603,
+      "value": "*\n     * 移除一个事件侦听器。\n     * @param {String|Symbol} type - 移除的事件类型。\n     * @param {Function|IEventListener} handler - 指定要移除的事件处理函数或者事件侦听器。\n     * @param {Boolean} [useCapture=false] - 指定是移除捕获阶段(`true`)还是冒泡阶段(`false`)的事件侦听器。\n     * @since 1.0.0\n     ",
+      "start": 405,
+      "end": 656,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 16,
           "column": 4
         },
         "end": {
-          "line": 19,
+          "line": 22,
           "column": 7
         }
       }
@@ -1139,15 +1139,15 @@
         "binop": null
       },
       "value": "removeEventListener",
-      "start": 608,
-      "end": 627,
+      "start": 661,
+      "end": 680,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 23,
           "column": 4
         },
         "end": {
-          "line": 20,
+          "line": 23,
           "column": 23
         }
       }
@@ -1164,15 +1164,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 627,
-      "end": 628,
+      "start": 680,
+      "end": 681,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 23,
           "column": 23
         },
         "end": {
-          "line": 20,
+          "line": 23,
           "column": 24
         }
       }
@@ -1190,15 +1190,15 @@
         "binop": null
       },
       "value": "type",
-      "start": 629,
-      "end": 633,
+      "start": 682,
+      "end": 686,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 23,
           "column": 25
         },
         "end": {
-          "line": 20,
+          "line": 23,
           "column": 29
         }
       }
@@ -1216,15 +1216,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 633,
-      "end": 634,
+      "start": 686,
+      "end": 687,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 23,
           "column": 29
         },
         "end": {
-          "line": 20,
+          "line": 23,
           "column": 30
         }
       }
@@ -1241,17 +1241,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "listener",
-      "start": 635,
-      "end": 643,
+      "value": "handler",
+      "start": 688,
+      "end": 695,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 23,
           "column": 31
         },
         "end": {
-          "line": 20,
-          "column": 39
+          "line": 23,
+          "column": 38
         }
       }
     },
@@ -1268,16 +1268,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 643,
-      "end": 644,
+      "start": 695,
+      "end": 696,
       "loc": {
         "start": {
-          "line": 20,
-          "column": 39
+          "line": 23,
+          "column": 38
         },
         "end": {
-          "line": 20,
-          "column": 40
+          "line": 23,
+          "column": 39
         }
       }
     },
@@ -1294,16 +1294,16 @@
         "binop": null
       },
       "value": "useCapture",
-      "start": 645,
-      "end": 655,
+      "start": 697,
+      "end": 707,
       "loc": {
         "start": {
-          "line": 20,
-          "column": 41
+          "line": 23,
+          "column": 40
         },
         "end": {
-          "line": 20,
-          "column": 51
+          "line": 23,
+          "column": 50
         }
       }
     },
@@ -1319,16 +1319,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 656,
-      "end": 657,
+      "start": 708,
+      "end": 709,
       "loc": {
         "start": {
-          "line": 20,
-          "column": 52
+          "line": 23,
+          "column": 51
         },
         "end": {
-          "line": 20,
-          "column": 53
+          "line": 23,
+          "column": 52
         }
       }
     },
@@ -1344,16 +1344,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 658,
-      "end": 659,
+      "start": 710,
+      "end": 711,
       "loc": {
         "start": {
-          "line": 20,
-          "column": 54
+          "line": 23,
+          "column": 53
         },
         "end": {
-          "line": 20,
-          "column": 55
+          "line": 23,
+          "column": 54
         }
       }
     },
@@ -1369,16 +1369,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 659,
-      "end": 660,
+      "start": 711,
+      "end": 712,
       "loc": {
         "start": {
-          "line": 20,
-          "column": 55
+          "line": 23,
+          "column": 54
         },
         "end": {
-          "line": 20,
-          "column": 56
+          "line": 23,
+          "column": 55
         }
       }
     },
@@ -1395,31 +1395,31 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 660,
-      "end": 661,
+      "start": 712,
+      "end": 713,
       "loc": {
         "start": {
-          "line": 20,
-          "column": 56
+          "line": 23,
+          "column": 55
         },
         "end": {
-          "line": 20,
-          "column": 57
+          "line": 23,
+          "column": 56
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * 检查是否注册了指定类型的事件侦听器。\n     * @param {String|Symbol} type - 检查的事件类型。\n     * @returns {Boolean} - 如果存在指定类型的侦听器则返回 `true`，否则返回 `false`。\n     ",
-      "start": 671,
-      "end": 819,
+      "value": "*\n     * 检查是否注册了指定类型的事件侦听器。\n     * @param {String|Symbol} type - 检查的事件类型。\n     * @returns {Boolean} - 如果存在指定类型的侦听器则返回 `true`，否则返回 `false`。\n     * @since 1.0.0\n     ",
+      "start": 723,
+      "end": 891,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 25,
           "column": 4
         },
         "end": {
-          "line": 26,
+          "line": 30,
           "column": 7
         }
       }
@@ -1437,15 +1437,15 @@
         "binop": null
       },
       "value": "hasEventListener",
-      "start": 824,
-      "end": 840,
+      "start": 896,
+      "end": 912,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 31,
           "column": 4
         },
         "end": {
-          "line": 27,
+          "line": 31,
           "column": 20
         }
       }
@@ -1462,15 +1462,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 840,
-      "end": 841,
+      "start": 912,
+      "end": 913,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 31,
           "column": 20
         },
         "end": {
-          "line": 27,
+          "line": 31,
           "column": 21
         }
       }
@@ -1488,15 +1488,15 @@
         "binop": null
       },
       "value": "type",
-      "start": 842,
-      "end": 846,
+      "start": 914,
+      "end": 918,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 31,
           "column": 22
         },
         "end": {
-          "line": 27,
+          "line": 31,
           "column": 26
         }
       }
@@ -1513,15 +1513,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 847,
-      "end": 848,
+      "start": 919,
+      "end": 920,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 31,
           "column": 27
         },
         "end": {
-          "line": 27,
+          "line": 31,
           "column": 28
         }
       }
@@ -1538,15 +1538,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 849,
-      "end": 850,
+      "start": 921,
+      "end": 922,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 31,
           "column": 29
         },
         "end": {
-          "line": 27,
+          "line": 31,
           "column": 30
         }
       }
@@ -1563,15 +1563,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 850,
-      "end": 851,
+      "start": 922,
+      "end": 923,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 31,
           "column": 30
         },
         "end": {
-          "line": 27,
+          "line": 31,
           "column": 31
         }
       }
@@ -1589,31 +1589,31 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 851,
-      "end": 852,
+      "start": 923,
+      "end": 924,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 31,
           "column": 31
         },
         "end": {
-          "line": 27,
+          "line": 31,
           "column": 32
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * 派发一个事件对象到目标对象的事件流中。\n     * @param {Event} event - 指定派发的事件对象。\n     * @returns {Boolean} - 如果事件传递到了当前目标对象，并且没有被取消默认行为。则返回 `true`，否则返回 `false`。\n     ",
-      "start": 862,
-      "end": 1021,
+      "value": "*\n     * 派发一个事件对象到目标对象的事件流中。\n     * @param {Event} event - 指定派发的事件对象。\n     * @returns {Boolean} - 如果事件传递到了当前目标对象，并且没有被取消默认行为。则返回 `true`，否则返回 `false`。\n     * @since 1.0.0\n     ",
+      "start": 934,
+      "end": 1113,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 33,
           "column": 4
         },
         "end": {
-          "line": 33,
+          "line": 38,
           "column": 7
         }
       }
@@ -1631,15 +1631,15 @@
         "binop": null
       },
       "value": "dispatchEvent",
-      "start": 1026,
-      "end": 1039,
+      "start": 1118,
+      "end": 1131,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 39,
           "column": 4
         },
         "end": {
-          "line": 34,
+          "line": 39,
           "column": 17
         }
       }
@@ -1656,15 +1656,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1039,
-      "end": 1040,
+      "start": 1131,
+      "end": 1132,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 39,
           "column": 17
         },
         "end": {
-          "line": 34,
+          "line": 39,
           "column": 18
         }
       }
@@ -1682,15 +1682,15 @@
         "binop": null
       },
       "value": "event",
-      "start": 1041,
-      "end": 1046,
+      "start": 1133,
+      "end": 1138,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 39,
           "column": 19
         },
         "end": {
-          "line": 34,
+          "line": 39,
           "column": 24
         }
       }
@@ -1707,15 +1707,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1047,
-      "end": 1048,
+      "start": 1139,
+      "end": 1140,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 39,
           "column": 25
         },
         "end": {
-          "line": 34,
+          "line": 39,
           "column": 26
         }
       }
@@ -1732,15 +1732,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1049,
-      "end": 1050,
+      "start": 1141,
+      "end": 1142,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 39,
           "column": 27
         },
         "end": {
-          "line": 34,
+          "line": 39,
           "column": 28
         }
       }
@@ -1757,15 +1757,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1050,
-      "end": 1051,
+      "start": 1142,
+      "end": 1143,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 39,
           "column": 28
         },
         "end": {
-          "line": 34,
+          "line": 39,
           "column": 29
         }
       }
@@ -1783,15 +1783,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1051,
-      "end": 1052,
+      "start": 1143,
+      "end": 1144,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 39,
           "column": 29
         },
         "end": {
-          "line": 34,
+          "line": 39,
           "column": 30
         }
       }
@@ -1808,15 +1808,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1053,
-      "end": 1054,
+      "start": 1145,
+      "end": 1146,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 40,
           "column": 0
         },
         "end": {
-          "line": 35,
+          "line": 40,
           "column": 1
         }
       }
@@ -1834,15 +1834,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1054,
-      "end": 1054,
+      "start": 1146,
+      "end": 1146,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 40,
           "column": 1
         },
         "end": {
-          "line": 35,
+          "line": 40,
           "column": 1
         }
       }

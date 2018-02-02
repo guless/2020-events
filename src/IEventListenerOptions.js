@@ -1,6 +1,7 @@
 /**
  * 定义侦听器配置选项的接口。
  * @interface
+ * @since 1.0.0
  */
 export default class IEventListenerOptions {
     /**

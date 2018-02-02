@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 530,
+  "end": 546,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 33,
+      "line": 34,
       "column": 1
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 530,
+    "end": 546,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 33,
+        "line": 34,
         "column": 1
       }
     },
@@ -30,43 +30,43 @@
     "body": [
       {
         "type": "ExportDefaultDeclaration",
-        "start": 39,
-        "end": 530,
+        "start": 55,
+        "end": 546,
         "loc": {
           "start": {
-            "line": 5,
+            "line": 6,
             "column": 0
           },
           "end": {
-            "line": 33,
+            "line": 34,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 54,
-          "end": 530,
+          "start": 70,
+          "end": 546,
           "loc": {
             "start": {
-              "line": 5,
+              "line": 6,
               "column": 15
             },
             "end": {
-              "line": 33,
+              "line": 34,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 60,
-            "end": 81,
+            "start": 76,
+            "end": 97,
             "loc": {
               "start": {
-                "line": 5,
+                "line": 6,
                 "column": 21
               },
               "end": {
-                "line": 5,
+                "line": 6,
                 "column": 42
               },
               "identifierName": "IEventListenerOptions"
@@ -77,30 +77,30 @@
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 82,
-            "end": 530,
+            "start": 98,
+            "end": 546,
             "loc": {
               "start": {
-                "line": 5,
+                "line": 6,
                 "column": 43
               },
               "end": {
-                "line": 33,
+                "line": 34,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 176,
-                "end": 190,
+                "start": 192,
+                "end": 206,
                 "loc": {
                   "start": {
-                    "line": 11,
+                    "line": 12,
                     "column": 4
                   },
                   "end": {
-                    "line": 11,
+                    "line": 12,
                     "column": 18
                   }
                 },
@@ -108,15 +108,15 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 180,
-                  "end": 185,
+                  "start": 196,
+                  "end": 201,
                   "loc": {
                     "start": {
-                      "line": 11,
+                      "line": 12,
                       "column": 8
                     },
                     "end": {
-                      "line": 11,
+                      "line": 12,
                       "column": 13
                     },
                     "identifierName": "scope"
@@ -131,15 +131,15 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 188,
-                  "end": 190,
+                  "start": 204,
+                  "end": 206,
                   "loc": {
                     "start": {
-                      "line": 11,
+                      "line": 12,
                       "column": 16
                     },
                     "end": {
-                      "line": 11,
+                      "line": 12,
                       "column": 18
                     }
                   },
@@ -150,15 +150,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n     * 获取侦听器的作用域对象。\n     * @type {IEventDispatcher}\n     * @since 1.0.0\n     ",
-                    "start": 88,
-                    "end": 171,
+                    "start": 104,
+                    "end": 187,
                     "loc": {
                       "start": {
-                        "line": 6,
+                        "line": 7,
                         "column": 4
                       },
                       "end": {
-                        "line": 10,
+                        "line": 11,
                         "column": 7
                       }
                     }
@@ -167,15 +167,15 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 290,
-                "end": 303,
+                "start": 306,
+                "end": 319,
                 "loc": {
                   "start": {
-                    "line": 18,
+                    "line": 19,
                     "column": 4
                   },
                   "end": {
-                    "line": 18,
+                    "line": 19,
                     "column": 17
                   }
                 },
@@ -183,15 +183,15 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 294,
-                  "end": 298,
+                  "start": 310,
+                  "end": 314,
                   "loc": {
                     "start": {
-                      "line": 18,
+                      "line": 19,
                       "column": 8
                     },
                     "end": {
-                      "line": 18,
+                      "line": 19,
                       "column": 12
                     },
                     "identifierName": "once"
@@ -206,15 +206,15 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 301,
-                  "end": 303,
+                  "start": 317,
+                  "end": 319,
                   "loc": {
                     "start": {
-                      "line": 18,
+                      "line": 19,
                       "column": 15
                     },
                     "end": {
-                      "line": 18,
+                      "line": 19,
                       "column": 17
                     }
                   },
@@ -225,15 +225,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n     * 指示侦听器是否在执行后，自动从派发器中移除。\n     * @type {Boolean}\n     * @since 1.0.0\n     ",
-                    "start": 201,
-                    "end": 285,
+                    "start": 217,
+                    "end": 301,
                     "loc": {
                       "start": {
-                        "line": 13,
+                        "line": 14,
                         "column": 4
                       },
                       "end": {
-                        "line": 17,
+                        "line": 18,
                         "column": 7
                       }
                     }
@@ -242,15 +242,15 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 398,
-                "end": 417,
+                "start": 414,
+                "end": 433,
                 "loc": {
                   "start": {
-                    "line": 25,
+                    "line": 26,
                     "column": 4
                   },
                   "end": {
-                    "line": 25,
+                    "line": 26,
                     "column": 23
                   }
                 },
@@ -258,15 +258,15 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 402,
-                  "end": 412,
+                  "start": 418,
+                  "end": 428,
                   "loc": {
                     "start": {
-                      "line": 25,
+                      "line": 26,
                       "column": 8
                     },
                     "end": {
-                      "line": 25,
+                      "line": 26,
                       "column": 18
                     },
                     "identifierName": "useCapture"
@@ -281,15 +281,15 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 415,
-                  "end": 417,
+                  "start": 431,
+                  "end": 433,
                   "loc": {
                     "start": {
-                      "line": 25,
+                      "line": 26,
                       "column": 21
                     },
                     "end": {
-                      "line": 25,
+                      "line": 26,
                       "column": 23
                     }
                   },
@@ -300,15 +300,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n     * 指示侦听器是否在捕获阶段处理事件。\n     * @type {Boolean}\n     * @since 1.0.0\n     ",
-                    "start": 314,
-                    "end": 393,
+                    "start": 330,
+                    "end": 409,
                     "loc": {
                       "start": {
-                        "line": 20,
+                        "line": 21,
                         "column": 4
                       },
                       "end": {
-                        "line": 24,
+                        "line": 25,
                         "column": 7
                       }
                     }
@@ -317,15 +317,15 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 510,
-                "end": 527,
+                "start": 526,
+                "end": 543,
                 "loc": {
                   "start": {
-                    "line": 32,
+                    "line": 33,
                     "column": 4
                   },
                   "end": {
-                    "line": 32,
+                    "line": 33,
                     "column": 21
                   }
                 },
@@ -333,15 +333,15 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 514,
-                  "end": 522,
+                  "start": 530,
+                  "end": 538,
                   "loc": {
                     "start": {
-                      "line": 32,
+                      "line": 33,
                       "column": 8
                     },
                     "end": {
-                      "line": 32,
+                      "line": 33,
                       "column": 16
                     },
                     "identifierName": "priority"
@@ -356,15 +356,15 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 525,
-                  "end": 527,
+                  "start": 541,
+                  "end": 543,
                   "loc": {
                     "start": {
-                      "line": 32,
+                      "line": 33,
                       "column": 19
                     },
                     "end": {
-                      "line": 32,
+                      "line": 33,
                       "column": 21
                     }
                   },
@@ -375,15 +375,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n     * 指示侦听器在派发事件时的优先级。\n     * @type {Number}\n     * @since 1.0.0\n     ",
-                    "start": 428,
-                    "end": 505,
+                    "start": 444,
+                    "end": 521,
                     "loc": {
                       "start": {
-                        "line": 27,
+                        "line": 28,
                         "column": 4
                       },
                       "end": {
-                        "line": 31,
+                        "line": 32,
                         "column": 7
                       }
                     }
@@ -395,16 +395,16 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * 定义侦听器配置选项的接口。\n * @interface\n ",
+              "value": "*\n * 定义侦听器配置选项的接口。\n * @interface\n * @since 1.0.0\n ",
               "start": 0,
-              "end": 38,
+              "end": 54,
               "loc": {
                 "start": {
                   "line": 1,
                   "column": 0
                 },
                 "end": {
-                  "line": 4,
+                  "line": 5,
                   "column": 3
                 }
               }
@@ -415,16 +415,16 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * 定义侦听器配置选项的接口。\n * @interface\n ",
+            "value": "*\n * 定义侦听器配置选项的接口。\n * @interface\n * @since 1.0.0\n ",
             "start": 0,
-            "end": 38,
+            "end": 54,
             "loc": {
               "start": {
                 "line": 1,
                 "column": 0
               },
               "end": {
-                "line": 4,
+                "line": 5,
                 "column": 3
               }
             }
@@ -437,16 +437,16 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * 定义侦听器配置选项的接口。\n * @interface\n ",
+      "value": "*\n * 定义侦听器配置选项的接口。\n * @interface\n * @since 1.0.0\n ",
       "start": 0,
-      "end": 38,
+      "end": 54,
       "loc": {
         "start": {
           "line": 1,
           "column": 0
         },
         "end": {
-          "line": 4,
+          "line": 5,
           "column": 3
         }
       }
@@ -454,15 +454,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * 获取侦听器的作用域对象。\n     * @type {IEventDispatcher}\n     * @since 1.0.0\n     ",
-      "start": 88,
-      "end": 171,
+      "start": 104,
+      "end": 187,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 7,
           "column": 4
         },
         "end": {
-          "line": 10,
+          "line": 11,
           "column": 7
         }
       }
@@ -470,15 +470,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * 指示侦听器是否在执行后，自动从派发器中移除。\n     * @type {Boolean}\n     * @since 1.0.0\n     ",
-      "start": 201,
-      "end": 285,
+      "start": 217,
+      "end": 301,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 14,
           "column": 4
         },
         "end": {
-          "line": 17,
+          "line": 18,
           "column": 7
         }
       }
@@ -486,15 +486,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * 指示侦听器是否在捕获阶段处理事件。\n     * @type {Boolean}\n     * @since 1.0.0\n     ",
-      "start": 314,
-      "end": 393,
+      "start": 330,
+      "end": 409,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 21,
           "column": 4
         },
         "end": {
-          "line": 24,
+          "line": 25,
           "column": 7
         }
       }
@@ -502,15 +502,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * 指示侦听器在派发事件时的优先级。\n     * @type {Number}\n     * @since 1.0.0\n     ",
-      "start": 428,
-      "end": 505,
+      "start": 444,
+      "end": 521,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 28,
           "column": 4
         },
         "end": {
-          "line": 31,
+          "line": 32,
           "column": 7
         }
       }
@@ -519,16 +519,16 @@
   "tokens": [
     {
       "type": "CommentBlock",
-      "value": "*\n * 定义侦听器配置选项的接口。\n * @interface\n ",
+      "value": "*\n * 定义侦听器配置选项的接口。\n * @interface\n * @since 1.0.0\n ",
       "start": 0,
-      "end": 38,
+      "end": 54,
       "loc": {
         "start": {
           "line": 1,
           "column": 0
         },
         "end": {
-          "line": 4,
+          "line": 5,
           "column": 3
         }
       }
@@ -548,15 +548,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 39,
-      "end": 45,
+      "start": 55,
+      "end": 61,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 5,
+          "line": 6,
           "column": 6
         }
       }
@@ -576,15 +576,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 46,
-      "end": 53,
+      "start": 62,
+      "end": 69,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 6,
           "column": 7
         },
         "end": {
-          "line": 5,
+          "line": 6,
           "column": 14
         }
       }
@@ -604,15 +604,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 54,
-      "end": 59,
+      "start": 70,
+      "end": 75,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 6,
           "column": 15
         },
         "end": {
-          "line": 5,
+          "line": 6,
           "column": 20
         }
       }
@@ -630,15 +630,15 @@
         "binop": null
       },
       "value": "IEventListenerOptions",
-      "start": 60,
-      "end": 81,
+      "start": 76,
+      "end": 97,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 6,
           "column": 21
         },
         "end": {
-          "line": 5,
+          "line": 6,
           "column": 42
         }
       }
@@ -655,15 +655,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 82,
-      "end": 83,
+      "start": 98,
+      "end": 99,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 6,
           "column": 43
         },
         "end": {
-          "line": 5,
+          "line": 6,
           "column": 44
         }
       }
@@ -671,15 +671,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * 获取侦听器的作用域对象。\n     * @type {IEventDispatcher}\n     * @since 1.0.0\n     ",
-      "start": 88,
-      "end": 171,
+      "start": 104,
+      "end": 187,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 7,
           "column": 4
         },
         "end": {
-          "line": 10,
+          "line": 11,
           "column": 7
         }
       }
@@ -697,15 +697,15 @@
         "binop": null
       },
       "value": "get",
-      "start": 176,
-      "end": 179,
+      "start": 192,
+      "end": 195,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 12,
           "column": 4
         },
         "end": {
-          "line": 11,
+          "line": 12,
           "column": 7
         }
       }
@@ -723,15 +723,15 @@
         "binop": null
       },
       "value": "scope",
-      "start": 180,
-      "end": 185,
+      "start": 196,
+      "end": 201,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 12,
           "column": 8
         },
         "end": {
-          "line": 11,
+          "line": 12,
           "column": 13
         }
       }
@@ -748,15 +748,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 185,
-      "end": 186,
+      "start": 201,
+      "end": 202,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 12,
           "column": 13
         },
         "end": {
-          "line": 11,
+          "line": 12,
           "column": 14
         }
       }
@@ -773,15 +773,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 186,
-      "end": 187,
+      "start": 202,
+      "end": 203,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 12,
           "column": 14
         },
         "end": {
-          "line": 11,
+          "line": 12,
           "column": 15
         }
       }
@@ -798,15 +798,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 188,
-      "end": 189,
+      "start": 204,
+      "end": 205,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 12,
           "column": 16
         },
         "end": {
-          "line": 11,
+          "line": 12,
           "column": 17
         }
       }
@@ -823,15 +823,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 189,
-      "end": 190,
+      "start": 205,
+      "end": 206,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 12,
           "column": 17
         },
         "end": {
-          "line": 11,
+          "line": 12,
           "column": 18
         }
       }
@@ -849,15 +849,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 190,
-      "end": 191,
+      "start": 206,
+      "end": 207,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 12,
           "column": 18
         },
         "end": {
-          "line": 11,
+          "line": 12,
           "column": 19
         }
       }
@@ -865,15 +865,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * 指示侦听器是否在执行后，自动从派发器中移除。\n     * @type {Boolean}\n     * @since 1.0.0\n     ",
-      "start": 201,
-      "end": 285,
+      "start": 217,
+      "end": 301,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 14,
           "column": 4
         },
         "end": {
-          "line": 17,
+          "line": 18,
           "column": 7
         }
       }
@@ -891,15 +891,15 @@
         "binop": null
       },
       "value": "get",
-      "start": 290,
-      "end": 293,
+      "start": 306,
+      "end": 309,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 19,
           "column": 4
         },
         "end": {
-          "line": 18,
+          "line": 19,
           "column": 7
         }
       }
@@ -917,15 +917,15 @@
         "binop": null
       },
       "value": "once",
-      "start": 294,
-      "end": 298,
+      "start": 310,
+      "end": 314,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 19,
           "column": 8
         },
         "end": {
-          "line": 18,
+          "line": 19,
           "column": 12
         }
       }
@@ -942,15 +942,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 298,
-      "end": 299,
+      "start": 314,
+      "end": 315,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 19,
           "column": 12
         },
         "end": {
-          "line": 18,
+          "line": 19,
           "column": 13
         }
       }
@@ -967,15 +967,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 299,
-      "end": 300,
+      "start": 315,
+      "end": 316,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 19,
           "column": 13
         },
         "end": {
-          "line": 18,
+          "line": 19,
           "column": 14
         }
       }
@@ -992,15 +992,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 301,
-      "end": 302,
+      "start": 317,
+      "end": 318,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 19,
           "column": 15
         },
         "end": {
-          "line": 18,
+          "line": 19,
           "column": 16
         }
       }
@@ -1017,15 +1017,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 302,
-      "end": 303,
+      "start": 318,
+      "end": 319,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 19,
           "column": 16
         },
         "end": {
-          "line": 18,
+          "line": 19,
           "column": 17
         }
       }
@@ -1043,15 +1043,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 303,
-      "end": 304,
+      "start": 319,
+      "end": 320,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 19,
           "column": 17
         },
         "end": {
-          "line": 18,
+          "line": 19,
           "column": 18
         }
       }
@@ -1059,15 +1059,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * 指示侦听器是否在捕获阶段处理事件。\n     * @type {Boolean}\n     * @since 1.0.0\n     ",
-      "start": 314,
-      "end": 393,
+      "start": 330,
+      "end": 409,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 21,
           "column": 4
         },
         "end": {
-          "line": 24,
+          "line": 25,
           "column": 7
         }
       }
@@ -1085,15 +1085,15 @@
         "binop": null
       },
       "value": "get",
-      "start": 398,
-      "end": 401,
+      "start": 414,
+      "end": 417,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 26,
           "column": 4
         },
         "end": {
-          "line": 25,
+          "line": 26,
           "column": 7
         }
       }
@@ -1111,15 +1111,15 @@
         "binop": null
       },
       "value": "useCapture",
-      "start": 402,
-      "end": 412,
+      "start": 418,
+      "end": 428,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 26,
           "column": 8
         },
         "end": {
-          "line": 25,
+          "line": 26,
           "column": 18
         }
       }
@@ -1136,15 +1136,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 412,
-      "end": 413,
+      "start": 428,
+      "end": 429,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 26,
           "column": 18
         },
         "end": {
-          "line": 25,
+          "line": 26,
           "column": 19
         }
       }
@@ -1161,15 +1161,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 413,
-      "end": 414,
+      "start": 429,
+      "end": 430,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 26,
           "column": 19
         },
         "end": {
-          "line": 25,
+          "line": 26,
           "column": 20
         }
       }
@@ -1186,15 +1186,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 415,
-      "end": 416,
+      "start": 431,
+      "end": 432,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 26,
           "column": 21
         },
         "end": {
-          "line": 25,
+          "line": 26,
           "column": 22
         }
       }
@@ -1211,15 +1211,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 416,
-      "end": 417,
+      "start": 432,
+      "end": 433,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 26,
           "column": 22
         },
         "end": {
-          "line": 25,
+          "line": 26,
           "column": 23
         }
       }
@@ -1237,15 +1237,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 417,
-      "end": 418,
+      "start": 433,
+      "end": 434,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 26,
           "column": 23
         },
         "end": {
-          "line": 25,
+          "line": 26,
           "column": 24
         }
       }
@@ -1253,15 +1253,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * 指示侦听器在派发事件时的优先级。\n     * @type {Number}\n     * @since 1.0.0\n     ",
-      "start": 428,
-      "end": 505,
+      "start": 444,
+      "end": 521,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 28,
           "column": 4
         },
         "end": {
-          "line": 31,
+          "line": 32,
           "column": 7
         }
       }
@@ -1279,15 +1279,15 @@
         "binop": null
       },
       "value": "get",
-      "start": 510,
-      "end": 513,
+      "start": 526,
+      "end": 529,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 33,
           "column": 4
         },
         "end": {
-          "line": 32,
+          "line": 33,
           "column": 7
         }
       }
@@ -1305,15 +1305,15 @@
         "binop": null
       },
       "value": "priority",
-      "start": 514,
-      "end": 522,
+      "start": 530,
+      "end": 538,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 33,
           "column": 8
         },
         "end": {
-          "line": 32,
+          "line": 33,
           "column": 16
         }
       }
@@ -1330,15 +1330,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 522,
-      "end": 523,
+      "start": 538,
+      "end": 539,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 33,
           "column": 16
         },
         "end": {
-          "line": 32,
+          "line": 33,
           "column": 17
         }
       }
@@ -1355,15 +1355,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 523,
-      "end": 524,
+      "start": 539,
+      "end": 540,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 33,
           "column": 17
         },
         "end": {
-          "line": 32,
+          "line": 33,
           "column": 18
         }
       }
@@ -1380,15 +1380,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 525,
-      "end": 526,
+      "start": 541,
+      "end": 542,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 33,
           "column": 19
         },
         "end": {
-          "line": 32,
+          "line": 33,
           "column": 20
         }
       }
@@ -1405,15 +1405,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 526,
-      "end": 527,
+      "start": 542,
+      "end": 543,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 33,
           "column": 20
         },
         "end": {
-          "line": 32,
+          "line": 33,
           "column": 21
         }
       }
@@ -1431,15 +1431,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 527,
-      "end": 528,
+      "start": 543,
+      "end": 544,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 33,
           "column": 21
         },
         "end": {
-          "line": 32,
+          "line": 33,
           "column": 22
         }
       }
@@ -1456,15 +1456,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 529,
-      "end": 530,
+      "start": 545,
+      "end": 546,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 34,
           "column": 0
         },
         "end": {
-          "line": 33,
+          "line": 34,
           "column": 1
         }
       }
@@ -1482,15 +1482,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 530,
-      "end": 530,
+      "start": 546,
+      "end": 546,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 34,
           "column": 1
         },
         "end": {
-          "line": 33,
+          "line": 34,
           "column": 1
         }
       }

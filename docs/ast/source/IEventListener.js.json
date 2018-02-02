@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 211,
+  "end": 247,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 13,
+      "line": 15,
       "column": 1
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 211,
+    "end": 247,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 13,
+        "line": 15,
         "column": 1
       }
     },
@@ -99,16 +99,16 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * 定义事件侦听器对象的接口。\n * @interface\n ",
+            "value": "*\n * 定义事件侦听器对象的接口。\n * @interface\n * @since 1.0.0\n ",
             "start": 30,
-            "end": 68,
+            "end": 84,
             "loc": {
               "start": {
                 "line": 3,
                 "column": 0
               },
               "end": {
-                "line": 6,
+                "line": 7,
                 "column": 3
               }
             }
@@ -117,43 +117,43 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 69,
-        "end": 211,
+        "start": 85,
+        "end": 247,
         "loc": {
           "start": {
-            "line": 7,
+            "line": 8,
             "column": 0
           },
           "end": {
-            "line": 13,
+            "line": 15,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 84,
-          "end": 211,
+          "start": 100,
+          "end": 247,
           "loc": {
             "start": {
-              "line": 7,
+              "line": 8,
               "column": 15
             },
             "end": {
-              "line": 13,
+              "line": 15,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 90,
-            "end": 104,
+            "start": 106,
+            "end": 120,
             "loc": {
               "start": {
-                "line": 7,
+                "line": 8,
                 "column": 21
               },
               "end": {
-                "line": 7,
+                "line": 8,
                 "column": 35
               },
               "identifierName": "IEventListener"
@@ -164,30 +164,30 @@
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 105,
-            "end": 211,
+            "start": 121,
+            "end": 247,
             "loc": {
               "start": {
-                "line": 7,
+                "line": 8,
                 "column": 36
               },
               "end": {
-                "line": 13,
+                "line": 15,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 185,
-                "end": 208,
+                "start": 221,
+                "end": 244,
                 "loc": {
                   "start": {
-                    "line": 12,
+                    "line": 14,
                     "column": 4
                   },
                   "end": {
-                    "line": 12,
+                    "line": 14,
                     "column": 27
                   }
                 },
@@ -195,15 +195,15 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 185,
-                  "end": 196,
+                  "start": 221,
+                  "end": 232,
                   "loc": {
                     "start": {
-                      "line": 12,
+                      "line": 14,
                       "column": 4
                     },
                     "end": {
-                      "line": 12,
+                      "line": 14,
                       "column": 15
                     },
                     "identifierName": "handleEvent"
@@ -219,15 +219,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 198,
-                    "end": 203,
+                    "start": 234,
+                    "end": 239,
                     "loc": {
                       "start": {
-                        "line": 12,
+                        "line": 14,
                         "column": 17
                       },
                       "end": {
-                        "line": 12,
+                        "line": 14,
                         "column": 22
                       },
                       "identifierName": "event"
@@ -237,15 +237,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 206,
-                  "end": 208,
+                  "start": 242,
+                  "end": 244,
                   "loc": {
                     "start": {
-                      "line": 12,
+                      "line": 14,
                       "column": 25
                     },
                     "end": {
-                      "line": 12,
+                      "line": 14,
                       "column": 27
                     }
                   },
@@ -255,16 +255,16 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n     * 处理一个事件对象。\n     * @param {Event} event - 指定派发的事件对象。\n     ",
-                    "start": 111,
-                    "end": 180,
+                    "value": "*\n     * 处理一个事件对象。\n     * @param {Event} event - 指定派发的事件对象。\n     * @since 1.0.0\n     ",
+                    "start": 127,
+                    "end": 216,
                     "loc": {
                       "start": {
-                        "line": 8,
+                        "line": 9,
                         "column": 4
                       },
                       "end": {
-                        "line": 11,
+                        "line": 13,
                         "column": 7
                       }
                     }
@@ -276,16 +276,16 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * 定义事件侦听器对象的接口。\n * @interface\n ",
+              "value": "*\n * 定义事件侦听器对象的接口。\n * @interface\n * @since 1.0.0\n ",
               "start": 30,
-              "end": 68,
+              "end": 84,
               "loc": {
                 "start": {
                   "line": 3,
                   "column": 0
                 },
                 "end": {
-                  "line": 6,
+                  "line": 7,
                   "column": 3
                 }
               }
@@ -296,16 +296,16 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * 定义事件侦听器对象的接口。\n * @interface\n ",
+            "value": "*\n * 定义事件侦听器对象的接口。\n * @interface\n * @since 1.0.0\n ",
             "start": 30,
-            "end": 68,
+            "end": 84,
             "loc": {
               "start": {
                 "line": 3,
                 "column": 0
               },
               "end": {
-                "line": 6,
+                "line": 7,
                 "column": 3
               }
             }
@@ -318,32 +318,32 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * 定义事件侦听器对象的接口。\n * @interface\n ",
+      "value": "*\n * 定义事件侦听器对象的接口。\n * @interface\n * @since 1.0.0\n ",
       "start": 30,
-      "end": 68,
+      "end": 84,
       "loc": {
         "start": {
           "line": 3,
           "column": 0
         },
         "end": {
-          "line": 6,
+          "line": 7,
           "column": 3
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * 处理一个事件对象。\n     * @param {Event} event - 指定派发的事件对象。\n     ",
-      "start": 111,
-      "end": 180,
+      "value": "*\n     * 处理一个事件对象。\n     * @param {Event} event - 指定派发的事件对象。\n     * @since 1.0.0\n     ",
+      "start": 127,
+      "end": 216,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 9,
           "column": 4
         },
         "end": {
-          "line": 11,
+          "line": 13,
           "column": 7
         }
       }
@@ -485,16 +485,16 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * 定义事件侦听器对象的接口。\n * @interface\n ",
+      "value": "*\n * 定义事件侦听器对象的接口。\n * @interface\n * @since 1.0.0\n ",
       "start": 30,
-      "end": 68,
+      "end": 84,
       "loc": {
         "start": {
           "line": 3,
           "column": 0
         },
         "end": {
-          "line": 6,
+          "line": 7,
           "column": 3
         }
       }
@@ -514,15 +514,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 69,
-      "end": 75,
+      "start": 85,
+      "end": 91,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 8,
           "column": 0
         },
         "end": {
-          "line": 7,
+          "line": 8,
           "column": 6
         }
       }
@@ -542,15 +542,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 76,
-      "end": 83,
+      "start": 92,
+      "end": 99,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 8,
           "column": 7
         },
         "end": {
-          "line": 7,
+          "line": 8,
           "column": 14
         }
       }
@@ -570,15 +570,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 84,
-      "end": 89,
+      "start": 100,
+      "end": 105,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 8,
           "column": 15
         },
         "end": {
-          "line": 7,
+          "line": 8,
           "column": 20
         }
       }
@@ -596,15 +596,15 @@
         "binop": null
       },
       "value": "IEventListener",
-      "start": 90,
-      "end": 104,
+      "start": 106,
+      "end": 120,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 8,
           "column": 21
         },
         "end": {
-          "line": 7,
+          "line": 8,
           "column": 35
         }
       }
@@ -621,31 +621,31 @@
         "postfix": false,
         "binop": null
       },
-      "start": 105,
-      "end": 106,
+      "start": 121,
+      "end": 122,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 8,
           "column": 36
         },
         "end": {
-          "line": 7,
+          "line": 8,
           "column": 37
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * 处理一个事件对象。\n     * @param {Event} event - 指定派发的事件对象。\n     ",
-      "start": 111,
-      "end": 180,
+      "value": "*\n     * 处理一个事件对象。\n     * @param {Event} event - 指定派发的事件对象。\n     * @since 1.0.0\n     ",
+      "start": 127,
+      "end": 216,
       "loc": {
         "start": {
-          "line": 8,
+          "line": 9,
           "column": 4
         },
         "end": {
-          "line": 11,
+          "line": 13,
           "column": 7
         }
       }
@@ -663,15 +663,15 @@
         "binop": null
       },
       "value": "handleEvent",
-      "start": 185,
-      "end": 196,
+      "start": 221,
+      "end": 232,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 14,
           "column": 4
         },
         "end": {
-          "line": 12,
+          "line": 14,
           "column": 15
         }
       }
@@ -688,15 +688,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 196,
-      "end": 197,
+      "start": 232,
+      "end": 233,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 14,
           "column": 15
         },
         "end": {
-          "line": 12,
+          "line": 14,
           "column": 16
         }
       }
@@ -714,15 +714,15 @@
         "binop": null
       },
       "value": "event",
-      "start": 198,
-      "end": 203,
+      "start": 234,
+      "end": 239,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 14,
           "column": 17
         },
         "end": {
-          "line": 12,
+          "line": 14,
           "column": 22
         }
       }
@@ -739,15 +739,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 204,
-      "end": 205,
+      "start": 240,
+      "end": 241,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 14,
           "column": 23
         },
         "end": {
-          "line": 12,
+          "line": 14,
           "column": 24
         }
       }
@@ -764,15 +764,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 206,
-      "end": 207,
+      "start": 242,
+      "end": 243,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 14,
           "column": 25
         },
         "end": {
-          "line": 12,
+          "line": 14,
           "column": 26
         }
       }
@@ -789,15 +789,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 207,
-      "end": 208,
+      "start": 243,
+      "end": 244,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 14,
           "column": 26
         },
         "end": {
-          "line": 12,
+          "line": 14,
           "column": 27
         }
       }
@@ -815,15 +815,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 208,
-      "end": 209,
+      "start": 244,
+      "end": 245,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 14,
           "column": 27
         },
         "end": {
-          "line": 12,
+          "line": 14,
           "column": 28
         }
       }
@@ -840,15 +840,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 210,
-      "end": 211,
+      "start": 246,
+      "end": 247,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 15,
           "column": 0
         },
         "end": {
-          "line": 13,
+          "line": 15,
           "column": 1
         }
       }
@@ -866,15 +866,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 211,
-      "end": 211,
+      "start": 247,
+      "end": 247,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 15,
           "column": 1
         },
         "end": {
-          "line": 13,
+          "line": 15,
           "column": 1
         }
       }

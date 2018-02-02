@@ -456,6 +456,18 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "src/eventlistener.js~eventlistener#handler",
+    "class/src/EventListener.js~EventListener.html#instance-get-handler",
+    "src/EventListener.js~EventListener#handler",
+    "member"
+  ],
+  [
+    "src/eventlistener.js~eventlistener#options",
+    "class/src/EventListener.js~EventListener.html#instance-get-options",
+    "src/EventListener.js~EventListener#options",
+    "member"
+  ],
+  [
     "src/eventlisteneroptions.js",
     "file/src/EventListenerOptions.js.html",
     "src/EventListenerOptions.js",

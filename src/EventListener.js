@@ -51,6 +51,7 @@ export default class EventListener /*< implement IEventListener >*/ {
      * 
      * @param {Function|IEventListener} handler - 指定事件处理函数或者是一个侦听器。
      * @param {Boolean|IEventListenerOptions} [options=false] - 指定侦听器的配置选项。
+     * @since 1.0.0
      */
     constructor( handler, options = false ) {
         /**
@@ -65,11 +66,35 @@ export default class EventListener /*< implement IEventListener >*/ {
     }
     
     /**
+     * 获取侦听器的处理函数。
+     * @type {Function|IEventListener}
+     * @since 1.0.0
+     */
+    get handler() {
+        return this._handler;
+    }
+    
+    /**
+     * 获取侦听器的配置选项。
+     * @type {EventListenerOptions}
+     * @since 1.0.0
+     */
+    get options() {
+        return this._options;
+    }
+    
+    /**
      * 处理一个事件对象。
      * @param {Event} event - 指定派发的事件对象。
+     * @since 1.0.0
      */
     handleEvent( event ) {
+        if ( (typeof this._handler.handleEvent == "function") ) {
+            this._handler.handleEvent(event);
+        }
         
-        
+        else {
+            this._handler.call(this._options.scope || event.currentTarget, event);
+        }
     }
 }

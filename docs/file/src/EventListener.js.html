@@ -95,6 +95,7 @@ export default class EventListener /*&lt; implement IEventListener &gt;*/ {
      * 
      * @param {Function|IEventListener} handler - &#x6307;&#x5B9A;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#x6216;&#x8005;&#x662F;&#x4E00;&#x4E2A;&#x4FA6;&#x542C;&#x5668;&#x3002;
      * @param {Boolean|IEventListenerOptions} [options=false] - &#x6307;&#x5B9A;&#x4FA6;&#x542C;&#x5668;&#x7684;&#x914D;&#x7F6E;&#x9009;&#x9879;&#x3002;
+     * @since 1.0.0
      */
     constructor( handler, options = false ) {
         /**
@@ -109,12 +110,36 @@ export default class EventListener /*&lt; implement IEventListener &gt;*/ {
     }
     
     /**
+     * &#x83B7;&#x53D6;&#x4FA6;&#x542C;&#x5668;&#x7684;&#x5904;&#x7406;&#x51FD;&#x6570;&#x3002;
+     * @type {Function|IEventListener}
+     * @since 1.0.0
+     */
+    get handler() {
+        return this._handler;
+    }
+    
+    /**
+     * &#x83B7;&#x53D6;&#x4FA6;&#x542C;&#x5668;&#x7684;&#x914D;&#x7F6E;&#x9009;&#x9879;&#x3002;
+     * @type {EventListenerOptions}
+     * @since 1.0.0
+     */
+    get options() {
+        return this._options;
+    }
+    
+    /**
      * &#x5904;&#x7406;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x3002;
      * @param {Event} event - &#x6307;&#x5B9A;&#x6D3E;&#x53D1;&#x7684;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x3002;
+     * @since 1.0.0
      */
     handleEvent( event ) {
+        if ( (typeof this._handler.handleEvent == &quot;function&quot;) ) {
+            this._handler.handleEvent(event);
+        }
         
-        
+        else {
+            this._handler.call(this._options.scope || event.currentTarget, event);
+        }
     }
 }</code></pre>
 
