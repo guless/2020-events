@@ -17,7 +17,7 @@ export default class IEventDispatcher {
      * 移除一个事件侦听器。
      * @param {String|Symbol} type - 移除的事件类型。
      * @param {Function|IEventListener} handler - 指定要移除的事件处理函数或者事件侦听器。
-     * @param {Boolean} [useCapture=false] - 指定是移除捕获阶段(`true`)还是冒泡阶段(`false`)的事件侦听器。
+     * @param {Boolean|IEventListenerOptions} [useCapture=false] - 指定是移除捕获阶段(`true`)还是冒泡阶段(`false`)的事件侦听器。
      * @since 1.0.0
      */
     removeEventListener( type, handler, useCapture ) {};

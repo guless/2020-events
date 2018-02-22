@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 1146,
+  "end": 1168,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 1146,
+    "end": 1168,
     "loc": {
       "start": {
         "line": 1,
@@ -31,7 +31,7 @@
       {
         "type": "ExportDefaultDeclaration",
         "start": 60,
-        "end": 1146,
+        "end": 1168,
         "loc": {
           "start": {
             "line": 6,
@@ -45,7 +45,7 @@
         "declaration": {
           "type": "ClassDeclaration",
           "start": 75,
-          "end": 1146,
+          "end": 1168,
           "loc": {
             "start": {
               "line": 6,
@@ -78,7 +78,7 @@
           "body": {
             "type": "ClassBody",
             "start": 98,
-            "end": 1146,
+            "end": 1168,
             "loc": {
               "start": {
                 "line": 6,
@@ -220,8 +220,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 661,
-                "end": 712,
+                "start": 683,
+                "end": 734,
                 "loc": {
                   "start": {
                     "line": 23,
@@ -236,8 +236,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 661,
-                  "end": 680,
+                  "start": 683,
+                  "end": 702,
                   "loc": {
                     "start": {
                       "line": 23,
@@ -260,8 +260,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 682,
-                    "end": 686,
+                    "start": 704,
+                    "end": 708,
                     "loc": {
                       "start": {
                         "line": 23,
@@ -277,8 +277,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 688,
-                    "end": 695,
+                    "start": 710,
+                    "end": 717,
                     "loc": {
                       "start": {
                         "line": 23,
@@ -294,8 +294,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 697,
-                    "end": 707,
+                    "start": 719,
+                    "end": 729,
                     "loc": {
                       "start": {
                         "line": 23,
@@ -312,8 +312,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 710,
-                  "end": 712,
+                  "start": 732,
+                  "end": 734,
                   "loc": {
                     "start": {
                       "line": 23,
@@ -330,9 +330,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n     * 移除一个事件侦听器。\n     * @param {String|Symbol} type - 移除的事件类型。\n     * @param {Function|IEventListener} handler - 指定要移除的事件处理函数或者事件侦听器。\n     * @param {Boolean} [useCapture=false] - 指定是移除捕获阶段(`true`)还是冒泡阶段(`false`)的事件侦听器。\n     * @since 1.0.0\n     ",
+                    "value": "*\n     * 移除一个事件侦听器。\n     * @param {String|Symbol} type - 移除的事件类型。\n     * @param {Function|IEventListener} handler - 指定要移除的事件处理函数或者事件侦听器。\n     * @param {Boolean|IEventListenerOptions} [useCapture=false] - 指定是移除捕获阶段(`true`)还是冒泡阶段(`false`)的事件侦听器。\n     * @since 1.0.0\n     ",
                     "start": 405,
-                    "end": 656,
+                    "end": 678,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -348,8 +348,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 896,
-                "end": 923,
+                "start": 918,
+                "end": 945,
                 "loc": {
                   "start": {
                     "line": 31,
@@ -364,8 +364,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 896,
-                  "end": 912,
+                  "start": 918,
+                  "end": 934,
                   "loc": {
                     "start": {
                       "line": 31,
@@ -388,8 +388,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 914,
-                    "end": 918,
+                    "start": 936,
+                    "end": 940,
                     "loc": {
                       "start": {
                         "line": 31,
@@ -406,8 +406,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 921,
-                  "end": 923,
+                  "start": 943,
+                  "end": 945,
                   "loc": {
                     "start": {
                       "line": 31,
@@ -425,8 +425,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n     * 检查是否注册了指定类型的事件侦听器。\n     * @param {String|Symbol} type - 检查的事件类型。\n     * @returns {Boolean} - 如果存在指定类型的侦听器则返回 `true`，否则返回 `false`。\n     * @since 1.0.0\n     ",
-                    "start": 723,
-                    "end": 891,
+                    "start": 745,
+                    "end": 913,
                     "loc": {
                       "start": {
                         "line": 25,
@@ -442,8 +442,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 1118,
-                "end": 1143,
+                "start": 1140,
+                "end": 1165,
                 "loc": {
                   "start": {
                     "line": 39,
@@ -458,8 +458,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1118,
-                  "end": 1131,
+                  "start": 1140,
+                  "end": 1153,
                   "loc": {
                     "start": {
                       "line": 39,
@@ -482,8 +482,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1133,
-                    "end": 1138,
+                    "start": 1155,
+                    "end": 1160,
                     "loc": {
                       "start": {
                         "line": 39,
@@ -500,8 +500,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1141,
-                  "end": 1143,
+                  "start": 1163,
+                  "end": 1165,
                   "loc": {
                     "start": {
                       "line": 39,
@@ -519,8 +519,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n     * 派发一个事件对象到目标对象的事件流中。\n     * @param {Event} event - 指定派发的事件对象。\n     * @returns {Boolean} - 如果事件传递到了当前目标对象，并且没有被取消默认行为。则返回 `true`，否则返回 `false`。\n     * @since 1.0.0\n     ",
-                    "start": 934,
-                    "end": 1113,
+                    "start": 956,
+                    "end": 1135,
                     "loc": {
                       "start": {
                         "line": 33,
@@ -613,9 +613,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * 移除一个事件侦听器。\n     * @param {String|Symbol} type - 移除的事件类型。\n     * @param {Function|IEventListener} handler - 指定要移除的事件处理函数或者事件侦听器。\n     * @param {Boolean} [useCapture=false] - 指定是移除捕获阶段(`true`)还是冒泡阶段(`false`)的事件侦听器。\n     * @since 1.0.0\n     ",
+      "value": "*\n     * 移除一个事件侦听器。\n     * @param {String|Symbol} type - 移除的事件类型。\n     * @param {Function|IEventListener} handler - 指定要移除的事件处理函数或者事件侦听器。\n     * @param {Boolean|IEventListenerOptions} [useCapture=false] - 指定是移除捕获阶段(`true`)还是冒泡阶段(`false`)的事件侦听器。\n     * @since 1.0.0\n     ",
       "start": 405,
-      "end": 656,
+      "end": 678,
       "loc": {
         "start": {
           "line": 16,
@@ -630,8 +630,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * 检查是否注册了指定类型的事件侦听器。\n     * @param {String|Symbol} type - 检查的事件类型。\n     * @returns {Boolean} - 如果存在指定类型的侦听器则返回 `true`，否则返回 `false`。\n     * @since 1.0.0\n     ",
-      "start": 723,
-      "end": 891,
+      "start": 745,
+      "end": 913,
       "loc": {
         "start": {
           "line": 25,
@@ -646,8 +646,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * 派发一个事件对象到目标对象的事件流中。\n     * @param {Event} event - 指定派发的事件对象。\n     * @returns {Boolean} - 如果事件传递到了当前目标对象，并且没有被取消默认行为。则返回 `true`，否则返回 `false`。\n     * @since 1.0.0\n     ",
-      "start": 934,
-      "end": 1113,
+      "start": 956,
+      "end": 1135,
       "loc": {
         "start": {
           "line": 33,
@@ -1112,9 +1112,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * 移除一个事件侦听器。\n     * @param {String|Symbol} type - 移除的事件类型。\n     * @param {Function|IEventListener} handler - 指定要移除的事件处理函数或者事件侦听器。\n     * @param {Boolean} [useCapture=false] - 指定是移除捕获阶段(`true`)还是冒泡阶段(`false`)的事件侦听器。\n     * @since 1.0.0\n     ",
+      "value": "*\n     * 移除一个事件侦听器。\n     * @param {String|Symbol} type - 移除的事件类型。\n     * @param {Function|IEventListener} handler - 指定要移除的事件处理函数或者事件侦听器。\n     * @param {Boolean|IEventListenerOptions} [useCapture=false] - 指定是移除捕获阶段(`true`)还是冒泡阶段(`false`)的事件侦听器。\n     * @since 1.0.0\n     ",
       "start": 405,
-      "end": 656,
+      "end": 678,
       "loc": {
         "start": {
           "line": 16,
@@ -1139,8 +1139,8 @@
         "binop": null
       },
       "value": "removeEventListener",
-      "start": 661,
-      "end": 680,
+      "start": 683,
+      "end": 702,
       "loc": {
         "start": {
           "line": 23,
@@ -1164,8 +1164,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 680,
-      "end": 681,
+      "start": 702,
+      "end": 703,
       "loc": {
         "start": {
           "line": 23,
@@ -1190,8 +1190,8 @@
         "binop": null
       },
       "value": "type",
-      "start": 682,
-      "end": 686,
+      "start": 704,
+      "end": 708,
       "loc": {
         "start": {
           "line": 23,
@@ -1216,8 +1216,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 686,
-      "end": 687,
+      "start": 708,
+      "end": 709,
       "loc": {
         "start": {
           "line": 23,
@@ -1242,8 +1242,8 @@
         "binop": null
       },
       "value": "handler",
-      "start": 688,
-      "end": 695,
+      "start": 710,
+      "end": 717,
       "loc": {
         "start": {
           "line": 23,
@@ -1268,8 +1268,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 695,
-      "end": 696,
+      "start": 717,
+      "end": 718,
       "loc": {
         "start": {
           "line": 23,
@@ -1294,8 +1294,8 @@
         "binop": null
       },
       "value": "useCapture",
-      "start": 697,
-      "end": 707,
+      "start": 719,
+      "end": 729,
       "loc": {
         "start": {
           "line": 23,
@@ -1319,8 +1319,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 708,
-      "end": 709,
+      "start": 730,
+      "end": 731,
       "loc": {
         "start": {
           "line": 23,
@@ -1344,8 +1344,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 710,
-      "end": 711,
+      "start": 732,
+      "end": 733,
       "loc": {
         "start": {
           "line": 23,
@@ -1369,8 +1369,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 711,
-      "end": 712,
+      "start": 733,
+      "end": 734,
       "loc": {
         "start": {
           "line": 23,
@@ -1395,8 +1395,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 712,
-      "end": 713,
+      "start": 734,
+      "end": 735,
       "loc": {
         "start": {
           "line": 23,
@@ -1411,8 +1411,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * 检查是否注册了指定类型的事件侦听器。\n     * @param {String|Symbol} type - 检查的事件类型。\n     * @returns {Boolean} - 如果存在指定类型的侦听器则返回 `true`，否则返回 `false`。\n     * @since 1.0.0\n     ",
-      "start": 723,
-      "end": 891,
+      "start": 745,
+      "end": 913,
       "loc": {
         "start": {
           "line": 25,
@@ -1437,8 +1437,8 @@
         "binop": null
       },
       "value": "hasEventListener",
-      "start": 896,
-      "end": 912,
+      "start": 918,
+      "end": 934,
       "loc": {
         "start": {
           "line": 31,
@@ -1462,8 +1462,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 912,
-      "end": 913,
+      "start": 934,
+      "end": 935,
       "loc": {
         "start": {
           "line": 31,
@@ -1488,8 +1488,8 @@
         "binop": null
       },
       "value": "type",
-      "start": 914,
-      "end": 918,
+      "start": 936,
+      "end": 940,
       "loc": {
         "start": {
           "line": 31,
@@ -1513,8 +1513,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 919,
-      "end": 920,
+      "start": 941,
+      "end": 942,
       "loc": {
         "start": {
           "line": 31,
@@ -1538,8 +1538,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 921,
-      "end": 922,
+      "start": 943,
+      "end": 944,
       "loc": {
         "start": {
           "line": 31,
@@ -1563,8 +1563,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 922,
-      "end": 923,
+      "start": 944,
+      "end": 945,
       "loc": {
         "start": {
           "line": 31,
@@ -1589,8 +1589,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 923,
-      "end": 924,
+      "start": 945,
+      "end": 946,
       "loc": {
         "start": {
           "line": 31,
@@ -1605,8 +1605,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * 派发一个事件对象到目标对象的事件流中。\n     * @param {Event} event - 指定派发的事件对象。\n     * @returns {Boolean} - 如果事件传递到了当前目标对象，并且没有被取消默认行为。则返回 `true`，否则返回 `false`。\n     * @since 1.0.0\n     ",
-      "start": 934,
-      "end": 1113,
+      "start": 956,
+      "end": 1135,
       "loc": {
         "start": {
           "line": 33,
@@ -1631,8 +1631,8 @@
         "binop": null
       },
       "value": "dispatchEvent",
-      "start": 1118,
-      "end": 1131,
+      "start": 1140,
+      "end": 1153,
       "loc": {
         "start": {
           "line": 39,
@@ -1656,8 +1656,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1131,
-      "end": 1132,
+      "start": 1153,
+      "end": 1154,
       "loc": {
         "start": {
           "line": 39,
@@ -1682,8 +1682,8 @@
         "binop": null
       },
       "value": "event",
-      "start": 1133,
-      "end": 1138,
+      "start": 1155,
+      "end": 1160,
       "loc": {
         "start": {
           "line": 39,
@@ -1707,8 +1707,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1139,
-      "end": 1140,
+      "start": 1161,
+      "end": 1162,
       "loc": {
         "start": {
           "line": 39,
@@ -1732,8 +1732,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1141,
-      "end": 1142,
+      "start": 1163,
+      "end": 1164,
       "loc": {
         "start": {
           "line": 39,
@@ -1757,8 +1757,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1142,
-      "end": 1143,
+      "start": 1164,
+      "end": 1165,
       "loc": {
         "start": {
           "line": 39,
@@ -1783,8 +1783,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1143,
-      "end": 1144,
+      "start": 1165,
+      "end": 1166,
       "loc": {
         "start": {
           "line": 39,
@@ -1808,8 +1808,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1145,
-      "end": 1146,
+      "start": 1167,
+      "end": 1168,
       "loc": {
         "start": {
           "line": 40,
@@ -1834,8 +1834,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1146,
-      "end": 1146,
+      "start": 1168,
+      "end": 1168,
       "loc": {
         "start": {
           "line": 40,

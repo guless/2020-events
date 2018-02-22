@@ -13,7 +13,7 @@
 
 <header>
   <a href="./">Home</a>
-  <a href="./manual/index.html" data-ice="manualHeaderLink">Manual</a>
+  
   <a href="identifiers.html">Reference</a>
   <a href="source.html">Source</a>
   
@@ -61,7 +61,7 @@ export default class IEventDispatcher {
      * &#x79FB;&#x9664;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x4FA6;&#x542C;&#x5668;&#x3002;
      * @param {String|Symbol} type - &#x79FB;&#x9664;&#x7684;&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;&#x3002;
      * @param {Function|IEventListener} handler - &#x6307;&#x5B9A;&#x8981;&#x79FB;&#x9664;&#x7684;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#x6216;&#x8005;&#x4E8B;&#x4EF6;&#x4FA6;&#x542C;&#x5668;&#x3002;
-     * @param {Boolean} [useCapture=false] - &#x6307;&#x5B9A;&#x662F;&#x79FB;&#x9664;&#x6355;&#x83B7;&#x9636;&#x6BB5;(`true`)&#x8FD8;&#x662F;&#x5192;&#x6CE1;&#x9636;&#x6BB5;(`false`)&#x7684;&#x4E8B;&#x4EF6;&#x4FA6;&#x542C;&#x5668;&#x3002;
+     * @param {Boolean|IEventListenerOptions} [useCapture=false] - &#x6307;&#x5B9A;&#x662F;&#x79FB;&#x9664;&#x6355;&#x83B7;&#x9636;&#x6BB5;(`true`)&#x8FD8;&#x662F;&#x5192;&#x6CE1;&#x9636;&#x6BB5;(`false`)&#x7684;&#x4E8B;&#x4EF6;&#x4FA6;&#x542C;&#x5668;&#x3002;
      * @since 1.0.0
      */
     removeEventListener( type, handler, useCapture ) {};
