@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/guless/events.svg?branch=master)](https://travis-ci.org/guless/events)
+
 安装
 ---
 ```sh
