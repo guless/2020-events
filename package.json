@@ -1,6 +1,6 @@
 {
   "name": "gs-events",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "事件分发器（同步）",
   "main": "exports.js",
   "scripts": {
