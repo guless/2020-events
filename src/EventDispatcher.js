@@ -68,6 +68,19 @@ export default class EventDispatcher /*< implements IEventDispatcher >*/ {
          * @type { {type:String|Symbol}: Boolean }
          */
         this._listenerLockers = {};
+        
+        /** 事件代理 */
+        if ( this !== this._targetDispatcher ) {
+            if ( this._targetDispatcher.hasEventListener || this._targetDispatcher.addEventListener || this._targetDispatcher.removeEventListener || this._targetDispatcher.dispatchEvent ) {
+                throw new TypeError("无法为目标对象创建代理，因为其自身已经实现了一套事件系统。");
+            }
+            
+            this._targetDispatcher.addEventListener     = this.addEventListener    .bind(this);
+            this._targetDispatcher.removeEventListener  = this.removeEventListener .bind(this);
+            this._targetDispatcher.hasEventListener     = this.hasEventListener    .bind(this);
+            this._targetDispatcher.dispatchEvent        = this.dispatchEvent       .bind(this);
+            this._targetDispatcher._dispatchToListeners = this._dispatchToListeners.bind(this);
+        }
     }
     
     /**
@@ -261,7 +274,7 @@ export default class EventDispatcher /*< implements IEventDispatcher >*/ {
     
     /**
      * 派发一个事件对象到目标对象的事件流中。
-     * @param {Event} event - 指定派发的事件对象。
+     * @param {Event|String|Symbol} event - 指定派发的事件对象。
      * @example
      * const dispatcher = new EventDispatcher();
      * 
@@ -271,6 +284,10 @@ export default class EventDispatcher /*< implements IEventDispatcher >*/ {
      * @since 1.0.0
      */
     dispatchEvent( event ) {
+        if ( typeof event == "string" || typeof event == "symbol" ) {
+            event = new Event(event);
+        }
+        
         /// 该事件对象已经被派发过一次！
         if ( event.target || event.eventPhase !== EventPhase.NONE ) {
             throw new Error("同一个事件对象不能派发多次！");
