@@ -9,6 +9,7 @@ npm i gs-events --save-dev
 文档
 ---
 - [UI Events](https://www.w3.org/TR/uievents/) - DOM 事件系统规范
+- [API 手册](https://guless.github.io/events/)
 - [测试用例](https://github.com/guless/events/blob/master/test/)
 
 基本用法

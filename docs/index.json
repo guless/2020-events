@@ -2401,7 +2401,7 @@
   },
   {
     "kind": "index",
-    "content": "[![Build Status](https://travis-ci.org/guless/events.svg?branch=master)](https://travis-ci.org/guless/events)\n\n安装\n---\n```sh\nnpm i gs-events --save-dev\n```\n\n文档\n---\n- [UI Events](https://www.w3.org/TR/uievents/) - DOM 事件系统规范\n- [测试用例](https://github.com/guless/events/blob/master/test/)\n\n基本用法\n-------\n```es6\nimport { Event, EventDispatcher } from \"gs-events\";\n\nclass Node extends EventDispatcher {\n    constructor() {\n        super();\n        this.addEventListener(\"custom\", this.handler);\n    }\n    \n    handler( evt ) {\n        console.log(\"scope:\", this);\n        console.log(\"event:\", evt);\n    }\n}\n\nlet node = new Node();\nnode.dispatchEvent(new Event(\"custom\", false, true));\n```\n\n",
+    "content": "[![Build Status](https://travis-ci.org/guless/events.svg?branch=master)](https://travis-ci.org/guless/events)\n\n安装\n---\n```sh\nnpm i gs-events --save-dev\n```\n\n文档\n---\n- [UI Events](https://www.w3.org/TR/uievents/) - DOM 事件系统规范\n- [API 手册](https://guless.github.io/events/)\n- [测试用例](https://github.com/guless/events/blob/master/test/)\n\n基本用法\n-------\n```es6\nimport { Event, EventDispatcher } from \"gs-events\";\n\nclass Node extends EventDispatcher {\n    constructor() {\n        super();\n        this.addEventListener(\"custom\", this.handler);\n    }\n    \n    handler( evt ) {\n        console.log(\"scope:\", this);\n        console.log(\"event:\", evt);\n    }\n}\n\nlet node = new Node();\nnode.dispatchEvent(new Event(\"custom\", false, true));\n```\n\n",
     "longname": "/Users/samlv9/Developer/GULESS/events/README.md",
     "name": "./README.md",
     "static": true,
