@@ -5,7 +5,8 @@
   "main": "exports.js",
   "scripts": {
     "docs": "rimraf ./docs && esdoc",
-    "test": "rimraf ./coverage && istanbul cover _mocha test/**/*.js -- --require babel-register"
+    "test": "rimraf ./coverage && istanbul cover _mocha test/**/*.js -- --require babel-register",
+    "examples": "node ./examples/"
   },
   "devDependencies": {
     "babel-plugin-transform-class-properties": "^6.24.1",

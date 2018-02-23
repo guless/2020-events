@@ -461,6 +461,11 @@ export default class EventDispatcher /*&lt; implements IEventDispatcher &gt;*/ {
                 this.removeEventListener(event.type, listener.handler, listener.options.useCapture);
             }
         }
+        
+        /**
+         * &#x89E3;&#x9501;&#x4FA6;&#x542C;&#x5668;&#x5217;&#x8868;&#x3002;
+         */
+        this._listenerLockers[event.type] = false;
     }
 }</code></pre>
 

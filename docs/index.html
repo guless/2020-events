@@ -41,8 +41,30 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h2 id="&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x5668;&#xFF08;&#x540C;&#x6B65;&#xFF09;">&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x5668;&#xFF08;&#x540C;&#x6B65;&#xFF09;</h2><pre><code><code class="source-code prettyprint">npm i gs-events --save-dev</code>
-</code></pre></div>
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h2 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h2><pre><code class="lang-sh"><code class="source-code prettyprint">npm i gs-events --save-dev</code>
+</code></pre>
+<h2 id="&#x6587;&#x6863;">&#x6587;&#x6863;</h2><ul>
+<li><a href="https://www.w3.org/TR/uievents/">UI Events</a> - DOM &#x4E8B;&#x4EF6;&#x7CFB;&#x7EDF;&#x89C4;&#x8303;</li>
+<li><a href="https://github.com/guless/events/blob/master/test/">&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;</a></li>
+</ul>
+<h2 id="&#x57FA;&#x672C;&#x7528;&#x6CD5;">&#x57FA;&#x672C;&#x7528;&#x6CD5;</h2><pre><code class="lang-es6"><code class="source-code prettyprint">import { Event, EventDispatcher } from &quot;gs-events&quot;;
+
+class Node extends EventDispatcher {
+    constructor() {
+        super();
+        this.addEventListener(&quot;custom&quot;, this.handler);
+    }
+
+    handler( evt ) {
+        console.log(&quot;scope:&quot;, this);
+        console.log(&quot;event:&quot;, evt);
+    }
+}
+
+let node = new Node();
+node.dispatchEvent(new Event(&quot;custom&quot;, false, true));</code>
+</code></pre>
+</div>
 </div>
 
 <footer class="footer">
