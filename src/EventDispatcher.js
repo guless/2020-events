@@ -417,5 +417,10 @@ export default class EventDispatcher /*< implements IEventDispatcher >*/ {
                 this.removeEventListener(event.type, listener.handler, listener.options.useCapture);
             }
         }
+        
+        /**
+         * 解锁侦听器列表。
+         */
+        this._listenerLockers[event.type] = false;
     }
 }
