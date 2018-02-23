@@ -152,7 +152,7 @@ describe("事件派发器(EventDispatcher)", () => {
         
         child.addEventListener("through", ( evt ) => {
             assert.strictEqual(evt.eventPhase, EventPhase.AT_TARGET, "事件状态不是目标阶段。");
-        }, true);
+        }, false);
         
         child.dispatchEvent(new Event("through", true, true));
         

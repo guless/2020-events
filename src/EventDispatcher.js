@@ -361,7 +361,7 @@ export default class EventDispatcher /*< implements IEventDispatcher >*/ {
          */
         event._eventPhase = EventPhase.BUBBLING_PHASE;
         
-        for ( let i = 0; i < path.length && !event._stopPropagation; ++i ) {
+        for ( let i = 1; i < path.length && !event._stopPropagation; ++i ) {
             event._currentTarget = path[i];
             
             if ( event.currentTarget._dispatchToListeners ) {
