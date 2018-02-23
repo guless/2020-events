@@ -42,13 +42,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import EventDispatcher from &apos;<span><a href="file/src/EventDispatcher.js.html#lineNumber49">gs-events/src/EventDispatcher.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import EventDispatcher from &apos;<span><a href="file/src/EventDispatcher.js.html#lineNumber50">gs-events/src/EventDispatcher.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   <span data-ice="since">| since 1.0.0</span>
-  <span data-ice="source">| <span><a href="file/src/EventDispatcher.js.html#lineNumber49">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/src/EventDispatcher.js.html#lineNumber50">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -167,7 +167,7 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/EventDispatcher.js~EventDispatcher.html#instance-method-dispatchEvent">dispatchEvent</a></span></span><span class="code" data-ice="signature">(event: <span><a href="class/src/Event.js~Event.html">Event</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
+          <span class="code" data-ice="name"><span><a href="class/src/EventDispatcher.js~EventDispatcher.html#instance-method-dispatchEvent">dispatchEvent</a></span></span><span class="code" data-ice="signature">(event: <span><a href="class/src/Event.js~Event.html">Event</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
         </p>
       </div>
       <div>
@@ -262,7 +262,7 @@
     <span class="right-info">
       
       <span class="since" data-ice="since">since 1.0.0</span>
-      <span data-ice="source"><span><a href="file/src/EventDispatcher.js.html#lineNumber55">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/EventDispatcher.js.html#lineNumber56">source</a></span></span>
     </span>
   </h3>
 
@@ -328,7 +328,7 @@
     <span class="right-info">
       
       <span class="since" data-ice="since">since 1.0.0</span>
-      <span data-ice="source"><span><a href="file/src/EventDispatcher.js.html#lineNumber126">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/EventDispatcher.js.html#lineNumber140">source</a></span></span>
     </span>
   </h3>
 
@@ -445,11 +445,11 @@ dispatcher.addEventListener(&quot;custom&quot;, handler, { &quot;priority&quot;:
     
     
     
-    <span class="code" data-ice="name">dispatchEvent</span><span class="code" data-ice="signature">(event: <span><a href="class/src/Event.js~Event.html">Event</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
+    <span class="code" data-ice="name">dispatchEvent</span><span class="code" data-ice="signature">(event: <span><a href="class/src/Event.js~Event.html">Event</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
     <span class="right-info">
       
       <span class="since" data-ice="since">since 1.0.0</span>
-      <span data-ice="source"><span><a href="file/src/EventDispatcher.js.html#lineNumber267">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/EventDispatcher.js.html#lineNumber286">source</a></span></span>
     </span>
   </h3>
 
@@ -471,7 +471,7 @@ dispatcher.addEventListener(&quot;custom&quot;, handler, { &quot;priority&quot;:
     
     <tr data-ice="property" data-depth="0">
       <td data-ice="name" class="code" data-depth="0">event</td>
-      <td data-ice="type" class="code"><span><a href="class/src/Event.js~Event.html">Event</a></span></td>
+      <td data-ice="type" class="code"><span><a href="class/src/Event.js~Event.html">Event</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"><p>&#x6307;&#x5B9A;&#x6D3E;&#x53D1;&#x7684;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x3002;</p>
 </td>
@@ -504,7 +504,17 @@ dispatcher.addEventListener(&quot;custom&quot;, handler, { &quot;priority&quot;:
 
   
 
-  
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">const dispatcher = new EventDispatcher();
+
+dispatcher.dispatchEvent(new Event(&quot;custom&quot;, false, false)); // &#x6D3E;&#x53D1;&#x4E00;&#x4E2A;&#x4E0D;&#x5192;&#x6CE1;&#x7684;&#x4E8B;&#x4EF6;&#x3002;
+dispatcher.dispatchEvent(new Event(&quot;custom&quot;, true, false)); // &#x6D3E;&#x53D1;&#x4E00;&#x4E2A;&#x53C2;&#x4E0E;&#x5192;&#x6CE1;&#x7684;&#x4E8B;&#x4EF6;&#x3002;</code></pre>
+    </div>
+</div>
 
   
 
@@ -523,7 +533,7 @@ dispatcher.addEventListener(&quot;custom&quot;, handler, { &quot;priority&quot;:
     <span class="right-info">
       
       <span class="since" data-ice="since">since 1.0.0</span>
-      <span data-ice="source"><span><a href="file/src/EventDispatcher.js.html#lineNumber257">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/EventDispatcher.js.html#lineNumber271">source</a></span></span>
     </span>
   </h3>
 
@@ -608,7 +618,7 @@ console.log(dispatcher.hasEventListener(&quot;notexists&quot;)); // false</code>
     <span class="right-info">
       
       <span class="since" data-ice="since">since 1.0.0</span>
-      <span data-ice="source"><span><a href="file/src/EventDispatcher.js.html#lineNumber211">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/EventDispatcher.js.html#lineNumber225">source</a></span></span>
     </span>
   </h3>
 

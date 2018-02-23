@@ -83,6 +83,7 @@ import IEventDispatcher from &quot;./IEventDispatcher&quot;;
 import IEventListener from &quot;./IEventListener&quot;;
 import IEventListenerOptions from &quot;./IEventListenerOptions&quot;;
 import Event from &quot;./Event&quot;;
+import EventPhase from &quot;./EventPhase&quot;;
 import EventListener from &quot;./EventListener&quot;;
 
 /**
@@ -111,6 +112,19 @@ export default class EventDispatcher /*&lt; implements IEventDispatcher &gt;*/ {
          * @type { {type:String|Symbol}: Boolean }
          */
         this._listenerLockers = {};
+        
+        /** &#x4E8B;&#x4EF6;&#x4EE3;&#x7406; */
+        if ( this !== this._targetDispatcher ) {
+            if ( this._targetDispatcher.hasEventListener || this._targetDispatcher.addEventListener || this._targetDispatcher.removeEventListener || this._targetDispatcher.dispatchEvent ) {
+                throw new TypeError(&quot;&#x65E0;&#x6CD5;&#x4E3A;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x4EE3;&#x7406;&#xFF0C;&#x56E0;&#x4E3A;&#x5176;&#x81EA;&#x8EAB;&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x5957;&#x4E8B;&#x4EF6;&#x7CFB;&#x7EDF;&#x3002;&quot;);
+            }
+            
+            this._targetDispatcher.addEventListener     = this.addEventListener    .bind(this);
+            this._targetDispatcher.removeEventListener  = this.removeEventListener .bind(this);
+            this._targetDispatcher.hasEventListener     = this.hasEventListener    .bind(this);
+            this._targetDispatcher.dispatchEvent        = this.dispatchEvent       .bind(this);
+            this._targetDispatcher._dispatchToListeners = this._dispatchToListeners.bind(this);
+        }
     }
     
     /**
@@ -169,7 +183,7 @@ export default class EventDispatcher /*&lt; implements IEventDispatcher &gt;*/ {
      */
     addEventListener( type, handler, options = false ) {
         if ( !handler ) {
-            throw new SyntaxError(&quot;handler &#x5FC5;&#x987B;&#x4E3A;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;(function)&#x6216;&#x8005;&#x662F;&#x4E8B;&#x4EF6;&#x4FA6;&#x542C;&#x5668;(IEventListener)&#x3002;&quot;);
+            throw new TypeError(&quot;handler &#x5FC5;&#x987B;&#x4E3A;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;(function)&#x6216;&#x8005;&#x662F;&#x4E8B;&#x4EF6;&#x4FA6;&#x542C;&#x5668;(IEventListener)&#x3002;&quot;);
         }
         
         const listener = new EventListener(handler, options);
@@ -299,17 +313,154 @@ export default class EventDispatcher /*&lt; implements IEventDispatcher &gt;*/ {
      * @since 1.0.0
      */
     hasEventListener( type ) {
-        return (this._listenerRegister[type] &amp;&amp; this._listenerRegister[type].length &gt;= 1);
+        return (!!this._listenerRegister[type] &amp;&amp; this._listenerRegister[type].length &gt;= 1);
     }
     
     /**
      * &#x6D3E;&#x53D1;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x5230;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#x7684;&#x4E8B;&#x4EF6;&#x6D41;&#x4E2D;&#x3002;
-     * @param {Event} event - &#x6307;&#x5B9A;&#x6D3E;&#x53D1;&#x7684;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x3002;
+     * @param {Event|String|Symbol} event - &#x6307;&#x5B9A;&#x6D3E;&#x53D1;&#x7684;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x3002;
+     * @example
+     * const dispatcher = new EventDispatcher();
+     * 
+     * dispatcher.dispatchEvent(new Event(&quot;custom&quot;, false, false)); // &#x6D3E;&#x53D1;&#x4E00;&#x4E2A;&#x4E0D;&#x5192;&#x6CE1;&#x7684;&#x4E8B;&#x4EF6;&#x3002;
+     * dispatcher.dispatchEvent(new Event(&quot;custom&quot;, true, false)); // &#x6D3E;&#x53D1;&#x4E00;&#x4E2A;&#x53C2;&#x4E0E;&#x5192;&#x6CE1;&#x7684;&#x4E8B;&#x4EF6;&#x3002;
      * @returns {Boolean} - &#x5982;&#x679C;&#x4E8B;&#x4EF6;&#x4F20;&#x9012;&#x5230;&#x4E86;&#x5F53;&#x524D;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x4E14;&#x6CA1;&#x6709;&#x88AB;&#x53D6;&#x6D88;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x3002;&#x5219;&#x8FD4;&#x56DE; `true`&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE; `false`&#x3002;
      * @since 1.0.0
      */
     dispatchEvent( event ) {
+        if ( typeof event == &quot;string&quot; || typeof event == &quot;symbol&quot; ) {
+            event = new Event(event);
+        }
         
+        /// &#x8BE5;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x5DF2;&#x7ECF;&#x88AB;&#x6D3E;&#x53D1;&#x8FC7;&#x4E00;&#x6B21;&#xFF01;
+        if ( event.target || event.eventPhase !== EventPhase.NONE ) {
+            throw new Error(&quot;&#x540C;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x4E0D;&#x80FD;&#x6D3E;&#x53D1;&#x591A;&#x6B21;&#xFF01;&quot;);
+        }
+        
+        event._target = this._targetDispatcher; // &#x8BBE;&#x7F6E;&#x4E8B;&#x4EF6;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#x3002;
+        
+        /**
+         * &#x6EE1;&#x8DB3;&#x4EE5;&#x4E0B;&#x6761;&#x4EF6;&#x65F6;&#xFF0C;&#x76F4;&#x63A5;&#x8C03;&#x5EA6;&#x4E8B;&#x4EF6;&#x81F3;&#x76EE;&#x6807;&#x9636;&#x6BB5;&#xFF1A;
+         * 
+         * 1) &#x4E8B;&#x4EF6;&#x4E0D;&#x53C2;&#x4E0E;&#x5192;&#x6CE1;&#x884C;&#x4E3A;&#x3002;
+         * 2) &#x76EE;&#x6807;&#x5BF9;&#x8C61;&#x6CA1;&#x6709;&#x52A0;&#x5165;&#x663E;&#x793A;&#x5BF9;&#x8C61;&#x5217;&#x8868;&#x3002;
+         */
+        if ( !event.bubbles || !event.target.parent 
+            /*&lt; &#x9632;&#x6B62;&#x6839;&#x7EA7;&#x522B;&#x5BF9;&#x8C61;&#x5FAA;&#x73AF;&#x5F15;&#x7528; &gt;*/ || (event.target === event.target.parent) ) {
+            
+            event._eventPhase = EventPhase.AT_TARGET;
+            event._currentTarget = event.target;
+            
+            if ( event.currentTarget._dispatchToListeners ) {
+                event.currentTarget._dispatchToListeners(event);
+            }
+            
+            event._currentTarget = null; // &#x4E8B;&#x4EF6;&#x6D3E;&#x53D1;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x5220;&#x9664;&#x4E8B;&#x4EF6;&#x5BF9;&#x5F53;&#x524D;&#x76EE;&#x6807;&#x7684;&#x5F15;&#x7528;&#x3002;
+            return !event.defaultPrevented;
+        }
+        
+        /**
+         * &#x67E5;&#x627E;&#x4E8B;&#x4EF6;&#x4F20;&#x9012;&#x8DEF;&#x5F84;&#x3002;
+         */
+        let target = event.target;
+        let path = [target];
+        
+        while( target.parent &amp;&amp; target !== target.parent ) { path.push(target = target.parent); }
+        
+        /**
+         * &#x6355;&#x83B7;&#x9636;&#x6BB5;&#x3002;
+         */
+        event._eventPhase = EventPhase.CAPTURING_PHASE;
+        
+        for ( let i = path.length - 1; i &gt;= 1 &amp;&amp; !event._stopPropagation; --i ) {
+            event._currentTarget = path[i];
+            
+            if ( event.currentTarget._dispatchToListeners ) {
+                event.currentTarget._dispatchToListeners(event);
+            }
+        }
+        
+        if ( event._stopPropagation ) { // &#x4E8B;&#x4EF6;&#x5728;&#x6355;&#x83B7;&#x9636;&#x6BB5;&#x88AB;&#x4E2D;&#x65AD;&#x3002;
+            event._currentTarget = null;
+            return false;
+        }
+        
+        /**
+         * &#x76EE;&#x6807;&#x9636;&#x6BB5;&#x3002;
+         */
+        event._eventPhase = EventPhase.AT_TARGET;
+        event._currentTarget = event.target;
+        
+        if ( event.currentTarget._dispatchToListeners ) {
+            event.currentTarget._dispatchToListeners(event);
+        }
+        
+        if ( event._stopPropagation ) {
+            event._currentTarget = null;
+            return !event.defaultPrevented;
+        }
+        
+        /**
+         * &#x5192;&#x6CE1;&#x9636;&#x6BB5;&#x3002;
+         */
+        event._eventPhase = EventPhase.BUBBLING_PHASE;
+        
+        for ( let i = 0; i &lt; path.length &amp;&amp; !event._stopPropagation; ++i ) {
+            event._currentTarget = path[i];
+            
+            if ( event.currentTarget._dispatchToListeners ) {
+                event.currentTarget._dispatchToListeners(event);
+            }
+        }
+        
+        event._currentTarget = null;
+        return !event.defaultPrevented;
+    }
+    
+    /**
+     * &#x6267;&#x884C;&#x6240;&#x6709;&#x7684;&#x4FA6;&#x542C;&#x5668;&#x3002;
+     * @param {Event} event - &#x6307;&#x5B9A;&#x6D3E;&#x53D1;&#x7684;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x3002;
+     */
+    _dispatchToListeners( event ) {
+        if ( !this.hasEventListener(event.type) ) {
+            return;
+        }
+        
+        /**
+         * &#x9501;&#x5B9A;&#x4FA6;&#x542C;&#x5668;&#x5217;&#x8868;&#x3002;
+         */
+        this._listenerLockers[event.type] = true;
+        
+        /**
+         * &#x6267;&#x884C;&#x4FA6;&#x542C;&#x5668;
+         */
+        for ( let i = 0, items = this._listenerRegister[event.type]; i &lt; items.length &amp;&amp; !event._stopImmediatePropagation; ++i ) {
+            /** @type {EventListener} */
+            const listener = items[i];
+            
+            switch( event.eventPhase ) {
+                case EventPhase.CAPTURING_PHASE :
+                    if ( listener.options.useCapture ) { listener.handleEvent(event); }
+                    break;
+                    
+                case EventPhase.AT_TARGET :
+                    listener.handleEvent(event);
+                    break;
+                    
+                case EventPhase.BUBBLING_PHASE :
+                    if ( !listener.options.useCapture ) { listener.handleEvent(event); }
+                    break;
+                
+                default: break;
+            }
+            
+            /**
+             * &#x81EA;&#x52A8;&#x79FB;&#x9664;&#x4E00;&#x6B21;&#x6027;&#x7684;&#x4FA6;&#x542C;&#x5668;&#x3002;
+             */
+            if ( listener.options.once ) {
+                this.removeEventListener(event.type, listener.handler, listener.options.useCapture);
+            }
+        }
     }
 }</code></pre>
 

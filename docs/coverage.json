@@ -1,7 +1,7 @@
 {
   "coverage": "100%",
-  "expectCount": 65,
-  "actualCount": 65,
+  "expectCount": 66,
+  "actualCount": 66,
   "files": {
     "src/Event.js": {
       "expectCount": 21,
@@ -9,8 +9,8 @@
       "undocumentLines": []
     },
     "src/EventDispatcher.js": {
-      "expectCount": 9,
-      "actualCount": 9,
+      "expectCount": 10,
+      "actualCount": 10,
       "undocumentLines": []
     },
     "src/EventListener.js": {
