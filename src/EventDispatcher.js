@@ -153,7 +153,7 @@ export default class EventDispatcher /*< implements IEventDispatcher >*/ {
          *     console.log(1}; 
          *     dispatcher.addEventListener("custom", () => {}, { "priority": 1 });
          * });
-         * dispatcher.dispatchEvent(new Event("custom", false, false"));
+         * dispatcher.dispatchEvent(new Event("custom", false, false));
          */
         if ( this._listenerLockers[type] ) {
             this._listenerLockers[type] = false;
