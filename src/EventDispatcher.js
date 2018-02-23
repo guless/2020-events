@@ -39,6 +39,7 @@ import IEventDispatcher from "./IEventDispatcher";
 import IEventListener from "./IEventListener";
 import IEventListenerOptions from "./IEventListenerOptions";
 import Event from "./Event";
+import EventPhase from "./EventPhase";
 import EventListener from "./EventListener";
 
 /**
@@ -125,7 +126,7 @@ export default class EventDispatcher /*< implements IEventDispatcher >*/ {
      */
     addEventListener( type, handler, options = false ) {
         if ( !handler ) {
-            throw new SyntaxError("handler 必须为事件处理函数(function)或者是事件侦听器(IEventListener)。");
+            throw new TypeError("handler 必须为事件处理函数(function)或者是事件侦听器(IEventListener)。");
         }
         
         const listener = new EventListener(handler, options);
@@ -255,16 +256,149 @@ export default class EventDispatcher /*< implements IEventDispatcher >*/ {
      * @since 1.0.0
      */
     hasEventListener( type ) {
-        return (this._listenerRegister[type] && this._listenerRegister[type].length >= 1);
+        return (!!this._listenerRegister[type] && this._listenerRegister[type].length >= 1);
     }
     
     /**
      * 派发一个事件对象到目标对象的事件流中。
      * @param {Event} event - 指定派发的事件对象。
+     * @example
+     * const dispatcher = new EventDispatcher();
+     * 
+     * dispatcher.dispatchEvent(new Event("custom", false, false)); // 派发一个不冒泡的事件。
+     * dispatcher.dispatchEvent(new Event("custom", true, false)); // 派发一个参与冒泡的事件。
      * @returns {Boolean} - 如果事件传递到了当前目标对象，并且没有被取消默认行为。则返回 `true`，否则返回 `false`。
      * @since 1.0.0
      */
     dispatchEvent( event ) {
+        /// 该事件对象已经被派发过一次！
+        if ( event.target || event.eventPhase !== EventPhase.NONE ) {
+            throw new Error("同一个事件对象不能派发多次！");
+        }
         
+        event._target = this._targetDispatcher; // 设置事件目标对象。
+        
+        /**
+         * 满足以下条件时，直接调度事件至目标阶段：
+         * 
+         * 1) 事件不参与冒泡行为。
+         * 2) 目标对象没有加入显示对象列表。
+         */
+        if ( !event.bubbles || !event.target.parent 
+            /*< 防止根级别对象循环引用 >*/ || (event.target === event.target.parent) ) {
+            
+            event._eventPhase = EventPhase.AT_TARGET;
+            event._currentTarget = event.target;
+            
+            if ( event.currentTarget._dispatchToListeners ) {
+                event.currentTarget._dispatchToListeners(event);
+            }
+            
+            event._currentTarget = null; // 事件派发完成后，删除事件对当前目标的引用。
+            return !event.defaultPrevented;
+        }
+        
+        /**
+         * 查找事件传递路径。
+         */
+        let target = event.target;
+        let path = [target];
+        
+        while( target.parent && target !== target.parent ) { path.push(target = target.parent); }
+        
+        /**
+         * 捕获阶段。
+         */
+        event._eventPhase = EventPhase.CAPTURING_PHASE;
+        
+        for ( let i = path.length - 1; i >= 1 && !event._stopPropagation; --i ) {
+            event._currentTarget = path[i];
+            
+            if ( event.currentTarget._dispatchToListeners ) {
+                event.currentTarget._dispatchToListeners(event);
+            }
+        }
+        
+        if ( event._stopPropagation ) { // 事件在捕获阶段被中断。
+            event._currentTarget = null;
+            return false;
+        }
+        
+        /**
+         * 目标阶段。
+         */
+        event._eventPhase = EventPhase.AT_TARGET;
+        event._currentTarget = event.target;
+        
+        if ( event.currentTarget._dispatchToListeners ) {
+            event.currentTarget._dispatchToListeners(event);
+        }
+        
+        if ( event._stopPropagation ) {
+            event._currentTarget = null;
+            return !event.defaultPrevented;
+        }
+        
+        /**
+         * 冒泡阶段。
+         */
+        event._eventPhase = EventPhase.BUBBLING_PHASE;
+        
+        for ( let i = 0; i < path.length && !event._stopPropagation; ++i ) {
+            event._currentTarget = path[i];
+            
+            if ( event.currentTarget._dispatchToListeners ) {
+                event.currentTarget._dispatchToListeners(event);
+            }
+        }
+        
+        event._currentTarget = null;
+        return !event.defaultPrevented;
+    }
+    
+    /**
+     * 执行所有的侦听器。
+     * @param {Event} event - 指定派发的事件对象。
+     */
+    _dispatchToListeners( event ) {
+        if ( !this.hasEventListener(event.type) ) {
+            return;
+        }
+        
+        /**
+         * 锁定侦听器列表。
+         */
+        this._listenerLockers[event.type] = true;
+        
+        /**
+         * 执行侦听器
+         */
+        for ( let i = 0, items = this._listenerRegister[event.type]; i < items.length && !event._stopImmediatePropagation; ++i ) {
+            /** @type {EventListener} */
+            const listener = items[i];
+            
+            switch( event.eventPhase ) {
+                case EventPhase.CAPTURING_PHASE :
+                    if ( listener.options.useCapture ) { listener.handleEvent(event); }
+                    break;
+                    
+                case EventPhase.AT_TARGET :
+                    listener.handleEvent(event);
+                    break;
+                    
+                case EventPhase.BUBBLING_PHASE :
+                    if ( !listener.options.useCapture ) { listener.handleEvent(event); }
+                    break;
+                
+                default: break;
+            }
+            
+            /**
+             * 自动移除一次性的侦听器。
+             */
+            if ( listener.options.once ) {
+                this.removeEventListener(event.type, listener.handler, listener.options.useCapture);
+            }
+        }
     }
 }
