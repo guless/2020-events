@@ -27,19 +27,6 @@
     "example": "examples",
     "test": "test"
   },
-  "dependencies": {
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-preset-env": "^1.6.1",
-    "babel-register": "^6.26.0",
-    "esdoc": "^1.0.4",
-    "esdoc-accessor-plugin": "^1.0.0",
-    "esdoc-ecmascript-proposal-plugin": "^1.0.0",
-    "esdoc-integrate-manual-plugin": "^1.0.0",
-    "esdoc-standard-plugin": "^1.0.0",
-    "esdoc-typescript-plugin": "^1.0.0",
-    "istanbul": "^1.1.0-alpha.1",
-    "rimraf": "^2.6.2"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/guless/events.git"
