@@ -389,7 +389,7 @@ export default class EventDispatcher /*&lt; implements IEventDispatcher &gt;*/ {
          * &#x76EE;&#x6807;&#x9636;&#x6BB5;&#x3002;
          */
         event._eventPhase = EventPhase.AT_TARGET;
-        event._currentTarget = event.target;
+        event._currentTarget = path[0];
         
         if ( event.currentTarget._dispatchToListeners ) {
             event.currentTarget._dispatchToListeners(event);

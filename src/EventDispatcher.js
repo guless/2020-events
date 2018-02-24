@@ -345,7 +345,7 @@ export default class EventDispatcher /*< implements IEventDispatcher >*/ {
          * 目标阶段。
          */
         event._eventPhase = EventPhase.AT_TARGET;
-        event._currentTarget = event.target;
+        event._currentTarget = path[0];
         
         if ( event.currentTarget._dispatchToListeners ) {
             event.currentTarget._dispatchToListeners(event);
