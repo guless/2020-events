@@ -6,7 +6,6 @@
   "scripts": {
     "docs": "rimraf ./docs && esdoc",
     "test": "rimraf ./coverage && istanbul cover _mocha test/**/*.js -- --require babel-register",
-    "build": "webpack --config=./Webpack.config.js",
     "examples": "node ./examples/",
     "publish": "npm version patch"
   },
