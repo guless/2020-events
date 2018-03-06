@@ -3,7 +3,6 @@
   "version": "1.0.7",
   "description": "事件分发器（同步）",
   "main": "exports.js",
-  "browser": "./dist/browser.js",
   "scripts": {
     "docs": "rimraf ./docs && esdoc",
     "test": "rimraf ./coverage && istanbul cover _mocha test/**/*.js -- --require babel-register",
