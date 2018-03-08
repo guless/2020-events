@@ -3,9 +3,11 @@
   "version": "1.0.8",
   "description": "事件分发器（同步）",
   "main": "exports.js",
+  "wepy": "./dist/wepy.js",
   "scripts": {
     "docs": "rimraf ./docs && esdoc",
     "test": "rimraf ./coverage && istanbul cover _mocha test/**/*.js -- --require babel-register",
+    "build": "webpack --config=./Webpack.config.js",
     "examples": "node ./examples/",
     "publish": "npm version patch"
   },
