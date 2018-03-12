@@ -1,5 +1,11 @@
 window.esdocSearchIndex = [
   [
+    "gs-events/src/customevent.js~customevent",
+    "class/src/CustomEvent.js~CustomEvent.html",
+    "<span>CustomEvent</span> <span class=\"search-result-import-path\">gs-events/src/CustomEvent.js</span>",
+    "class"
+  ],
+  [
     "gs-events/src/event.js~event",
     "class/src/Event.js~Event.html",
     "<span>Event</span> <span class=\"search-result-import-path\">gs-events/src/Event.js</span>",
@@ -328,6 +334,24 @@ window.esdocSearchIndex = [
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
     "src/.external-ecmascript.js~undefined",
     "external"
+  ],
+  [
+    "src/customevent.js",
+    "file/src/CustomEvent.js.html",
+    "src/CustomEvent.js",
+    "file"
+  ],
+  [
+    "src/customevent.js~customevent#constructor",
+    "class/src/CustomEvent.js~CustomEvent.html#instance-constructor-constructor",
+    "src/CustomEvent.js~CustomEvent#constructor",
+    "method"
+  ],
+  [
+    "src/customevent.js~customevent#data",
+    "class/src/CustomEvent.js~CustomEvent.html#instance-get-data",
+    "src/CustomEvent.js~CustomEvent#data",
+    "member"
   ],
   [
     "src/event.js",

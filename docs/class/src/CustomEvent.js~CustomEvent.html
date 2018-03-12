@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">Event | gs-events</title>
+  <title data-ice="title">CustomEvent | gs-events</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -43,24 +43,24 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import Event from &apos;<span><a href="file/src/Event.js.html#lineNumber46">gs-events/src/Event.js</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import CustomEvent from &apos;<span><a href="file/src/CustomEvent.js.html#lineNumber45">gs-events/src/CustomEvent.js</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
-  <span data-ice="since">| since 1.0.0</span>
-  <span data-ice="source">| <span><a href="file/src/Event.js.html#lineNumber46">source</a></span></span>
+  <span data-ice="since">| since 1.0.9</span>
+  <span data-ice="source">| <span><a href="file/src/CustomEvent.js.html#lineNumber45">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
-  <h1 data-ice="name">Event</h1>
+  <h1 data-ice="name">CustomEvent</h1>
 
   
 
   
   
+  <div class="flat-list" data-ice="extendsChain"><h4>Extends:</h4><div><span><a href="class/src/Event.js~Event.html">Event</a></span> &#x2192; CustomEvent</div></div>
   
-  <div class="flat-list" data-ice="directSubclass"><h4>Direct Subclass:</h4><div><span><a href="class/src/CustomEvent.js~CustomEvent.html">CustomEvent</a></span></div></div>
   
   
   
@@ -69,11 +69,11 @@
 
   
   
-  <div class="description" data-ice="description"><p>&#x5B9A;&#x4E49; <span><a href="class/src/EventDispatcher.js~EventDispatcher.html">EventDispatcher</a></span> &#x6D3E;&#x53D1;&#x7684;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x3002;</p>
+  <div class="description" data-ice="description"><p>&#x5B9A;&#x4E49;&#x643A;&#x5E26;&#x81EA;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x7684;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x3002;</p>
 </div>
   
 
-  <div data-ice="see"><h4>See:</h4><ul><li><span><span><a href="class/src/EventDispatcher.js~EventDispatcher.html">EventDispatcher</a></span></span></li></ul></div>
+  <div data-ice="see"><h4>See:</h4><ul><li><span><span><a href="class/src/Event.js~Event.html">Event</a></span></span></li></ul></div>
 
   
 
@@ -102,19 +102,19 @@
           
           
           
-          <span class="code" data-ice="name"><span><a href="class/src/Event.js~Event.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(type: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>, bubbles: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span>, cancelable: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span>)</span>
+          <span class="code" data-ice="name"><span><a href="class/src/CustomEvent.js~CustomEvent.html#instance-constructor-constructor">constructor</a></span></span><span class="code" data-ice="signature">(type: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>, data: <span>any</span>, bubbles: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span>, cancelable: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span>)</span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x3002;</p>
+        <div data-ice="description"><p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x652F;&#x6301;&#x81EA;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x7684;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x3002;</p>
 </div>
       </div>
     </td>
     <td>
       
-      <span class="since" data-ice="since">since 1.0.0</span>
+      <span class="since" data-ice="since">since 1.0.9</span>
     </td>
   </tr>
 </tbody>
@@ -122,6 +122,44 @@
 </div>
 <div data-ice="memberSummary"><h2>Member Summary</h2><table class="summary" data-ice="summary">
   <thead><tr><td data-ice="title" colspan="3">Public Members</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      <span class="kind" data-ice="kind">get</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
+          <span class="code" data-ice="name"><span><a href="class/src/CustomEvent.js~CustomEvent.html#instance-get-data">data</a></span></span><span class="code" data-ice="signature">: <span>any</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>&#x83B7;&#x53D6;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x3002;</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since 1.0.9</span>
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+
+<div class="inherited-summary" data-ice="inheritedSummary"><h2>Inherited Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3"><span class="toggle closed"></span> From class <span><a href="class/src/Event.js~Event.html">Event</a></span></td></tr></thead>
   <tbody>
   
   <tr data-ice="target">
@@ -327,14 +365,7 @@
       <span class="since" data-ice="since">since 1.0.0</span>
     </td>
   </tr>
-</tbody>
-</table>
-</div>
-<div data-ice="methodSummary"><h2>Method Summary</h2><table class="summary" data-ice="summary">
-  <thead><tr><td data-ice="title" colspan="3">Public Methods</td></tr></thead>
-  <tbody>
-  
-  <tr data-ice="target">
+<tr data-ice="target">
     <td>
       <span class="access" data-ice="access">public</span>
       
@@ -427,8 +458,6 @@
 
 
 
-
-
 <div data-ice="constructorDetails"><h2 data-ice="title">Public Constructors</h2>
 
 <div class="detail" data-ice="detail">
@@ -439,21 +468,21 @@
     
     
     
-    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(type: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>, bubbles: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span>, cancelable: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span>)</span>
+    <span class="code" data-ice="name">constructor</span><span class="code" data-ice="signature">(type: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>, data: <span>any</span>, bubbles: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span>, cancelable: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span>)</span>
     <span class="right-info">
       
-      <span class="since" data-ice="since">since 1.0.0</span>
-      <span data-ice="source"><span><a href="file/src/Event.js.html#lineNumber55">source</a></span></span>
+      <span class="since" data-ice="since">since 1.0.9</span>
+      <span data-ice="source"><span><a href="file/src/CustomEvent.js.html#lineNumber55">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  <div data-ice="description"><p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x3002;</p>
+  <div data-ice="description"><p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x652F;&#x6301;&#x81EA;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x7684;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x3002;</p>
 </div>
 
-  
+  <div data-ice="override"><h4>Override:</h4><span><a href="class/src/Event.js~Event.html#instance-constructor-constructor">Event#constructor</a></span></div>
 
   <div data-ice="properties"><div data-ice="properties">
   <h4 data-ice="title">Params:</h4>
@@ -468,6 +497,14 @@
       <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"><p>&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;&#x3002;</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">data</td>
+      <td data-ice="type" class="code"><span>any</span></td>
+      <td data-ice="appendix"><ul><li>optional</li>
+<li>default: null</li></ul></td>
+      <td data-ice="description"><p>&#x6307;&#x5B9A;&#x9644;&#x52A0;&#x5230;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x7684;&#x6570;&#x636E;&#x3002;</p>
 </td>
     </tr>
 <tr data-ice="property" data-depth="0">
@@ -512,289 +549,25 @@
 <div data-ice="memberDetails"><h2 data-ice="title">Public Members</h2>
 
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-get-bubbles">
+  <h3 data-ice="anchor" id="instance-get-data">
     <span class="access" data-ice="access">public</span>
     
     <span class="kind" data-ice="kind">get</span>
     
     
     
-    <span class="code" data-ice="name">bubbles</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
+    <span class="code" data-ice="name">data</span><span class="code" data-ice="signature">: <span>any</span></span>
     <span class="right-info">
       
-      <span class="since" data-ice="since">since 1.0.0</span>
-      <span data-ice="source"><span><a href="file/src/Event.js.html#lineNumber116">source</a></span></span>
+      <span class="since" data-ice="since">since 1.0.9</span>
+      <span data-ice="source"><span><a href="file/src/CustomEvent.js.html#lineNumber65">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  <div data-ice="description"><p>&#x6307;&#x793A;&#x8BE5;&#x4E8B;&#x4EF6;&#x662F;&#x5426;&#x53C2;&#x4E0E;&#x5192;&#x6CE1;&#x884C;&#x4E3A;&#x3002;</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-get-cancelable">
-    <span class="access" data-ice="access">public</span>
-    
-    <span class="kind" data-ice="kind">get</span>
-    
-    
-    
-    <span class="code" data-ice="name">cancelable</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
-    <span class="right-info">
-      
-      <span class="since" data-ice="since">since 1.0.0</span>
-      <span data-ice="source"><span><a href="file/src/Event.js.html#lineNumber125">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  <div data-ice="description"><p>&#x6307;&#x793A;&#x8BE5;&#x4E8B;&#x4EF6;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x53D6;&#x6D88;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x3002;</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-get-currentTarget">
-    <span class="access" data-ice="access">public</span>
-    
-    <span class="kind" data-ice="kind">get</span>
-    
-    
-    
-    <span class="code" data-ice="name">currentTarget</span><span class="code" data-ice="signature">: <span><a href="class/src/IEventDispatcher.js~IEventDispatcher.html">IEventDispatcher</a></span></span>
-    <span class="right-info">
-      
-      <span class="since" data-ice="since">since 1.0.0</span>
-      <span data-ice="source"><span><a href="file/src/Event.js.html#lineNumber143">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  <div data-ice="description"><p>&#x83B7;&#x53D6;&#x4E8B;&#x4EF6;&#x7684;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x3002;</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-get-defaultPrevented">
-    <span class="access" data-ice="access">public</span>
-    
-    <span class="kind" data-ice="kind">get</span>
-    
-    
-    
-    <span class="code" data-ice="name">defaultPrevented</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
-    <span class="right-info">
-      
-      <span class="since" data-ice="since">since 1.0.0</span>
-      <span data-ice="source"><span><a href="file/src/Event.js.html#lineNumber161">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  <div data-ice="description"><p>&#x6307;&#x793A;&#x8BE5;&#x4E8B;&#x4EF6;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x53D6;&#x6D88;&#x4E86;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x3002;</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-get-eventPhase">
-    <span class="access" data-ice="access">public</span>
-    
-    <span class="kind" data-ice="kind">get</span>
-    
-    
-    
-    <span class="code" data-ice="name">eventPhase</span><span class="code" data-ice="signature">: <span><a href="class/src/EventPhase.js~EventPhase.html">EventPhase</a></span></span>
-    <span class="right-info">
-      
-      <span class="since" data-ice="since">since 1.0.0</span>
-      <span data-ice="source"><span><a href="file/src/Event.js.html#lineNumber152">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  <div data-ice="description"><p>&#x83B7;&#x53D6;&#x4E8B;&#x4EF6;&#x7684;&#x5F53;&#x524D;&#x9636;&#x6BB5;&#x3002;</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-get-target">
-    <span class="access" data-ice="access">public</span>
-    
-    <span class="kind" data-ice="kind">get</span>
-    
-    
-    
-    <span class="code" data-ice="name">target</span><span class="code" data-ice="signature">: <span><a href="class/src/IEventDispatcher.js~IEventDispatcher.html">IEventDispatcher</a></span></span>
-    <span class="right-info">
-      
-      <span class="since" data-ice="since">since 1.0.0</span>
-      <span data-ice="source"><span><a href="file/src/Event.js.html#lineNumber134">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  <div data-ice="description"><p>&#x83B7;&#x53D6;&#x4E8B;&#x4EF6;&#x7684;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#x3002;</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-get-type">
-    <span class="access" data-ice="access">public</span>
-    
-    <span class="kind" data-ice="kind">get</span>
-    
-    
-    
-    <span class="code" data-ice="name">type</span><span class="code" data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span></span>
-    <span class="right-info">
-      
-      <span class="since" data-ice="since">since 1.0.0</span>
-      <span data-ice="source"><span><a href="file/src/Event.js.html#lineNumber107">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  <div data-ice="description"><p>&#x83B7;&#x53D6;&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;&#x3002;</p>
+  <div data-ice="description"><p>&#x83B7;&#x53D6;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x3002;</p>
 </div>
 
   
@@ -820,141 +593,7 @@
   
 </div>
 </div>
-<div data-ice="methodDetails"><h2 data-ice="title">Public Methods</h2>
 
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-method-preventDefault">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    
-    <span class="code" data-ice="name">preventDefault</span><span class="code" data-ice="signature">()</span>
-    <span class="right-info">
-      
-      <span class="since" data-ice="since">since 1.0.0</span>
-      <span data-ice="source"><span><a href="file/src/Event.js.html#lineNumber170">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  <div data-ice="description"><p>&#x5982;&#x679C;&#x4E8B;&#x4EF6;&#x53EF;&#x4EE5;&#x53D6;&#x6D88;(<code>cancelable == true</code>)&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#xFF0C;&#x5219;&#x53D6;&#x6D88;&#x8BE5;&#x4E8B;&#x4EF6;&#x7684;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x3002;</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  <div data-ice="see"><h4>See:</h4><ul><li><span><span><a href="class/src/Event.js~Event.html#instance-get-cancelable">Event#cancelable</a></span></span></li></ul></div>
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-method-stopImmediatePropagation">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    
-    <span class="code" data-ice="name">stopImmediatePropagation</span><span class="code" data-ice="signature">()</span>
-    <span class="right-info">
-      
-      <span class="since" data-ice="since">since 1.0.0</span>
-      <span data-ice="source"><span><a href="file/src/Event.js.html#lineNumber188">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  <div data-ice="description"><p>&#x7ACB;&#x5373;&#x505C;&#x6B62;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;&#xFF0C;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x4EE5;&#x53CA;&#x540E;&#x7EED;&#x6240;&#x6709;&#x8282;&#x70B9;&#x7684;&#x4FA6;&#x542C;&#x5668;&#x90FD;&#x5C06;&#x4E0D;&#x4F1A;&#x6536;&#x5230;&#x8BE5;&#x4E8B;&#x4EF6;&#x901A;&#x77E5;&#x3002;</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  <div data-ice="see"><h4>See:</h4><ul><li><span><span><a href="class/src/EventDispatcher.js~EventDispatcher.html#instance-method-dispatchEvent">EventDispatcher#dispatchEvent</a></span></span></li></ul></div>
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-method-stopPropagation">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    
-    <span class="code" data-ice="name">stopPropagation</span><span class="code" data-ice="signature">()</span>
-    <span class="right-info">
-      
-      <span class="since" data-ice="since">since 1.0.0</span>
-      <span data-ice="source"><span><a href="file/src/Event.js.html#lineNumber179">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  <div data-ice="description"><p>&#x505C;&#x6B62;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;&#xFF0C;&#x540E;&#x7EED;&#x6240;&#x6709;&#x8282;&#x70B9;&#x7684;&#x4FA6;&#x542C;&#x5668;&#x90FD;&#x5C06;&#x4E0D;&#x4F1A;&#x6536;&#x5230;&#x8BE5;&#x4E8B;&#x4EF6;&#x901A;&#x77E5;&#x3002;</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  <div data-ice="see"><h4>See:</h4><ul><li><span><span><a href="class/src/EventDispatcher.js~EventDispatcher.html#instance-method-dispatchEvent">EventDispatcher#dispatchEvent</a></span></span></li></ul></div>
-  
-</div>
-</div>
 </div>
 
 <footer class="footer">
