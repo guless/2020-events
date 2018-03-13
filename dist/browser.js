@@ -915,20 +915,23 @@ var EventListenerOptions /*< implements IEventListenerOptions >*/ = function () 
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_Event__ = __webpack_require__(2);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Event", function() { return __WEBPACK_IMPORTED_MODULE_0__src_Event__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_EventDispatcher__ = __webpack_require__(10);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "EventDispatcher", function() { return __WEBPACK_IMPORTED_MODULE_1__src_EventDispatcher__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_EventListener__ = __webpack_require__(7);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "EventListener", function() { return __WEBPACK_IMPORTED_MODULE_2__src_EventListener__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_EventListenerOptions__ = __webpack_require__(8);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "EventListenerOptions", function() { return __WEBPACK_IMPORTED_MODULE_3__src_EventListenerOptions__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__src_EventPhase__ = __webpack_require__(5);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "EventPhase", function() { return __WEBPACK_IMPORTED_MODULE_4__src_EventPhase__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__src_IEventDispatcher__ = __webpack_require__(3);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "IEventDispatcher", function() { return __WEBPACK_IMPORTED_MODULE_5__src_IEventDispatcher__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__src_IEventListener__ = __webpack_require__(6);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "IEventListener", function() { return __WEBPACK_IMPORTED_MODULE_6__src_IEventListener__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__src_IEventListenerOptions__ = __webpack_require__(4);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "IEventListenerOptions", function() { return __WEBPACK_IMPORTED_MODULE_7__src_IEventListenerOptions__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_CustomEvent__ = __webpack_require__(10);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "CustomEvent", function() { return __WEBPACK_IMPORTED_MODULE_1__src_CustomEvent__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_EventDispatcher__ = __webpack_require__(14);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "EventDispatcher", function() { return __WEBPACK_IMPORTED_MODULE_2__src_EventDispatcher__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_EventListener__ = __webpack_require__(7);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "EventListener", function() { return __WEBPACK_IMPORTED_MODULE_3__src_EventListener__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__src_EventListenerOptions__ = __webpack_require__(8);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "EventListenerOptions", function() { return __WEBPACK_IMPORTED_MODULE_4__src_EventListenerOptions__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__src_EventPhase__ = __webpack_require__(5);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "EventPhase", function() { return __WEBPACK_IMPORTED_MODULE_5__src_EventPhase__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__src_IEventDispatcher__ = __webpack_require__(3);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "IEventDispatcher", function() { return __WEBPACK_IMPORTED_MODULE_6__src_IEventDispatcher__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__src_IEventListener__ = __webpack_require__(6);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "IEventListener", function() { return __WEBPACK_IMPORTED_MODULE_7__src_IEventListener__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__src_IEventListenerOptions__ = __webpack_require__(4);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "IEventListenerOptions", function() { return __WEBPACK_IMPORTED_MODULE_8__src_IEventListenerOptions__["a"]; });
+
 
 
 
@@ -943,8 +946,137 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CustomEvent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Event__ = __webpack_require__(2);
+
+
+
+
+
+/// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/// @Copyright ~2018 ☜Samlv9☞ and other contributors
+/// @MIT-LICENSE | 1.0.0 | https://api.guless.com/
+/// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+///                                              }|
+///                                              }|
+///                                              }|     　 へ　　　 ／|    
+///      _______     _______         ______      }|      /　│　　 ／ ／
+///     /  ___  |   |_   __ \      .' ____ '.    }|     │　Z ＿,＜　／　　 /`ヽ
+///    |  (__ \_|     | |__) |     | (____) |    }|     │　　　　　ヽ　　 /　　〉
+///     '.___`-.      |  __ /      '_.____. |    }|      Y　　　　　`　 /　　/
+///    |`\____) |    _| |  \ \_    | \____| |    }|    ｲ●　､　●　　⊂⊃〈　　/
+///    |_______.'   |____| |___|    \______,'    }|    ()　 v　　　　|　＼〈
+///    |=========================================\|    　>ｰ ､_　 ィ　 │ ／／
+///    |> LESS IS MORE                           ||     / へ　　 /　ﾉ＜|＼＼
+///    `=========================================/|    ヽ_ﾉ　　(_／　 │／／
+///                                              }|     7　　　　　　  |／
+///                                              }|     ＞―r￣￣`ｰ―＿`
+///                                              }|
+///                                              }|
+/// Permission is hereby granted, free of charge, to any person obtaining a copy
+/// of this software and associated documentation files (the "Software"), to deal
+/// in the Software without restriction, including without limitation the rights
+/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+/// copies of the Software, and to permit persons to whom the Software is
+/// furnished to do so, subject to the following conditions:
+///
+/// The above copyright notice and this permission notice shall be included in all
+/// copies or substantial portions of the Software.
+///
+/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+/// THE SOFTWARE.
+
+
+/**
+ * 定义携带自定义数据的事件对象。
+ * @see {@link Event}
+ * @since 1.0.9
+ */
+
+var CustomEvent = function (_Event) {
+  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(CustomEvent, _Event);
+
+  /**
+   * 创建一个支持自定义数据的事件对象。
+   * 
+   * @param {String|Symbol} type - 事件类型。
+   * @param {any} [data=null] - 指定附加到事件对象的数据。
+   * @param {Boolean} [bubbles=false] - 指示该事件是否参与冒泡行为。
+   * @param {Boolean} [cancelable=true] - 指示该事件是否可以取消默认行为。
+   * @since 1.0.9
+   */
+  function CustomEvent(type) {
+    var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+    var bubbles = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+    var cancelable = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : true;
+
+    __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, CustomEvent);
+
+    var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (CustomEvent.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(CustomEvent)).call(this, type, bubbles, cancelable));
+
+    _this._data = data;
+    return _this;
+  }
+
+  /**
+   * 获取事件对象的自定义数据。
+   * @type {any}
+   * @since 1.0.9
+   */
+
+
+  __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(CustomEvent, [{
+    key: "data",
+    get: function get() {
+      return this._data;
+    }
+  }]);
+
+  return CustomEvent;
+}(__WEBPACK_IMPORTED_MODULE_5__Event__["a" /* default */]);
+
+
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+module.exports = require("babel-runtime/core-js/object/get-prototype-of");
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports) {
+
+module.exports = require("babel-runtime/helpers/possibleConstructorReturn");
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports) {
+
+module.exports = require("babel-runtime/helpers/inherits");
+
+/***/ }),
+/* 14 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventDispatcher; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_typeof__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_typeof__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_typeof___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_typeof__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
@@ -1427,7 +1559,7 @@ var EventDispatcher /*< implements IEventDispatcher >*/ = function () {
 
 
 /***/ }),
-/* 11 */
+/* 15 */
 /***/ (function(module, exports) {
 
 module.exports = require("babel-runtime/helpers/typeof");

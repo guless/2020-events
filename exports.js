@@ -1,4 +1,5 @@
 export { default as Event } from "./src/Event";
+export { default as CustomEvent } from "./src/CustomEvent";
 export { default as EventDispatcher } from "./src/EventDispatcher";
 export { default as EventListener } from "./src/EventListener";
 export { default as EventListenerOptions } from "./src/EventListenerOptions";

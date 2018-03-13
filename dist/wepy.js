@@ -887,20 +887,23 @@ var EventListenerOptions /*< implements IEventListenerOptions >*/ = function () 
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_Event__ = __webpack_require__(0);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Event", function() { return __WEBPACK_IMPORTED_MODULE_0__src_Event__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_EventDispatcher__ = __webpack_require__(8);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "EventDispatcher", function() { return __WEBPACK_IMPORTED_MODULE_1__src_EventDispatcher__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_EventListener__ = __webpack_require__(5);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "EventListener", function() { return __WEBPACK_IMPORTED_MODULE_2__src_EventListener__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_EventListenerOptions__ = __webpack_require__(6);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "EventListenerOptions", function() { return __WEBPACK_IMPORTED_MODULE_3__src_EventListenerOptions__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__src_EventPhase__ = __webpack_require__(3);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "EventPhase", function() { return __WEBPACK_IMPORTED_MODULE_4__src_EventPhase__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__src_IEventDispatcher__ = __webpack_require__(1);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "IEventDispatcher", function() { return __WEBPACK_IMPORTED_MODULE_5__src_IEventDispatcher__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__src_IEventListener__ = __webpack_require__(4);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "IEventListener", function() { return __WEBPACK_IMPORTED_MODULE_6__src_IEventListener__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__src_IEventListenerOptions__ = __webpack_require__(2);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "IEventListenerOptions", function() { return __WEBPACK_IMPORTED_MODULE_7__src_IEventListenerOptions__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_CustomEvent__ = __webpack_require__(8);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "CustomEvent", function() { return __WEBPACK_IMPORTED_MODULE_1__src_CustomEvent__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_EventDispatcher__ = __webpack_require__(9);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "EventDispatcher", function() { return __WEBPACK_IMPORTED_MODULE_2__src_EventDispatcher__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_EventListener__ = __webpack_require__(5);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "EventListener", function() { return __WEBPACK_IMPORTED_MODULE_3__src_EventListener__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__src_EventListenerOptions__ = __webpack_require__(6);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "EventListenerOptions", function() { return __WEBPACK_IMPORTED_MODULE_4__src_EventListenerOptions__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__src_EventPhase__ = __webpack_require__(3);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "EventPhase", function() { return __WEBPACK_IMPORTED_MODULE_5__src_EventPhase__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__src_IEventDispatcher__ = __webpack_require__(1);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "IEventDispatcher", function() { return __WEBPACK_IMPORTED_MODULE_6__src_IEventDispatcher__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__src_IEventListener__ = __webpack_require__(4);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "IEventListener", function() { return __WEBPACK_IMPORTED_MODULE_7__src_IEventListener__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__src_IEventListenerOptions__ = __webpack_require__(2);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "IEventListenerOptions", function() { return __WEBPACK_IMPORTED_MODULE_8__src_IEventListenerOptions__["a"]; });
+
 
 
 
@@ -912,6 +915,110 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 /* 8 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CustomEvent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Event__ = __webpack_require__(0);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+/// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/// @Copyright ~2018 ☜Samlv9☞ and other contributors
+/// @MIT-LICENSE | 1.0.0 | https://api.guless.com/
+/// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+///                                              }|
+///                                              }|
+///                                              }|     　 へ　　　 ／|    
+///      _______     _______         ______      }|      /　│　　 ／ ／
+///     /  ___  |   |_   __ \      .' ____ '.    }|     │　Z ＿,＜　／　　 /`ヽ
+///    |  (__ \_|     | |__) |     | (____) |    }|     │　　　　　ヽ　　 /　　〉
+///     '.___`-.      |  __ /      '_.____. |    }|      Y　　　　　`　 /　　/
+///    |`\____) |    _| |  \ \_    | \____| |    }|    ｲ●　､　●　　⊂⊃〈　　/
+///    |_______.'   |____| |___|    \______,'    }|    ()　 v　　　　|　＼〈
+///    |=========================================\|    　>ｰ ､_　 ィ　 │ ／／
+///    |> LESS IS MORE                           ||     / へ　　 /　ﾉ＜|＼＼
+///    `=========================================/|    ヽ_ﾉ　　(_／　 │／／
+///                                              }|     7　　　　　　  |／
+///                                              }|     ＞―r￣￣`ｰ―＿`
+///                                              }|
+///                                              }|
+/// Permission is hereby granted, free of charge, to any person obtaining a copy
+/// of this software and associated documentation files (the "Software"), to deal
+/// in the Software without restriction, including without limitation the rights
+/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+/// copies of the Software, and to permit persons to whom the Software is
+/// furnished to do so, subject to the following conditions:
+///
+/// The above copyright notice and this permission notice shall be included in all
+/// copies or substantial portions of the Software.
+///
+/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+/// THE SOFTWARE.
+
+
+/**
+ * 定义携带自定义数据的事件对象。
+ * @see {@link Event}
+ * @since 1.0.9
+ */
+
+var CustomEvent = function (_Event) {
+  _inherits(CustomEvent, _Event);
+
+  /**
+   * 创建一个支持自定义数据的事件对象。
+   * 
+   * @param {String|Symbol} type - 事件类型。
+   * @param {any} [data=null] - 指定附加到事件对象的数据。
+   * @param {Boolean} [bubbles=false] - 指示该事件是否参与冒泡行为。
+   * @param {Boolean} [cancelable=true] - 指示该事件是否可以取消默认行为。
+   * @since 1.0.9
+   */
+  function CustomEvent(type) {
+    var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+    var bubbles = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+    var cancelable = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : true;
+
+    _classCallCheck(this, CustomEvent);
+
+    var _this = _possibleConstructorReturn(this, (CustomEvent.__proto__ || Object.getPrototypeOf(CustomEvent)).call(this, type, bubbles, cancelable));
+
+    _this._data = data;
+    return _this;
+  }
+
+  /**
+   * 获取事件对象的自定义数据。
+   * @type {any}
+   * @since 1.0.9
+   */
+
+
+  _createClass(CustomEvent, [{
+    key: "data",
+    get: function get() {
+      return this._data;
+    }
+  }]);
+
+  return CustomEvent;
+}(__WEBPACK_IMPORTED_MODULE_0__Event__["a" /* default */]);
+
+
+
+/***/ }),
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
