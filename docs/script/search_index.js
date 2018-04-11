@@ -354,6 +354,12 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "src/customevent.js~customevent#reset",
+    "class/src/CustomEvent.js~CustomEvent.html#instance-method-reset",
+    "src/CustomEvent.js~CustomEvent#reset",
+    "method"
+  ],
+  [
     "src/event.js",
     "file/src/Event.js.html",
     "src/Event.js",
@@ -399,6 +405,12 @@ window.esdocSearchIndex = [
     "src/event.js~event#preventdefault",
     "class/src/Event.js~Event.html#instance-method-preventDefault",
     "src/Event.js~Event#preventDefault",
+    "method"
+  ],
+  [
+    "src/event.js~event#reset",
+    "class/src/Event.js~Event.html#instance-method-reset",
+    "src/Event.js~Event#reset",
     "method"
   ],
   [

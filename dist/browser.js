@@ -205,14 +205,42 @@ var Event = function () {
 
 
   __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_createClass___default()(Event, [{
-    key: "preventDefault",
+    key: "reset",
 
+
+    /**
+     * 重置事件状态（允许外部复用事件对象）。
+     * 
+     * @param {String|Symbol} type - 事件类型。
+     * @param {Boolean} [bubbles=false] - 指示该事件是否参与冒泡行为。
+     * @param {Boolean} [cancelable=true] - 指示该事件是否可以取消默认行为。
+     * @returns {this}
+     * @since 1.0.11
+     */
+    value: function reset(type) {
+      var bubbles = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+      var cancelable = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+
+      this._type = type;
+      this._bubbles = bubbles;
+      this._cancelable = cancelable;
+      this._target = null;
+      this._currentTarget = null;
+      this._eventPhase = __WEBPACK_IMPORTED_MODULE_3__EventPhase__["a" /* default */].NONE;
+      this._defaultPrevented = false;
+      this._stopPropagation = false;
+      this._stopImmediatePropagation = false;
+      return this;
+    }
 
     /**
      * 如果事件可以取消(`cancelable == true`)默认行为，则取消该事件的默认行为。
      * @see {@link Event#cancelable}
      * @since 1.0.0
      */
+
+  }, {
+    key: "preventDefault",
     value: function preventDefault() {
       this._cancelable && (this._defaultPrevented = true);
     }
@@ -917,7 +945,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Event", function() { return __WEBPACK_IMPORTED_MODULE_0__src_Event__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__src_CustomEvent__ = __webpack_require__(10);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "CustomEvent", function() { return __WEBPACK_IMPORTED_MODULE_1__src_CustomEvent__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_EventDispatcher__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_EventDispatcher__ = __webpack_require__(15);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "EventDispatcher", function() { return __WEBPACK_IMPORTED_MODULE_2__src_EventDispatcher__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_EventListener__ = __webpack_require__(7);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "EventListener", function() { return __WEBPACK_IMPORTED_MODULE_3__src_EventListener__["a"]; });
@@ -955,9 +983,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Event__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_get__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_get___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_get__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Event__ = __webpack_require__(2);
+
 
 
 
@@ -1009,7 +1040,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  */
 
 var CustomEvent = function (_Event) {
-  __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(CustomEvent, _Event);
+  __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default()(CustomEvent, _Event);
 
   /**
    * 创建一个支持自定义数据的事件对象。
@@ -1034,13 +1065,36 @@ var CustomEvent = function (_Event) {
   }
 
   /**
-   * 获取事件对象的自定义数据。
-   * @type {any}
-   * @since 1.0.9
+   * 重置事件状态（允许外部复用事件对象）。
+   * 
+   * @param {String|Symbol} type - 事件类型。
+   * @param {any} [data=null] - 指定附加到事件对象的数据。
+   * @param {Boolean} [bubbles=false] - 指示该事件是否参与冒泡行为。
+   * @param {Boolean} [cancelable=true] - 指示该事件是否可以取消默认行为。
+   * @returns {this}
+   * @since 1.0.11
    */
 
 
   __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(CustomEvent, [{
+    key: "reset",
+    value: function reset(type) {
+      var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+      var bubbles = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+      var cancelable = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
+
+      __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_get___default()(CustomEvent.prototype.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(CustomEvent.prototype), "reset", this).call(this, type, bubbles, cancelable);
+      this._data = data;
+      return this;
+    }
+
+    /**
+     * 获取事件对象的自定义数据。
+     * @type {any}
+     * @since 1.0.9
+     */
+
+  }, {
     key: "data",
     get: function get() {
       return this._data;
@@ -1048,7 +1102,7 @@ var CustomEvent = function (_Event) {
   }]);
 
   return CustomEvent;
-}(__WEBPACK_IMPORTED_MODULE_5__Event__["a" /* default */]);
+}(__WEBPACK_IMPORTED_MODULE_6__Event__["a" /* default */]);
 
 
 
@@ -1068,15 +1122,21 @@ module.exports = require("babel-runtime/helpers/possibleConstructorReturn");
 /* 13 */
 /***/ (function(module, exports) {
 
-module.exports = require("babel-runtime/helpers/inherits");
+module.exports = require("babel-runtime/helpers/get");
 
 /***/ }),
 /* 14 */
+/***/ (function(module, exports) {
+
+module.exports = require("babel-runtime/helpers/inherits");
+
+/***/ }),
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EventDispatcher; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_typeof__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_typeof__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_typeof___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_typeof__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
@@ -1559,7 +1619,7 @@ var EventDispatcher /*< implements IEventDispatcher >*/ = function () {
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports) {
 
 module.exports = require("babel-runtime/helpers/typeof");

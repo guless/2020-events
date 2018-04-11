@@ -163,6 +163,28 @@ export default class Event {
     }
     
     /**
+     * 重置事件状态（允许外部复用事件对象）。
+     * 
+     * @param {String|Symbol} type - 事件类型。
+     * @param {Boolean} [bubbles=false] - 指示该事件是否参与冒泡行为。
+     * @param {Boolean} [cancelable=true] - 指示该事件是否可以取消默认行为。
+     * @returns {this}
+     * @since 1.0.11
+     */
+    reset( type, bubbles = false, cancelable = false ) {
+        this._type = type;
+        this._bubbles = bubbles;
+        this._cancelable = cancelable;
+        this._target = null;
+        this._currentTarget = null;
+        this._eventPhase = EventPhase.NONE;
+        this._defaultPrevented = false;
+        this._stopPropagation = false;
+        this._stopImmediatePropagation = false;
+        return this;
+    }
+    
+    /**
      * 如果事件可以取消(`cancelable == true`)默认行为，则取消该事件的默认行为。
      * @see {@link Event#cancelable}
      * @since 1.0.0

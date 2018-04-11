@@ -191,14 +191,42 @@ var Event = function () {
 
 
   _createClass(Event, [{
-    key: "preventDefault",
+    key: "reset",
 
+
+    /**
+     * 重置事件状态（允许外部复用事件对象）。
+     * 
+     * @param {String|Symbol} type - 事件类型。
+     * @param {Boolean} [bubbles=false] - 指示该事件是否参与冒泡行为。
+     * @param {Boolean} [cancelable=true] - 指示该事件是否可以取消默认行为。
+     * @returns {this}
+     * @since 1.0.11
+     */
+    value: function reset(type) {
+      var bubbles = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+      var cancelable = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+
+      this._type = type;
+      this._bubbles = bubbles;
+      this._cancelable = cancelable;
+      this._target = null;
+      this._currentTarget = null;
+      this._eventPhase = __WEBPACK_IMPORTED_MODULE_1__EventPhase__["a" /* default */].NONE;
+      this._defaultPrevented = false;
+      this._stopPropagation = false;
+      this._stopImmediatePropagation = false;
+      return this;
+    }
 
     /**
      * 如果事件可以取消(`cancelable == true`)默认行为，则取消该事件的默认行为。
      * @see {@link Event#cancelable}
      * @since 1.0.0
      */
+
+  }, {
+    key: "preventDefault",
     value: function preventDefault() {
       this._cancelable && (this._defaultPrevented = true);
     }
@@ -922,6 +950,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Event__ = __webpack_require__(0);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -999,13 +1029,36 @@ var CustomEvent = function (_Event) {
   }
 
   /**
-   * 获取事件对象的自定义数据。
-   * @type {any}
-   * @since 1.0.9
+   * 重置事件状态（允许外部复用事件对象）。
+   * 
+   * @param {String|Symbol} type - 事件类型。
+   * @param {any} [data=null] - 指定附加到事件对象的数据。
+   * @param {Boolean} [bubbles=false] - 指示该事件是否参与冒泡行为。
+   * @param {Boolean} [cancelable=true] - 指示该事件是否可以取消默认行为。
+   * @returns {this}
+   * @since 1.0.11
    */
 
 
   _createClass(CustomEvent, [{
+    key: "reset",
+    value: function reset(type) {
+      var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+      var bubbles = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+      var cancelable = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
+
+      _get(CustomEvent.prototype.__proto__ || Object.getPrototypeOf(CustomEvent.prototype), "reset", this).call(this, type, bubbles, cancelable);
+      this._data = data;
+      return this;
+    }
+
+    /**
+     * 获取事件对象的自定义数据。
+     * @type {any}
+     * @since 1.0.9
+     */
+
+  }, {
     key: "data",
     get: function get() {
       return this._data;

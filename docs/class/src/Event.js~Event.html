@@ -377,6 +377,35 @@
           
           
           
+          <span class="code" data-ice="name"><span><a href="class/src/Event.js~Event.html#instance-method-reset">reset</a></span></span><span class="code" data-ice="signature">(type: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>, bubbles: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span>, cancelable: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span>): <span>this</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>&#x91CD;&#x7F6E;&#x4E8B;&#x4EF6;&#x72B6;&#x6001;&#xFF08;&#x5141;&#x8BB8;&#x5916;&#x90E8;&#x590D;&#x7528;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#xFF09;&#x3002;</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      <span class="since" data-ice="since">since 1.0.11</span>
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          
           <span class="code" data-ice="name"><span><a href="class/src/Event.js~Event.html#instance-method-stopImmediatePropagation">stopImmediatePropagation</a></span></span><span class="code" data-ice="signature">()</span>
         </p>
       </div>
@@ -834,7 +863,7 @@
     <span class="right-info">
       
       <span class="since" data-ice="since">since 1.0.0</span>
-      <span data-ice="source"><span><a href="file/src/Event.js.html#lineNumber170">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Event.js.html#lineNumber192">source</a></span></span>
     </span>
   </h3>
 
@@ -867,6 +896,95 @@
   
 </div>
 <div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-reset">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span class="code" data-ice="name">reset</span><span class="code" data-ice="signature">(type: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span>, bubbles: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span>, cancelable: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span>): <span>this</span></span>
+    <span class="right-info">
+      
+      <span class="since" data-ice="since">since 1.0.11</span>
+      <span data-ice="source"><span><a href="file/src/Event.js.html#lineNumber174">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>&#x91CD;&#x7F6E;&#x4E8B;&#x4EF6;&#x72B6;&#x6001;&#xFF08;&#x5141;&#x8BB8;&#x5916;&#x90E8;&#x590D;&#x7528;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#xFF09;&#x3002;</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">type</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></span> | <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>&#x4E8B;&#x4EF6;&#x7C7B;&#x578B;&#x3002;</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">bubbles</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
+      <td data-ice="appendix"><ul><li>optional</li>
+<li>default: false</li></ul></td>
+      <td data-ice="description"><p>&#x6307;&#x793A;&#x8BE5;&#x4E8B;&#x4EF6;&#x662F;&#x5426;&#x53C2;&#x4E0E;&#x5192;&#x6CE1;&#x884C;&#x4E3A;&#x3002;</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" class="code" data-depth="0">cancelable</td>
+      <td data-ice="type" class="code"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
+      <td data-ice="appendix"><ul><li>optional</li>
+<li>default: true</li></ul></td>
+      <td data-ice="description"><p>&#x6307;&#x793A;&#x8BE5;&#x4E8B;&#x4EF6;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x53D6;&#x6D88;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x3002;</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type code" data-ice="returnType"><span>this</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="instance-method-stopImmediatePropagation">
     <span class="access" data-ice="access">public</span>
     
@@ -878,7 +996,7 @@
     <span class="right-info">
       
       <span class="since" data-ice="since">since 1.0.0</span>
-      <span data-ice="source"><span><a href="file/src/Event.js.html#lineNumber188">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Event.js.html#lineNumber210">source</a></span></span>
     </span>
   </h3>
 
@@ -922,7 +1040,7 @@
     <span class="right-info">
       
       <span class="since" data-ice="since">since 1.0.0</span>
-      <span data-ice="source"><span><a href="file/src/Event.js.html#lineNumber179">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/Event.js.html#lineNumber201">source</a></span></span>
     </span>
   </h3>
 

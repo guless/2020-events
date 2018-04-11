@@ -58,6 +58,22 @@ export default class CustomEvent extends Event {
     }
     
     /**
+     * 重置事件状态（允许外部复用事件对象）。
+     * 
+     * @param {String|Symbol} type - 事件类型。
+     * @param {any} [data=null] - 指定附加到事件对象的数据。
+     * @param {Boolean} [bubbles=false] - 指示该事件是否参与冒泡行为。
+     * @param {Boolean} [cancelable=true] - 指示该事件是否可以取消默认行为。
+     * @returns {this}
+     * @since 1.0.11
+     */
+    reset( type, data = null, bubbles = false, cancelable = false ) {
+        super.reset(type, bubbles, cancelable);
+        this._data = data;
+        return this;
+    }
+    
+    /**
      * 获取事件对象的自定义数据。
      * @type {any}
      * @since 1.0.9

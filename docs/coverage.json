@@ -1,18 +1,18 @@
 {
-  "coverage": "98.57%",
-  "expectCount": 70,
-  "actualCount": 69,
+  "coverage": "98.61%",
+  "expectCount": 72,
+  "actualCount": 71,
   "files": {
     "src/CustomEvent.js": {
-      "expectCount": 4,
-      "actualCount": 3,
+      "expectCount": 5,
+      "actualCount": 4,
       "undocumentLines": [
         57
       ]
     },
     "src/Event.js": {
-      "expectCount": 21,
-      "actualCount": 21,
+      "expectCount": 22,
+      "actualCount": 22,
       "undocumentLines": []
     },
     "src/EventDispatcher.js": {
